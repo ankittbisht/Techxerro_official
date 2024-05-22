@@ -1,0 +1,56 @@
+.main{    
+    padding-top: 10vh;
+    padding-bottom:5vh;
+    background: #151618;
+}
+.main .title{
+    padding:0px 70px;
+    color:#fff;
+}
+
+.main .title h3{
+    color:#fff;
+    font-size:44px;
+}
+
+.main .title h3  span{
+    color: rgba(161, 10, 11, 1);
+}
+
+.servicemenu{
+    padding:20px 75px 0;
+    color: #a7a7a7;
+    list-style-type: none;
+    display: flex;
+    gap:2.5%;
+
+}
+
+.servicemenu li{
+    font-size: 25px!important;
+    cursor: pointer;
+}
+.servicemenu li:hover{
+    color:#fff;
+}
+
+.servicemenu li a{
+    color:#fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menutitle{
+    padding-right: 20px;
+    color:#fff;
+    border-right:1px solid #fff;
+}
+
+@media (max-width:480px) {
+    .main{
+        padding-bottom: 0;
+        padding-top: 10vh;
+    }
+}
+  
+

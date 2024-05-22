@@ -1,0 +1,180 @@
+.blog-container {
+  background: linear-gradient(123.06deg, #141618 45.51%, #96191a 92.29%);
+  padding-bottom:100px;
+  position: relative;
+  color:#fff;
+  .title {
+    padding: 100px 0 60px 0px;
+    span{
+      color: #EC1A1A;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    form{
+      padding-top:30px;
+      label{
+        border:1px solid #fff;
+        border-radius: 40px;
+      }
+      input[type="email"]{
+        padding:15px 25px;
+        width:300px;
+        border:none;
+        background: transparent;
+        font-size: 18px;
+      }
+      input[type="submit"]{
+        padding:15px 50px;
+        border:none;
+        border-radius:40px;
+        background: #EC1A1A;
+        color:#fff;
+        font-size: 18px;
+      }
+
+    }
+  }
+  .all-blog {
+    margin-right: 102px;
+    gap: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    img {
+      padding: 43px 24px;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 100%;
+      transition-duration: 0.3s;
+      transition: border-top-color 0.3s linear 0s,
+        border-right-color 0.3s linear 0.05s,
+        border-bottom-color 0.3s linear 0.1s,
+        border-left-color 0.3s linear 0.15s;
+
+      &:hover {
+        // border-color: initial;
+        border-color: transparent;
+        transition: border-top-color 0.3s linear 0s,
+          border-right-color 0.3s linear 0.05s,
+          border-bottom-color 0.3s linear 0.1s,
+          border-left-color 0.3s linear 0.15s;
+      }
+    }
+  }
+  .blog-swiper {
+    width: 75%;
+    margin-right: 0;
+    padding-bottom: 97px;
+    position: unset;
+    .swiper {
+      &-slide {
+        width: 280px !important;
+        height: 425px !important;
+        border-radius: 16px;
+        .content {
+          border-radius: 0px 0px 20px 20px;
+          background: #fff;
+          padding: 28px 19px 18px 23px;
+          &-title {
+            color: #000;
+            font-family: Poppins600;
+            font-size: 18px;
+            line-height: 25.11px;
+          }
+          .author {
+            color: #565656;
+            font-family: Poppins700;
+            font-size: 16px;
+          }
+          .date {
+            color: #565656;
+            font-family: Poppins500;
+            font-size: 16px;
+          }
+        }
+        img {
+          height: 280px;
+          padding: 0;
+          border-radius: 16px 16px 0 0;
+        }
+      }
+      &-button-prev {
+        left: 7% !important;
+        top: unset !important;
+        bottom: 45% !important;
+      }
+      &-button-next {
+        left: 15% !important;
+        top: unset !important;
+        bottom: 45% !important;
+      }
+    }
+  }
+}
+
+.tab {
+  overflow: hidden;
+  border:none;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 0px;
+  margin-right:40px;
+  transition: 0.3s;
+  font-size: 17px;
+  color:#fff;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  border-bottom:1px solid #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 40px 0px;
+  border-top: none;
+}
+
+.tabcontent img{
+  margin-bottom: 20px;
+}
+
+.blog-container  .owl-theme .owl-dots .owl-dot{
+  border-radius: 0;
+  border:none;
+}
+
+.blog-container .owl-theme .owl-dots .owl-dot span {
+  border-radius: 0;
+  background-color:#fff;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+  
+  background-color:#EC1A1A;
+}
+
+
+@media (max-width:480px) {
+  .blog-container{
+    padding: 50px 15px!important;
+    .title{
+      padding:0;
+      form{
+        input[type=email]{
+          width:220px!important;
+        } 
+        input[type=submit]{
+          padding:15px 35px!important;
+        }
+      }
+    }  
+  }
+}

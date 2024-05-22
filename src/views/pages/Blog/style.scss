@@ -1,0 +1,116 @@
+.blogs-section {
+    padding-top:140px;
+    background: #161719;
+    color: white;
+}
+
+.blogs-section .first-row {
+    border-bottom: 1px solid grey;
+}
+
+.first-row h1 {
+    font-family: Poppins;
+    font-size: 54px!important;
+    font-weight: 700!important;
+    line-height: 77.23px!important;
+    text-align: left;
+}
+
+.first-row {
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+
+.blogs-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #161719 !important;
+    color: white !important;
+    height: 100% !important;
+    min-height: 640px;
+    max-height: 640px;
+    border: none !important;
+}
+
+.blogs-card h3 {
+    font-family: Poppins;
+    font-size: 26px!important;
+    font-weight: 400!important;
+    line-height: 31.36px!important;
+    text-align: left;
+}
+
+.blogs-card p {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.blogs-card .date {
+    opacity: 0.5;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.74px;
+    text-align: left;
+}
+
+.blogs-card .head {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25.74px;
+    text-align: left;
+
+}
+
+.section-tabs {
+    padding-top: 20px;
+}
+
+.react-tabs__tab {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.74px;
+    text-align: center;
+    border: none !important;
+
+}
+
+.react-tabs__tab--selected {
+    background: transparent !important;
+    border-color: unset !important;
+    color: white !important;
+    border-radius: 0 !important;
+    font-weight: bold !important;
+}
+
+.react-tabs__tab-panel {
+    padding-top: 30px;
+}
+
+.papa-card:nth-child(2) {
+    padding-top: 60px;
+}
+
+.papa-card:nth-child(5) {
+    padding-top: 60px;
+}
+
+.section-tabs{
+    padding-left:0;
+}
+
+.servicestab{
+    padding-top: 0;
+    display: flex;
+    gap: 20px;
+    border-bottom:1px solid #ffffff40;
+}
+
+.servicestab .react-tabs__tab{
+    padding:0 0 15px 0!important;
+}

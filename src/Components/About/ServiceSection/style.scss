@@ -1,0 +1,19 @@
+.serviceavail{
+    padding: 100px 0;
+    background: #161719;
+    color:#fff;
+    .serv-card-wrapper{
+        padding:100px 0 0;
+        .business-card{
+            text-align: center;
+            background: #fff;
+            border-radius: 10px;
+            color:#000;
+            padding:20px;
+            img{
+                margin-top: -50px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

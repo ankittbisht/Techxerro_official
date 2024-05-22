@@ -1,0 +1,189 @@
+.Testimonial {
+    position: relative;
+    background:linear-gradient(90deg, #ec1a1a, #151618 65%);
+    color:#fff;
+    padding:80px 0;
+}
+.parlleximg{
+    position:absolute;
+    left:30%;
+    width:550px;
+    opacity: 0.4;
+}
+.Testimonial .navigation{
+    padding-top:80px ;
+    float: right;
+}
+.Testimonial .navigation .arrows li{
+    border:1px solid #fff;  
+}
+
+.Testimonial .navigation .arrows li img{
+    color:#fff;
+}
+
+.Testimonial .Review
+{
+    display: flex;
+    list-style: none;
+    padding:30px 0;
+}
+
+.Testimonial .Review li{
+    padding:30px;
+    border-left:1px solid rgba(255, 255, 255, 0.3);
+}
+.Testimonial .Review li img{
+    width:100px!important;
+    height:100px!important;
+    border-radius:100%;
+    object-fit: cover;
+}
+.ClientName{
+    padding:10px 0px;
+}
+
+.Testimonial .Review .ClientReview{
+    padding-top: 20px;
+}
+
+.Testimonial .Review .opaquetext h1{
+    font-size:100px;
+    font-weight:bold;
+    opacity:0.2;
+}
+
+.Testimonial .title p{
+    color:#fff;
+}
+
+.Testimonial .Navbtn{
+    float:right;
+    padding-top:20px;
+}
+
+.Testimonial .Navbtn button{
+    background-color: transparent;
+    border:1px solid #fff;
+    color:#fff;
+    transition: 1s;
+    padding:10px 20px;
+}
+
+
+.Testimonial .Navbtn button a {
+    color:#fff;
+    text-decoration: none;
+}
+
+
+.navigation .arrows{
+    display:inline-flex;
+    list-style: none;
+    padding: 0;
+}
+
+
+.navigation .arrows .arrow-left{
+    transition: 0.6s;
+}
+.navigation .arrows .arrow-left:hover{
+    transform: scale(0.95);  
+}
+
+.navigation .arrows .arrow-right{
+    transition: 0.6s;
+}
+.navigation .arrows .arrow-right:hover{
+    transform: scale(0.95);  
+}
+
+.navigation .arrows li{
+    border-radius: 50px;
+    margin-right:20px;
+    border:1px solid #000;
+    width:65px!important;
+    height:65px!important;
+}
+
+.navigation .arrows li img{
+    width: 65px;
+    padding: 25px 15px;
+}
+
+.Review .owl-theme .owl-nav{
+    position: absolute;
+    left:-25%;
+    bottom: 0;
+}
+
+.Review .owl-theme .owl-nav .owl-next,.Review .owl-theme .owl-nav .owl-prev{
+    border:1px solid #fff;
+    border-radius: 100px;
+    width:70px;
+    height:70px;
+}
+
+.Review .owl-theme .owl-nav .owl-next:hover,.Review .owl-theme .owl-nav .owl-prev:hover{
+    background-color: #000;    
+}
+
+
+
+/* /responsive/ */
+
+@media only screen and (max-width: 480px){
+    .title{
+        padding:20px;
+    }
+    
+    .parlleximg{
+        position:absolute;
+        left:0%;
+        width:350px;
+        opacity: 0.4;
+    }
+    .Testimonial .navigation{
+        padding-top:20px ;
+        float: right;
+    }
+    .Testimonial .navigation .arrows li{
+        border:1px solid #fff;  
+    }
+    
+    .Testimonial .navigation .arrows li img{
+        color:#fff;
+    }
+    
+    .Testimonial .Review
+    {
+        display: block;
+    }
+
+    .opaquetext{
+        display:none;
+    }
+
+    .Testimonial .Navbtn{
+        float:left;
+        padding-left:15px;
+    }
+
+    .Review .owl-theme .owl-nav{
+        position: absolute;
+        left:0%;
+        bottom: -20%;
+    }
+
+    .Review .owl-theme .owl-nav .owl-next,.Review .owl-theme .owl-nav .owl-prev{
+        border:1px solid #fff;
+        border-radius: 100px;
+        width:70px;
+        height:70px;
+    }
+
+    .Review .owl-theme .owl-nav .owl-next:hover,.Review .owl-theme .owl-nav .owl-prev:hover{
+        background-color: #000;    
+    }
+
+}

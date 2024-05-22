@@ -1,0 +1,115 @@
+.contact-banner{
+    padding:100px 0;
+    height:600px;
+    display: flex;
+    align-items: end;
+    color:#fff;
+    h3{
+        // font-weight: bold!important;
+        font-size: 55px!important;
+        padding-bottom: 20px;
+    }
+    .contact-info{
+        padding-left: 50px;
+        font-size: 34px;
+        padding-bottom: 20px;
+        p{
+            // font-weight: bold;
+            font-size: 26px!important;
+        }
+    }
+}
+.contact-form{
+    padding:100px 0;
+    color:#fff;
+    .consult-card{
+        background-color: #ffffff10;
+        background-image:url('../../../assets/contactbgback.png') ;
+        width: 550px;
+        height: 460px;
+        padding:20px 50px;
+        border-radius: 9px ;
+        // background: #ffffff10;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        div{
+            position: relative;
+            z-index: 3;
+            p{
+            font-size: 18px;
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            left:0;
+            top:0;
+            background-image:url('../../../assets/contactbgfront.png');
+            width: 100%;
+            height: 460px;
+            z-index: 1;
+        }
+        img{
+            padding-bottom: 10px;
+        }        
+       
+        h3{
+            font-size: 35px!important;
+            padding-bottom: 10px;
+        }
+        button{
+            width:250px;
+            height:60px;
+            border-radius: 100px;
+            padding:20px 0;
+            border:none;
+        }     
+
+    }
+    form{
+        .d-flex{
+            div{
+                width:100%
+            }
+        }
+        label{
+            width:100%;
+            font-size: 22px;
+            padding-bottom: 30px;
+            input{
+                width:100%;
+                border:none;
+                border-bottom:1px solid #ffffff50;
+                background: transparent;
+                padding:10px 0;
+                color:#fff;
+            }
+            textarea{
+                width:100%;
+                border:none;
+                border-bottom:1px solid #ffffff50;
+                background: transparent;
+                color:#fff;
+            }
+        }
+        input[type="submit"]{            
+            border:none;
+            width:200px;
+            height:60px;
+            border-radius: 100px;
+            background: #fff;
+        }
+        textarea::placeholder,input::placeholder{
+            
+            color:#fff;
+            opacity: 0.5;
+        }
+    }
+    
+}
+
+.contact-wrapper{
+    background: linear-gradient(116.78deg, #151618 48.18%, #FF0000 117.05%);
+}

@@ -1,0 +1,47 @@
+.about-section{
+    background: #151618;    
+    color:#fff;
+    .about-company{
+        padding:50px 20px 80px;
+        span{
+            font-family: 'syne';
+            font-size:21px;
+            font-weight: 600;
+            color:#fff;
+        }
+        h3{
+            font-size:44px!important;
+            font-weight: 700;
+            margin-bottom:0px;
+        } 
+        p{
+            color:#fff;
+            line-height: 24px;
+        }
+        .about-com-img {
+            position: relative; 
+            img{
+                width:75%;
+            }
+        }
+        
+    }
+
+    a{
+        color:#fff;
+        text-decoration: none;
+    }
+
+}
+
+
+@media (max-width:480px) {
+    
+    .about-com-img {
+        position: relative; 
+        width:100%;
+        img{
+            width:100%!important;
+        }
+    }
+}

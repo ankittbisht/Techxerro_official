@@ -1,0 +1,179 @@
+nav{
+    position: absolute;
+    z-index:9;
+    width:100%;
+    padding:18px 40px;border-bottom: 1px solid #ffffff50;
+    .sidemenu{
+      border:none;
+      background:transparent;
+    }
+    .logo{
+      width:180px;
+    }
+    .menu{
+      list-style-type: none;
+      li{
+        padding:10px 0;
+        cursor:pointer;
+        font-size: 22px;
+        height:60px;
+        display: flex;
+        align-items: center;
+        color:#fff;
+        a{
+          color:inherit;
+          text-decoration: none;
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+      }
+      .drop-menu{
+        // position: relative;
+        height:80px;
+        .dropdown{
+          display:none;
+          position: absolute;
+          top:115px;
+          left:0;
+          background: #fff;
+          width:100dvw;
+          height:400px;
+          padding:0;
+          border-radius: 0px;
+          justify-content: space-between;
+          ul{
+            padding-top:100px;
+            li{
+              padding:0px;
+              padding-bottom:20px;
+              height:unset;
+              color:#000!important;
+              display: block!important;
+              &:hover{
+                opacity: 0.7;
+                transition: 0.3s ease-in-out;
+              }
+              .menutitle{
+                display:block;
+                font-size: 22px;
+                font-weight:400; 
+                line-height: 28px;               
+              }
+              .menusubtitle{
+                font-size: 20px;
+                display:block;
+                opacity: 0.5;
+                font-weight:400;
+              }
+            }
+          }
+
+          .info{
+            padding:20px 0px 20px 40px;
+            height:100%;
+            background: linear-gradient(235.73deg, #FC0404 -15.3%, #151618 108.02%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:20px;
+            h6{
+              color:#fff;
+              font-size: 32px!important;
+            }
+            .btnwhite{
+              width:180px;
+
+            }
+          }
+          .service-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:10px!important;
+            height:100%;
+            padding-left:150px;
+            padding-right: 60px;
+            h2{
+              border-bottom: 1px solid #ffffff50;
+              padding-bottom: 20px;
+              font-size: 44px!important;
+            }
+            ul{
+              padding: 0!important;
+              color:#fff!important;
+              li{                
+                color:#fff!important;
+                padding-bottom:2px;
+              }
+            }
+          }
+          .servicelist{
+            padding-top: 5px;
+            padding-left: 0;
+            li{
+              display: flex!important;
+            }
+          }
+        }
+        // &:hover{
+        //   .dropdown{
+        //     display: flex!important;
+        //   }
+        // }
+  
+      }
+    }
+    .btnwhite{
+      border:1px solid #fff;
+      background: transparent;
+      padding:10px 25px;
+      border-radius: 10px;
+      color:#fff;
+      font-size: 20px!important;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      a{
+        color:#fff;
+        text-decoration: none;
+      }
+
+      &::after{
+        content: '';
+        background: #000000;
+        width:100%;
+        height:100%;
+        position: absolute;
+        top:0;
+        left:-100%;   
+        border-radius: inherit;
+        z-index:-1;             
+        transition: 0.7s ease;
+      }
+      &:hover{
+        &::after{
+          left:0;
+          transition: 0.7s ease;
+        }
+        
+      }
+    }
+}
+  
+ 
+.mobile{
+  display: none;
+  #mobilelogo{
+    width:140px
+  }
+}
+
+@media (max-width:768px){
+  .mobile{
+    display: block!important;
+  }
+  .desktop-menu{
+    display: none!important;
+  }
+}

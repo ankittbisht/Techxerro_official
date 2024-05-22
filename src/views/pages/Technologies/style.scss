@@ -1,0 +1,29 @@
+.bannersection{
+    background-color: #161719;
+    padding:100px 0 0px;
+    color:#fff;
+    display: flex;
+    align-items: end;
+    height:750px;
+}
+
+.techs{
+    background-color: #161719;
+    padding:100px 0;
+    color:#fff;
+    .icon-ellipse{
+        height:100px;
+        width:100px;
+        border-radius: 100px;
+        padding:20px;
+        box-shadow: 10px 10px 15px #00000020;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        background-color: #fff;
+    }
+    span{
+        opacity: 0.5;
+    }
+}

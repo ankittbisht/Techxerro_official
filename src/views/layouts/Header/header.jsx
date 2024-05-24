@@ -44,7 +44,7 @@ const Header=()=>{
       <nav>
         <div className="desktop-menu container">
           <div className="row align-items-center">
-            <div className="col-3 d-flex gap-5 align-items-center">
+            <div className="col-3 d-flex gap-lg-3 gap-xxl-4 align-items-center">
               <button className="sidemenu">
                 <svg width="35" height="11" viewBox="0 0 35 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect y="0.65918" width="34.9854" height="1.88072" fill="white"/>
@@ -66,7 +66,7 @@ const Header=()=>{
                     <div className="col-7 d-flex " style={{justifyContent:'space-around'}}>
                       <ul>
                           <li>
-                            <div className="menutitle"><a href="#">Who We Are</a></div>
+                            <div className="menutitle"><a href="/about">Who We Are</a></div>
                             <div className="menusubtitle">Get to know about us</div>                        
                           </li>
                           <li>
@@ -84,7 +84,7 @@ const Header=()=>{
                           <div className="menusubtitle">Find Opportunities</div>                        
                         </li>
                         <li> 
-                          <div className="menutitle"><a href="#">Why TechXerro</a></div>
+                          <div className="menutitle"><a href="/about#service-avail">Why TechXerro</a></div>
                           <div className="menusubtitle">Understanding the "why"</div>  
                         </li>
                       </ul>

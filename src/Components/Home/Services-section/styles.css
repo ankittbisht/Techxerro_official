@@ -1,0 +1,40 @@
+.servicemenu {
+  padding: 10px 70px 0;
+  color: #a7a7a7;
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.servicemenu li {
+  font-size: 20px !important;
+  cursor: pointer;
+}
+
+.servicemenu li:hover {
+  color: #fff;
+}
+
+.servicemenu li a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menutitle1 {
+  padding-right: 20px;
+  color: #fff;
+  border-right: 1px solid #fff;
+}

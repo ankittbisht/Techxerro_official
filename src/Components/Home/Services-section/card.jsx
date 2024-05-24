@@ -1,5 +1,6 @@
 'use client'
 // import Image from 'next/image';
+
 import styles from './card.module.scss';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -8,6 +9,7 @@ import { blogPosts } from './blogData';
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import './styles.css';
 
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 // import { projects } from '.';
@@ -163,6 +165,9 @@ function GridExample2() {
 
 const Cards = ({title, description, src, url, color, i, id}) => {
 
+  //testing
+
+
   const option={ 
     autoplayHoverPause:true,  
     navText:
@@ -188,13 +193,15 @@ const Cards = ({title, description, src, url, color, i, id}) => {
   }
 
   return (
+   
+ 
     <div className={styles.cardContainer}>      
       <div 
+      id={id}
         className={styles.card}
         style={{ background: 'linear-gradient(180deg, #EC1A1A 0%, #000000 100%)'
-          , top:`calc(-5vh + ${i * 30}px)`}}
+          , top:`calc(8vh + ${i * 20}px)`}}
       >
-          
         <div className={styles.servicessectionwappper}>
             <h4>{title}</h4>
             <Tabs>
@@ -205,19 +212,19 @@ const Cards = ({title, description, src, url, color, i, id}) => {
               <Tab>Story Captivation</Tab>
               <Tab>Visual Iconicity</Tab>
             </TabList>
-            <TabPanel>
+            <TabPanel className = "cards-container">
               <GridExample />
             </TabPanel>
-            <TabPanel>
+            <TabPanel className = "cards-container">
               <GridExample2 />
             </TabPanel>
-            <TabPanel>
+            <TabPanel className = "cards-container">
               <GridExample />
             </TabPanel>
-            <TabPanel>
+            <TabPanel className = "cards-container">
               <GridExample />
             </TabPanel>
-            <TabPanel>
+            <TabPanel className = "cards-container">
               <GridExample />
             </TabPanel>
           </Tabs>
@@ -280,6 +287,7 @@ const Cards = ({title, description, src, url, color, i, id}) => {
         </div>
       </div>
     </div>
+    // </section>
   )
 }
 

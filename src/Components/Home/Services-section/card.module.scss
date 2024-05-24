@@ -1,170 +1,192 @@
-.cardContainer{
-    height: 110vh;
-    width:100%;
+.cardContainer {
+  scroll-behavior: smooth;
+  height: 110vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  color: #fff;
+  margin-top: 50px;
+  z-index: 1;
+  .card {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    top: 0px;
-    color:#fff;
-    margin-top: 50px;
-    z-index: 1;
-    .card{      
+    flex-direction: column;
+    position: relative;
+    height: 680px;
+    width: 90%;
+    max-width: 1350px;
+    border-radius: 0px;
+    padding: 25px 50px;
+    transform-origin: top;
+    box-shadow: 10px -20px 10px #00000020;
+    h2 {
+      text-align: center;
+      margin: 0px;
+      font-size: 28px;
+    }
+    .body {
       display: flex;
-      flex-direction: column;
-      position: relative;
-      height: 680px;
-      width: 90%;
-      max-width:1350px;
-      border-radius: 0px;
-      padding:25px 50px;
-      transform-origin: top;
-      box-shadow:10px -20px 10px #00000020;
-      h2{
-        text-align: center;
-        margin: 0px;
-        font-size: 28px;
-      }
-      .body{
-        display: flex;
-        height: 100%;
-        margin-top: 50px;
-        gap: 50px;
-  
-        .description{
-          width: 40%;
-          position: relative;
-          top: 10%;
-          p{
-            font-size: 16px;
-            &::first-letter{
-              font-size: 28px;
-              font-family: 'Title';
-            }
-          }
-          span{
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            a{
-              font-size: 12px;
-              text-decoration: underline;
-              cursor: pointer;
-            }
+      height: 100%;
+      margin-top: 50px;
+      gap: 50px;
+
+      .description {
+        width: 40%;
+        position: relative;
+        top: 10%;
+        p {
+          font-size: 16px;
+          &::first-letter {
+            font-size: 28px;
+            font-family: "Title";
           }
         }
-  
-        .imageContainer{
-          position: relative;
-          width: 60%;
+        span {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          a {
+            font-size: 12px;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .imageContainer {
+        position: relative;
+        width: 60%;
+        height: 100%;
+        border-radius: 25px;
+        overflow: hidden;
+        .inner {
+          width: 100%;
           height: 100%;
-          border-radius: 25px;
-          overflow: hidden;
-          .inner{
-            width: 100%;
-            height: 100%;
-          }
-          img{
-            object-fit: cover;
-          }
+        }
+        img {
+          object-fit: cover;
         }
       }
     }
   }
+}
 
-.servicessectionwappper{
+.servicessectionwappper {
   width: 100%;
   margin: 0 auto;
-  .servicestab{
-    padding-top:0;
+  .servicestab {
+    padding-top: 0;
   }
-  .cardsWrapper{
+  .cardsWrapper {
     display: flex;
-    gap:10px;
+    gap: 10px;
     justify-content: space-between;
-    .cards{      
+    .cards {
       background: rgba(236, 26, 26, 1);
-      box-shadow:0px 0px 5px 5px #00000020;
+      box-shadow: 0px 0px 5px 5px #00000020;
       position: relative;
-      width:290px;
-      height:420px;
+      width: 290px;
+      height: 420px;
       overflow: hidden;
-      .posterImg{
-        background: #E05A3250;
-        height:250px;
-        margin-bottom:20px;
+      .posterImg {
+        background: #e05a3250;
+        height: 250px;
+        margin-bottom: 20px;
         overflow: hidden;
         transition: 0.2s ease-in;
-        img{
-          width:100%;
-          height:100%;
-          object-fit: cover ;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
-      &:hover{
-        .posterImg{
-          height:200px;
+      &:hover {
+        .posterImg {
+          height: 200px;
           transition: 0.2s ease-in;
         }
-        .cardContent{
-          .hiddenbtn{
+        .cardContent {
+          .hiddenbtn {
             display: block;
             transition: 0.2s ease-in;
           }
         }
       }
-      .cardContent{
-        padding:5px 20px; 
-        color:#fff;   
+      .cardContent {
+        padding: 5px 20px;
+        color: #fff;
         background: rgba(236, 26, 26, 1);
         // position: absolute;
         // width: 100%;
-        p{
-          font-size: 20px!important;
+        p {
+          font-size: 20px !important;
         }
-        ul{
+        ul {
           padding: 0;
           list-style-type: none;
           opacity: 0.8;
           font-size: 1.2rem;
-        }  
-      }  
+        }
+      }
     }
-  } 
+  }
 }
 
-.hiddenbtn{
-  display:none;  
-  border:none;
+.hiddenbtn {
+  display: none;
+  border: none;
   margin-top: 10px;
   transition: 0.3s ease-in;
-  button{
-    padding:2px 25px;
-    border:none;
+  button {
+    padding: 2px 25px;
+    border: none;
     background: #000;
-    color:#fff;
-    font-size: 20px!important;
+    color: #fff;
+    font-size: 20px !important;
   }
 }
 
 
-@media (max-width:480px) {
-  .cardContainer{
-    .card{
-      padding:40px 20px!important;
-      height:800px!important;
+
+@media (max-width: 480px) {
+  .cardContainer {
+    .card {
+      padding: 40px 20px !important;
+      height: 800px !important;
     }
   }
-  .servicessectionwappper{
-      width:350px!important;
-      h3{
-        font-size: 35px!important;
-      }
-      .cardsWrapper{
-        display: inline!important;
-        width:100%;
-      }
+  .servicessectionwappper {
+    width: 350px !important;
+    h3 {
+      font-size: 35px !important;
+    }
+    .cardsWrapper {
+      display: inline !important;
+      width: 100%;
+    }
   }
-
 }
-  
+
+
+// screen size 1240
+@media (min-width: 990px) and (max-width: 1290px) {
+  .react-tabs__tab-panel {
+    padding-top: 0px !important;
+}
+  .servicessectionwappper {
+    .cardsWrapper {
+      .cards {
+        height: 380px;
+        .posterImg {
+          height: 190px;
+        } &:hover {
+          .posterImg {
+            height: 160px;
+          }
+      }
+    }
+    }
+  }
+}

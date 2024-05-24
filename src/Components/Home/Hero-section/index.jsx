@@ -1,92 +1,131 @@
-import React, { useEffect }  from 'react';
-import './style.scss';
+import React, { useEffect } from "react";
+import "./style.scss";
 // import OwlCarousel from 'react-owl-carousel';
 // import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css'; 
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const HeroSection = () => {
-
-    const items={
-        nav:true,
-        navText:
-        [`<svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const items = {
+    nav: true,
+    navText: [
+      `<svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.4057 17.3036L1.5957 9.49359L9.4057 1.68359" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>        
         `,
-        `<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      `<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.02789 1.06359L8.83789 8.87359L1.02789 16.6836" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        `],
-        smartSpeed: 100,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',    
-        responsive : {
-            // breakpoint from 0 up
-            0 : {
-                items:1,
-            },
-            // breakpoint from 480 up
-            480 : {
-                items:1,
-            },
-            // breakpoint from 768 up
-            768 : {
-                items:1
-            },
-            1028:{
-                items:1
-            }
-        }
+        `,
+    ],
+    smartSpeed: 100,
+    animateOut: "fadeOut",
+    animateIn: "fadeIn",
+    responsive: {
+      // breakpoint from 0 up
+      0: {
+        items: 1,
+      },
+      // breakpoint from 480 up
+      480: {
+        items: 1,
+      },
+      // breakpoint from 768 up
+      768: {
+        items: 1,
+      },
+      1028: {
+        items: 1,
+      },
+    },
+  };
+
+  useEffect(() => {
+    let dots = document.querySelectorAll(
+      ".Hero-section .hide-on-mobile .owl-items"
+    );
+    let numberofSlides = dots.length;
+
+    for (let x = 0; x < numberofSlides; x++) {
+      console.log(dots[x].className);
+      if (dots[x].classList.contains("active")) {
+        console.log(x + " is the active slide");
+      }
     }
+  });
 
-    useEffect(()=>{
-        let dots = document.querySelectorAll('.Hero-section .hide-on-mobile .owl-items');
-        let numberofSlides = dots.length;
+  return (
+    <>
+      <section className="hero-sec-wrapper">
+        <div className="container">
+          {/* <OwlCarousel className='owl-theme hide-on-mobile' {...items} items={1} loop margin={40} nav={false} dots={false} autoplaySpeed={5000} autoplayTimeout={3000}> */}
 
-        for(let x=0; x<numberofSlides;x++){   
-            console.log(dots[x].className);
-            if(dots[x].classList.contains('active')){
-                console.log(x+' is the active slide');
-            }
-        }
-    })
-
-    return ( 
-        <>
-        <section className='hero-sec-wrapper'>
-            <div className="container">
-                {/* <OwlCarousel className='owl-theme hide-on-mobile' {...items} items={1} loop margin={40} nav={false} dots={false} autoplaySpeed={5000} autoplayTimeout={3000}> */}
-                
-                <div className="row Hero-section align-items-center">                         
-                    <div className="col-sm-6 col-12 pd50 slider-content" style={{color:'#fff', height:'100%',padding:'80px 0px 50px',display:'flex',alignItems:'center'}}>
-                        <div>
-                            <div className="bannerText">                                
-                                <div>
-                                    <h6  data-aos="fade-left" data-aos-delay="100">Welcome, we're</h6>
-                                    <h2  data-aos="fade-right" data-aos-delay="200">TechXerro</h2>
-                                </div>
-                            </div>
-
-                            <div className="content align-items-center pb-2" data-aos="fade-left" data-aos-delay="200">
-                                <p>Experience One-Stop Brand Empowerment with TechXerro </p>
-                            </div>
-
-                            <button className="btn-1" data-aos="fade-up" data-aos-delay="200"><a href="#">Get started</a></button>
-                        </div>   
-                    </div>
-
-                    {/* <div className="col-sm-6 col-12 d-flex justify-content-center" /> */}
-                    <div className="col-sm-6 col-12 d-flex justify-content-end" >
-                        <div className='banner-1 mt-2'>
-                            <img src={require('../../../assets/logobanner.png')} alt=""  data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200"/>
-                        </div>
-                        <img src={require('../../../assets/Home/paralleximg.png')} alt="" style={{position:'absolute',bottom:'0',right:'0',width:'43%'}}  data-aos="fade-left" />
-                    </div>
+          <div className="row Hero-section align-items-center">
+            <div
+              className="col-sm-6 col-12 pd50 slider-content"
+              style={{
+                color: "#fff",
+                height: "100%",
+                padding: "80px 0px 50px",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <div>
+                <div className="bannerText">
+                  <div>
+                    <h6 data-aos="fade-left" data-aos-delay="100">
+                      Welcome, we're
+                    </h6>
+                    <h2 data-aos="fade-right" data-aos-delay="200">
+                      TechXerro
+                    </h2>
+                  </div>
                 </div>
-                
-                    
 
-                    {/* <div className='slider-wrapper d-flex align-items-center'>
+                <div
+                  className="content align-items-center pb-2"
+                  data-aos="fade-left"
+                  data-aos-delay="200"
+                >
+                  <p>Experience One-Stop Brand Empowerment with TechXerro </p>
+                </div>
+
+                <button
+                  className="btn-1"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <a href="#">Get started</a>
+                </button>
+              </div>
+            </div>
+
+            {/* <div className="col-sm-6 col-12 d-flex justify-content-center" /> */}
+            <div className="col-sm-6 col-12 d-flex justify-content-end">
+              <div className="banner-1 mt-2">
+                <img
+                  src={require("../../../assets/logobanner.png")}
+                  alt=""
+                  data-aos="fade-left"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                />
+              </div>
+              <img
+                src={require("../../../assets/Home/paralleximg.png")}
+                alt=""
+                style={{
+                  position: "absolute",
+                  bottom: "0",
+                  right: "0",
+                  width: "43%",
+                }}
+                data-aos="fade-left"
+              />
+            </div>
+          </div>
+
+          {/* <div className='slider-wrapper d-flex align-items-center'>
                         <div className="col-lg-6 col-12 d-flex justify-content-center" >
                             <div className='banner-2'>
                                 <img src={require('../../../assets/Home/banner2.png')} alt="" style={{position: 'absolute', width: '40%',height:'90%',top: '0px',left: '20px'}}/>
@@ -132,7 +171,7 @@ const HeroSection = () => {
                             </div> 
                         </div>
                     </div> */}
-                {/*         
+          {/*         
                     <div className='slider-wrapper d-flex align-items-center'>
                         <div className="col-lg-6 col-12 d-flex justify-content-center" >
                             <div className='banner-1'>
@@ -157,12 +196,11 @@ const HeroSection = () => {
                         </div>
                     </div> */}
 
-                    {/* <div className='nav-wrapper'></div> */}
+          {/* <div className='nav-wrapper'></div> */}
 
-                {/* </OwlCarousel>   */}
-                        
+          {/* </OwlCarousel>   */}
 
-                {/* <OwlCarousel className='owl-theme hide-on-desktop' items={1} loop margin={40} autoplay={false} dots={true} autoplaySpeed={5000} autoplayTimeout={3000}>
+          {/* <OwlCarousel className='owl-theme hide-on-desktop' items={1} loop margin={40} autoplay={false} dots={true} autoplaySpeed={5000} autoplayTimeout={3000}>
                     {sliderData ? 
                         
                         sliderData.map((speckey)=>{
@@ -197,13 +235,10 @@ const HeroSection = () => {
                     }
 
                 </OwlCarousel>   */}
-            </div>
-        </section>
+        </div>
+      </section>
+    </>
+  );
+};
 
-        </>
-
-     );
-
-}
- 
 export default HeroSection;

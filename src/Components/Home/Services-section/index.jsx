@@ -1,4 +1,6 @@
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './style.module.css'
+import './styles.css';
 import Cards from './card';
 
 export const projects = [
@@ -9,7 +11,6 @@ export const projects = [
     link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
     color: "#BBACAF",
     id:"websitelaunch",
-
   },
   {
     title: "Digital Marketing Strategies",
@@ -38,9 +39,38 @@ export const projects = [
   
 ]
 export default function ServicesSection() {
+
+  //testing
+  const [isSticky, setIsSticky] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionTop = sectionRef.current.offsetTop;
+      const sectionHeight = sectionRef.current.offsetHeight;
+      const scrollPosition = window.scrollY;
+      // const buffer = 300
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight - 600 ) {
+        setIsSticky(true);
+        setIsHidden(false);
+      } else {
+        setIsSticky(false);
+        setIsHidden(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <main className={styles.main}>
-      <div className="container">
+      <div className="container headerContainer">
         <div className={styles.title} data-aos="fade-up">
           <h3>
           The 360° <span>Online Presence</span> Enabler <br/>You Need
@@ -55,17 +85,17 @@ export default function ServicesSection() {
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#digitalmarketing">
                 Marketing Mastery
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#creativedesign">
                 Brand Crafting
               </a> 
             </li>          
             <li>
-              <a href="">
+              <a href="#visual-iconicity">
                 Story Captivation
               </a>
             </li>          
@@ -76,13 +106,37 @@ export default function ServicesSection() {
             </li>          
           </ul>
         </div>
+      
       </div> 
       
+      <section ref={sectionRef} id="service">
+
+      <ul className={` servicemenu ${isSticky ? 'sticky' : ''} ${isHidden ? 'hidden' : ''}`} >
+        <li className="menutitle1" >Rely on TechXerro for:</li>
+        <li >
+          <a href="#websitelaunch" >Website Launch</a>
+        </li>
+        <li>
+          <a href="#digitalmarketing">Marketing Mastery</a>
+        </li>
+        <li >
+          <a href="#creativedesign">Brand Crafting</a>
+        </li>
+        <li >
+          <a href="#story-captivation" >Story Captivation</a>
+        </li>
+        <li >
+          <a href="#visual-iconicity" >Visual Iconicity</a>
+        </li>
+      </ul>
+      {/* Other content of the section */}
       {
         projects.map( (project, i) => {
           return <Cards key={`p_${i}`} {...project} id={project.id} i={i}/>
         })
       }
+    </section>
+      
     </main>
   )
 }

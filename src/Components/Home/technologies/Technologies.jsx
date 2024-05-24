@@ -1,16 +1,23 @@
 import React from "react";
 import "./Technologies.scss";
 import { images } from "../../../assets/images";
+import VerticalSlider from "./Iconslides";
 // import PrimaryButton from "../../utils/PrimaryButton/PrimaryButton";
 
 export default function Technologies(props) {
   return (
     <>
     <div className="technologies" data-aos={props.aos} data-aos-delay="100" data-aos-duration="1200">
+      <div className="container">
       <div className="row my-5 w-100">
-        <h4 className="title" data-aos="fade-down">
-          The Master Jack of All Expertises
-        </h4>
+        <div className="col-sm-6 col-12">
+          <h2 className="title" data-aos="fade-down">
+            Powering every industry<br/>Powering all disruptors.
+          </h2>
+        </div>
+        <div className="col-sm-6 col-12">
+            <VerticalSlider/>
+        </div>    
       </div>
       <ul className="nav nav-tabs" id="myTab" role="tablist">
         <li className="nav-item" role="presentation">
@@ -24,7 +31,7 @@ export default function Technologies(props) {
             aria-controls="home"
             aria-selected="true"
           >
-            Web Technology
+            E-commerce
           </button>
         </li>
         <li className="nav-item" role="presentation">
@@ -38,7 +45,7 @@ export default function Technologies(props) {
             aria-controls="profile"
             aria-selected="false"
           >
-            Mobile Technology
+            Construction
           </button>
         </li>
         <li className="nav-item" role="presentation">
@@ -52,157 +59,161 @@ export default function Technologies(props) {
             aria-controls="contact"
             aria-selected="false"
           >
-            Graphic & UI/UX Design
+            Hospitality
+          </button>
+        </li>
+        <li className="nav-item" role="presentation">
+          <button
+            className="nav-link"
+            id="automotive-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#automotive"
+            type="button"
+            role="tab"
+            aria-controls="automotive"
+            aria-selected="false"
+          >
+            Automotive
+          </button>
+        </li>
+        <li className="nav-item" role="presentation">
+          <button
+            className="nav-link"
+            id="Sports-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#Sports"
+            type="button"
+            role="tab"
+            aria-controls="Sports"
+            aria-selected="false"
+          >
+            Sports
           </button>
         </li>
       </ul>
+
       <div className="tab-content" id="myTabContent">
+
+        {/*  {E-Commerce} */}
         <div
           className="tab-pane fade show active tech-container"
           id="home"
           role="tabpanel"
           aria-labelledby="home-tab"
         >
-          <div className="tech hvr-grow">
-            <img src={images.webTech1} alt="" />
-            <p>PHP</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech2} alt="" />
-            <p>.Net</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech3} alt="" />
-            <p>Laravel</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech4} alt="" />
-            <p>Node.Js</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech5} alt="" />
-            <p>Angular</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech6} alt="" />
-            <p>React.Js</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech7} alt="" />
-            <p>Python</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech8} alt="" />
-            <p>HTML 5</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech9} alt="" />
-            <p>VueJS</p>
+          <div className="industrywrapper">
+            <div className="content">
+              <h3>Powering every industry<br/>
+              <span>Powering all disruptors.</span></h3>
+              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
+              <div class="logos d-flex">
+                <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
+                <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
+                <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
+                <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
+              </div>
+              <button>Get Started</button>
+            </div>
           </div>
         </div>
+
+        
+        {/* Construction Tab */}
         <div
           className="tab-pane fade tech-container"
           id="profile"
           role="tabpanel"
           aria-labelledby="profile-tab"
         >
-          <div className="tech hvr-grow">
-            <img src={images.webTech1} alt="" />
-            <p>PHP</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech2} alt="" />
-            <p>.Net</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech3} alt="" />
-            <p>Laravel</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech4} alt="" />
-            <p>Node.Js</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech5} alt="" />
-            <p>Angular</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech6} alt="" />
-            <p>React.Js</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech7} alt="" />
-            <p>Python</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech8} alt="" />
-            <p>HTML 5</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech9} alt="" />
-            <p>VueJS</p>
+          
+          <div className="industrywrapper">
+            <div className="content">
+              <h3>Powering every industry<br/>
+              <span>Powering all disruptors.</span></h3>
+              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
+              <div class="logos d-flex">
+                <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
+                <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
+                <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
+                <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
+              </div>
+              <button>Get Started</button>
+            </div>
           </div>
         </div>
+
+        {/* Hospitality Tab */}
         <div
           className="tab-pane fade tech-container"
           id="contact"
           role="tabpanel"
           aria-labelledby="contact-tab"
         >
-          <div className="tech hvr-grow">
-            <img src={images.webTech1} alt="" />
-            <p>PHP</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech2} alt="" />
-            <p>.Net</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech3} alt="" />
-            <p>Laravel</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech4} alt="" />
-            <p>Node.Js</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech5} alt="" />
-            <p>Angular</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech6} alt="" />
-            <p>React.Js</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech7} alt="" />
-            <p>Python</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech8} alt="" />
-            <p>HTML 5</p>
-          </div>
-          <div className="tech hvr-grow">
-            <img src={images.webTech9} alt="" />
-            <p>VueJS</p>
+          
+          <div className="industrywrapper">
+            <div className="content">
+              <h3>Powering every industry<br/>
+              <span>Powering all disruptors.</span></h3>
+              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
+              <div class="logos d-flex">
+                <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
+                <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
+                <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
+                <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
+              </div>
+              <button>Get Started</button>
+            </div>
           </div>
         </div>
+        
+        {/* Automotive Tab */}
+        <div
+          className="tab-pane fade tech-container"
+          id="automotive"
+          role="tabpanel"
+          aria-labelledby="automotive-tab"
+        >       
+        <div className="industrywrapper">
+          <div className="content">
+            <h3>Powering every industry<br/>
+            <span>Powering all disruptors.</span></h3>
+            <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
+            <div class="logos d-flex">
+              <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
+              <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
+              <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
+              <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
+            </div>
+            <button>Get Started</button>
+          </div>
+        </div>   
+        </div>
+
+        {/* Sports Tab */}
+        <div
+          className="tab-pane fade tech-container"
+          id="Sports"
+          role="tabpanel"
+          aria-labelledby="Sports-tab"
+        >       
+        <div className="industrywrapper">
+          <div className="content">
+            <h3>Powering every industry<br/>
+            <span>Powering all disruptors.</span></h3>
+            <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
+            <div class="logos d-flex">
+              <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
+              <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
+              <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
+              <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
+            </div>
+            <button>Get Started</button>
+          </div>
+        </div>   
+        </div>
       </div>
-      <div className="text-center my-5">
-        {/* <PrimaryButton
-          btnText="Explore"
-          isRightArrow={true}
-          variant="whiteFill"
-        /> */}
-        <button style={{background:'transparent', border:'none', color:'#fff'}}>
-          Explore
-          <svg width="52" height="43" viewBox="0 0 52 43" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginLeft:"10px"}}>
-          <circle cx="31" cy="21.5" r="20.5" stroke="white"/>
-          <path d="M32.3536 22.8536C32.5488 22.6583 32.5488 22.3417 32.3536 22.1464L29.1716 18.9645C28.9763 18.7692 28.6597 18.7692 28.4645 18.9645C28.2692 19.1597 28.2692 19.4763 28.4645 19.6716L31.2929 22.5L28.4645 25.3284C28.2692 25.5237 28.2692 25.8403 28.4645 26.0355C28.6597 26.2308 28.9763 26.2308 29.1716 26.0355L32.3536 22.8536ZM0 23H32V22H0V23Z" fill="white"/>
-          </svg>
-        </button>
       </div>
     </div>
-    {/* <div className="blackbg"></div> */}
     </>
   );
 }

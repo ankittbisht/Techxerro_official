@@ -3,7 +3,7 @@ import './style.scss';
 
 const ServAvail = () =>{
     return(
-        <section className="serviceavail">
+        <section className="serviceavail" id="service-avail">
             <div className="container">
                 <div className="row">
                     <div className="col-12 text-center title">

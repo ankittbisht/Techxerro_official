@@ -103,36 +103,37 @@ export default function ServicesSection() {
             </li>
           </ul>
         </div>
+        <section ref={sectionRef} id="service">
+          <ul
+            className={` servicemenu ${isSticky ? "sticky" : ""} ${
+              isHidden ? "hidden" : ""
+            }`}
+          >
+            <li className="menutitle1">Rely on TechXerro for:</li>
+            <li>
+              <a href="#websitelaunch">Website Launch</a>
+            </li>
+            <li>
+              <a href="#digitalmarketing">Marketing Mastery</a>
+            </li>
+            <li>
+              <a href="#creativedesign">Brand Crafting</a>
+            </li>
+            <li>
+              <a href="#story-captivation">Story Captivation</a>
+            </li>
+            <li>
+              <a href="#visual-iconicity">Visual Iconicity</a>
+            </li>
+          </ul>
+          {/* Other content of the section */}
+          {projects.map((project, i) => {
+            return <Cards key={`p_${i}`} {...project} id={project.id} i={i} />;
+          })}
+        </section>
       </div>
 
-      <section ref={sectionRef} id="service">
-        <ul
-          className={` servicemenu ${isSticky ? "sticky" : ""} ${
-            isHidden ? "hidden" : ""
-          }`}
-        >
-          <li className="menutitle1">Rely on TechXerro for:</li>
-          <li>
-            <a href="#websitelaunch">Website Launch</a>
-          </li>
-          <li>
-            <a href="#digitalmarketing">Marketing Mastery</a>
-          </li>
-          <li>
-            <a href="#creativedesign">Brand Crafting</a>
-          </li>
-          <li>
-            <a href="#story-captivation">Story Captivation</a>
-          </li>
-          <li>
-            <a href="#visual-iconicity">Visual Iconicity</a>
-          </li>
-        </ul>
-        {/* Other content of the section */}
-        {projects.map((project, i) => {
-          return <Cards key={`p_${i}`} {...project} id={project.id} i={i} />;
-        })}
-      </section>
+      
 
       <Mobilescroll />
     </main>

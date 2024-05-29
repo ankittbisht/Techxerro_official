@@ -49,6 +49,17 @@
     padding-bottom: 0;
     padding-top: 10vh;
   }
+
+  .servicemenu{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0px 10px 0;
+  }
+
+  .main .title{
+    padding: 10px 10px ;
+  }
 }
 
 @media (min-width: 990px) and (max-width: 1280px) {

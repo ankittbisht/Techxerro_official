@@ -12,25 +12,34 @@ import Blog from "../../../Components/Home/Blog/Blog";
 
 import quotebgimg from "../../../assets/quote1bg.png";
 import quotebgimg2 from "../../../assets/quote2bg.png";
+import Mobilescroll from "../../../Components/Home/Services-section/Mobilescroll";
 
-const Home = () =>{
-    return(
-        <>
-            <HeroSection/>
-            <AboutSection/>
-            <Quotes quote="Your one-stop brand empowerment hub, leveling the playing field with tailored strategies and a commitment to your success." background={quotebgimg}/>
-            <ServicesSection/>
-            <Workflow/>
-            <div className="blackbg"></div>
-            <Quotes quote="Empowering businesses of any size to become formidable brands through comprehensive branding, marketing, and consulting solutions." background={quotebgimg2}/>            
-            {/* <div className="blackbg"></div> */}
-            <Technologies />
-            <Stats />
-            <Testimonial />
-            <CurvedCarousel />
-            <Blog />
-        </>
-    )
-}
+const Home = () => {
+  return (
+    <>
+      <HeroSection />
+      <AboutSection />
+      <Quotes
+        quote="Your one-stop brand empowerment hub, leveling the playing field with tailored strategies and a commitment to your success."
+        background={quotebgimg}
+      />
+      <ServicesSection />
+
+      <Workflow />
+      <div className="blackbg"></div>
+      <Quotes
+        quote="Empowering businesses of any size to become formidable brands through comprehensive branding, marketing, and consulting solutions."
+        background={quotebgimg2}
+      />
+      <div className="blackbg"></div>
+      <Technologies />
+
+      <Stats />
+      <Testimonial />
+      <CurvedCarousel />
+      <Blog />
+    </>
+  );
+};
 
 export default Home;

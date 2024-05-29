@@ -154,8 +154,6 @@
   }
 }
 
-
-
 @media (max-width: 480px) {
   .cardContainer {
     .card {
@@ -175,24 +173,24 @@
   }
 }
 
-
 // screen size 1240
 @media (min-width: 990px) and (max-width: 1290px) {
-  // .react-tabs__tab-panel {
-  //   padding-top: 0px ;
-  // }
+  .react-tabs__tab-panel {
+    padding-top: 0px !important;
+  }
   .servicessectionwappper {
     .cardsWrapper {
       .cards {
         height: 380px;
         .posterImg {
           height: 190px;
-        } &:hover {
+        }
+        &:hover {
           .posterImg {
             height: 160px;
           }
+        }
       }
-    }
     }
   }
 }

@@ -1,3 +1,10 @@
+@media (max-width: 501px) {
+  #service {
+    display: none;
+  }
+}
+
+
 .servicemenu {
   padding: 10px 70px 0;
   color: #a7a7a7;
@@ -9,8 +16,9 @@
 
 .sticky {
   position: fixed;
-  top: 8px;
-  z-index: 1000; /* Ensure it appears above other elements */
+  top: 0;
+  z-index: 1000;
+  /* Ensure it appears above other elements */
 }
 
 .hidden {
@@ -37,4 +45,99 @@
   padding-right: 20px;
   color: #fff;
   border-right: 1px solid #fff;
+}
+
+
+/* for mobile */
+@media (max-width:501px) {
+  .cards {
+    background: rgba(236, 26, 26, 1);
+    box-shadow: 0px 0px 5px 5px #00000020;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+  }
+
+  .cardComponent {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .posterImg {
+    background: #e05a3250;
+    height: 200px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: 0.2s ease-in;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cardContent {
+    padding: 5px 20px;
+    color: #fff;
+    background: rgba(236, 26, 26, 1);
+    /* // position: absolute;
+    // width: 100%; */
+  }
+
+  .cards p {
+    font-size: 18px !important;
+  }
+
+  .cards ul {
+    padding: 0;
+    list-style-type: none;
+    opacity: 0.8;
+    font-size: 16px;
+  }
+
+  button {
+    border: none !important;
+    margin-top: 10px !important;
+    padding: 2px 20px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 20px !important;
+  }
+
+
+  .react-tabs__tab-list {
+    color: #a7a7a7;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0;
+  }
+
+  .cardContainer {
+    background: #151618;
+    color: white;
+    /* background-color: black; */
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  .react-tabs {
+    background: #151618;
+    /* background-color: black; */
+  }
+}
+
+.hide-on-large {
+  display: block;
+}
+
+@media (min-width: 501px) {
+  .hide-on-large {
+    display: none;
+  }
 }

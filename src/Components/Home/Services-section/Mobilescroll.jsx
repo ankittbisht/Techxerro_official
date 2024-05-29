@@ -2,8 +2,6 @@ import React from "react";
 import "./styles.css";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Mobilecard from "./Mobilecard";
-import {RemoveScrollBar} from 'react-remove-scroll-bar';
-
 
 
 function Mobilescroll() {

@@ -4,12 +4,11 @@ import Header from "./Header/header";
 import Footer from "./Footer/footer";
 
 const Layout = () => {
-
   return (
     <>
-      <Header/>
+      <Header />
       <Outlet />
-      <Footer/>
+      <Footer />
     </>
   );
 };

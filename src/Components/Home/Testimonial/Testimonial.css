@@ -6,7 +6,8 @@
 }
 .parlleximg{
     position:absolute;
-    left:30%;
+    right:0%;
+    top:0%;
     width:550px;
     opacity: 0.4;
 }

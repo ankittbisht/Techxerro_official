@@ -1,6 +1,8 @@
 .stats-section{    
     padding:120px 0 80px 0;
-    background-color: #0f1011;
+    /* background-color: #0f1011; */
+    
+    background:url('../../../assets/imagebg.jpg');
     position: relative; 
     color:#fff;
 }

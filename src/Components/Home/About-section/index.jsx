@@ -17,7 +17,7 @@ const AboutSection = () =>{
         <section className="about-section">
             <div className="about-company container"  style={{position:'relative'}}>
                 <div className="row">
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-12 d-flex align-items-end">
+                    <div className="col-xl-6 col-lg-6 col-md-12 col-12 d-flex align-items-center">
                         {/* <div style={{position:"absolute",fontSize:'300px',opacity:'0.1',fontWeight:'600',zIndex:'0',top:'-50px',left:'-100px'}}>About <div style={{position:"absolute",right:'-80px',top:'75px',fontSize:'80px'}}>Us</div></div> */}
                             
                         <div className="content" style={{position:"relative",zIndex:'1'}}>
@@ -29,7 +29,7 @@ const AboutSection = () =>{
                     </div>
                     
                     <div className="col-xl-6 col-lg-6 col-md-12 col-12 about-com-img d-flex justify-content-end">
-                        <img src={aboutimg} alt="whatwedo"   data-aos="fade-left" data-aos-delay="100"/>
+                        <img src={aboutimg} alt="whatwedo" data-aos="fade-left" data-aos-delay="200"/>
                     </div>
                 </div>
             </div>

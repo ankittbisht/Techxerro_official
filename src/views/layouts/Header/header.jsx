@@ -39,18 +39,59 @@ const Header=()=>{
     
     console.log(menuOpen)
   }
+
+  //sidemenu
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
   return (
     <>
       <nav>
         <div className="desktop-menu container">
           <div className="row align-items-center">
             <div className="col-3 d-flex gap-lg-3 gap-xxl-4 align-items-center">
-              <button className="sidemenu">
+              <button className="sidemenu" onClick={toggleMenu}>
                 <svg width="35" height="11" viewBox="0 0 35 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect y="0.65918" width="34.9854" height="1.88072" fill="white"/>
                   <rect y="8.55859" width="34.9854" height="1.88072" fill="#EC1A1A"/>
                 </svg>
               </button>
+              <div className={`sidemenu1 ${isOpen ? 'open' : ''}`}>
+                <button className="close-btn" onClick={closeMenu}><svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.732794" y1="1.31955" x2="13.7328" y2="15.3195" stroke="white" stroke-width="2"></line><line x1="13.7809" y1="0.624695" x2="1.78087" y2="15.6247" stroke="white" stroke-width="2"></line></svg></button>
+
+                {/* Menu content goes here */}
+                <ul>
+                  <li><h6>Prefer to talk?
+                  </h6>
+                    +91-9876543210</li>
+                  <li>
+                    <h6>Our Office address
+                    </h6>
+                    A-28, Sector 4,
+                    Noida,
+                    <br />Uttar Pradesh,
+                    India</li>
+                  <li> <h6>send us a quick email at
+                  </h6>solutions@techxerro.com </li>
+                  <li  > <h6> Let's chat about your new project
+                    send us a quick email at
+                  </h6>solutions@techxerro.com
+                  </li>
+                  {/* Add more menu items as needed */}
+                </ul>
+                <div class="social-icons">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+
+              </div>
               <a href="/"><img src={images.Logo} className="logo" alt="" /></a>
             </div>
             <div className="col-7 d-flex align-items-center">
@@ -63,47 +104,47 @@ const Header=()=>{
                     </svg>
                   </a>
                   <div className="dropdown row" style={{display:`${menuOpenAbout  ?  "flex":"none"}`, height:'375px'}}>
-                    <div className="col-7 d-flex " style={{justifyContent:'space-around'}}>
-                      <ul>
+                      <div className="col-7 d-flex " style={{justifyContent:'space-around'}}>
+                        <ul>
+                            <li>
+                              <div className="menutitle"><a href="/about">Who We Are</a></div>
+                              <div className="menusubtitle">Get to know about us</div>                        
+                            </li>
+                            <li>
+                              <div className="menutitle"><a href="#">Our Team</a></div>
+                              <div className="menusubtitle">Get to know team behind Techxerro</div> 
+                            </li>
+                            <li>
+                              <div className="menutitle"><a href="/about#corporate-values">Corporate Values</a></div>
+                              <div className="menusubtitle">Check out Techxerro's Values</div> 
+                            </li>
+                        </ul>
+                        <ul>
                           <li>
-                            <div className="menutitle"><a href="/about">Who We Are</a></div>
-                            <div className="menusubtitle">Get to know about us</div>                        
+                            <div className="menutitle"><a href="/career">Career</a></div>
+                            <div className="menusubtitle">Find Opportunities</div>                        
                           </li>
-                          <li>
-                            <div className="menutitle"><a href="#">Our Team</a></div>
-                            <div className="menusubtitle">Get to know team behind Techxerro</div> 
+                          <li> 
+                            <div className="menutitle"><a href="/about#service-avail">Why TechXerro</a></div>
+                            <div className="menusubtitle">Understanding the "why"</div>  
                           </li>
-                          <li>
-                            <div className="menutitle"><a href="/about#corporate-values">Corporate Values</a></div>
-                            <div className="menusubtitle">Check out Techxerro's Values</div> 
-                          </li>
-                      </ul>
-                      <ul>
-                        <li>
-                          <div className="menutitle"><a href="/career">Career</a></div>
-                          <div className="menusubtitle">Find Opportunities</div>                        
-                        </li>
-                        <li> 
-                          <div className="menutitle"><a href="/about#service-avail">Why TechXerro</a></div>
-                          <div className="menusubtitle">Understanding the "why"</div>  
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-5 p-0">
-                      <div className="info">
-                        <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={(e)=>handleAboutMenu(e)} style={{position:'absolute',top:'5%', right:'5%'}}>
-                          <line x1="0.732794" y1="1.31955" x2="13.7328" y2="15.3195" stroke="white" stroke-width="2"/>
-                          <line x1="13.7809" y1="0.624695" x2="1.78087" y2="15.6247" stroke="white" stroke-width="2"/>
-                        </svg>
-                        <h6>Your one-stop brand empowerment hub, leveling the playing field with tailored strategies and a commitment to your success.</h6>              
-                        <button className="d-flex align-items-center btnwhite">
-                          Get In touch  
-                          <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M10.0943 9.88L17.9043 17.69L10.0943 25.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                        </button>
+                        </ul>
                       </div>
-                    </div>
+                      <div className="col-5 p-0">
+                        <div className="info">
+                          <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={(e)=>handleAboutMenu(e)} style={{position:'absolute',top:'5%', right:'5%'}}>
+                            <line x1="0.732794" y1="1.31955" x2="13.7328" y2="15.3195" stroke="white" stroke-width="2"/>
+                            <line x1="13.7809" y1="0.624695" x2="1.78087" y2="15.6247" stroke="white" stroke-width="2"/>
+                          </svg>
+                          <h6>Your one-stop brand empowerment hub, leveling the playing field with tailored strategies and a commitment to your success.</h6>              
+                          <button className="d-flex align-items-center btnwhite">
+                            Get In touch  
+                            <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.0943 9.88L17.9043 17.69L10.0943 25.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
                   </div>                     
                 </li>
                 <li className="drop-menu">
@@ -113,7 +154,7 @@ const Header=()=>{
                     </svg>
                   </a>
                   <div className="dropdown row" style={{display:`${menuOpen  ?  "flex":"none"}`, height:'420px'}}>                    
-                    <div className="col-5">
+                    <div className="col-5 p-0">
                       <div className="service-info info">
                         <h2>Our Services</h2>              
                         <ul>

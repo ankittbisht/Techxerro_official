@@ -26,7 +26,8 @@ function GridExample() {
 
 
   return (
-    <div className={styles.cardsWrapper}>       
+    <div className={styles.cardsWrapper}>    
+      <OwlCarousel items={4}>   
         <div className={styles.cards} >
           <div className={styles.posterImg }>
             <img src={require('../../../assets/services/insta-marketing.png')} alt=""/>
@@ -42,7 +43,8 @@ function GridExample() {
               </div>
             </ul>
           </div>
-        </div> <div className={styles.cards} >
+        </div> 
+        <div className={styles.cards} >
           <div className={styles.posterImg }>
             <img src={require('../../../assets/services/youtubemarketing.png')} alt=""/>
           </div>
@@ -89,7 +91,8 @@ function GridExample() {
               </div>
             </ul>
           </div>
-        </div>
+        </div>      
+      </OwlCarousel> 
     </div>
   );
 }
@@ -200,7 +203,7 @@ const Cards = ({title, description, src, url, color, i, id}) => {
       id={id}
         className={styles.card}
         style={{ background: 'linear-gradient(180deg, #EC1A1A 0%, #000000 100%)'
-          , top:`calc(8vh + ${i * 20}px)`}}
+          , top:`calc(5vh + ${i * 20}px)`}}
       >
         <div className={styles.servicessectionwappper}>
             <h4>{title}</h4>

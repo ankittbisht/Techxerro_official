@@ -30,7 +30,7 @@ const Testimonial =()=>{
         <>
             <div className="Testimonial pd100" id="#CorporateValues">
                 <div className="container">                    
-                    {/* <img src={require('../../img/techop.png')} className="parlleximg"/> */}
+                    {/* <img src={require('../../../assets/pattern-2.png')} className="parlleximg"/> */}
                     <div className="row">                        
                         <div className="col-lg-4 d-flex align-items-center">
                             <div>

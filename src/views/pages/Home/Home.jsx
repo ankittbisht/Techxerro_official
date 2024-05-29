@@ -23,7 +23,7 @@ const Home = () =>{
             <Workflow/>
             <div className="blackbg"></div>
             <Quotes quote="Empowering businesses of any size to become formidable brands through comprehensive branding, marketing, and consulting solutions." background={quotebgimg2}/>            
-            <div className="blackbg"></div>
+            {/* <div className="blackbg"></div> */}
             <Technologies />
             <Stats />
             <Testimonial />

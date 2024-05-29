@@ -71,7 +71,7 @@ nav{
           }
 
           .info{
-            padding:20px 0px 20px 40px;
+            padding:20px 40px;
             height:100%;
             background: linear-gradient(235.73deg, #FC0404 -15.3%, #151618 108.02%);
             display: flex;
@@ -83,7 +83,7 @@ nav{
               font-size: 32px!important;
             }
             .btnwhite{
-              width:180px;
+              width:200px;
 
             }
           }
@@ -161,6 +161,76 @@ nav{
       }
     }
 }
+
+.sidemenu1 {
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+  /* Add shadow to the left */
+
+  /* Add 3D shadow effect */
+
+  background-color: black !important;
+  position: fixed;
+  top: 0;
+  left: -30%;
+  /* Initially hide the menu */
+  width: 25%;
+  /* Adjust the width as needed */
+  height: 100vh;
+  background-color: #f0f0f0;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidemenu1.open {
+  left: 0;
+  /* Slide in the menu when it's open */
+}
+
+.sidemenu1 ul {
+  list-style: none;
+  padding: 70px 10px;
+}
+
+.sidemenu1 li {
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  left: 34%;
+  display: flex;
+  /* Use flexbox */
+  justify-content: center;
+  /* Center the icons horizontally */
+
+  transform: translateX(-50%);
+
+  a {
+    margin: 0 20px;
+    /* Adjust the margin to add spacing */
+    color: white;
+    font-size: 24px;
+
+    &:hover {
+      color: #007bff;
+      /* Change color on hover */
+    }
+  }
+}
+
   
  
 .mobile{
@@ -170,7 +240,21 @@ nav{
   }
 }
 
-@media (max-width:768px){
+@media (min-width:1950px) {
+  nav{
+    .menu{
+      .drop-menu{
+        .dropdown{
+            max-width: 1450px;
+            left:25%;
+            transform: translate(0%,0);
+        }
+      }
+    }
+  }   
+}
+
+@media (max-width:1028px){
   .mobile{
     display: block!important;
   }

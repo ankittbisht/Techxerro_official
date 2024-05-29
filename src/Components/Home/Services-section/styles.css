@@ -9,7 +9,7 @@
 
 .sticky {
   position: fixed;
-  top: 0;
+  top: 8px;
   z-index: 1000; /* Ensure it appears above other elements */
 }
 

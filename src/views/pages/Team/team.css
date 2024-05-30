@@ -26,7 +26,6 @@
 
 .Teamheader .teamImg {
     height: 400px;
-
 }
 
 .teams2 {
@@ -35,16 +34,34 @@
 }
 
 .teams2 .memberCard {
+    position: relative;
     overflow: hidden;
     height: 560px;
     padding-left: 40px;
     margin-bottom: 50px;
 }
 
-.teams2 img {
+.teams2 .postrImg {
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    width: 327px;
     height: 400px;
     margin-bottom: 40px;
 }
+
+.teams2 .postrImg img{
+    object-position: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.teams2 .small-image {
+    /* width: 288px; */
+    /* object-fit: cover; */
+    transition: all 1s ease-in-out;
+    height: 200px;
+ }
 
 .teams2 h2 {
     font-family: NATS;
@@ -54,26 +71,25 @@
 }
 
 .teams2 .designation {
+    margin-bottom: 20px;
     align-self: flex-start;
     border: 1px solid #666666;
     border-radius: 100px;
     font-family: NATS;
-    font-size: 20px;
+    font-size: 20px !important;
     font-weight: 400;
     text-align: left;
     padding: 10px;
 }
 
 .teams2 .postContain {
-    object-position: top;
+  
     transition: all 1s ease-in-out  ;
-    position: absolute;
-    bottom: 0px;
-    /* top: 230px */
+   
 }
 
 .teams2 .test2 {
-    object-position: top;
+ 
     transition: all 1s ease-in-out ;
 }
 
@@ -95,23 +111,16 @@
     font-weight: 500;
 }
 
-.teams2 .small-image {
-    object-position: top;
-    width: 288px;
-    object-fit: cover;
-    transition: all 1s ease-in-out;
-    height: 50%;
-    /* Set the height to 50% when the image is small */
-}
 
-.teams2 .test{
+
+/* .teams2 .test{
     object-fit: cover;
     transition: all 1s ease-in-out;
     width: 288px;
-}
+} */ */
 
 .teams2 .Collapsecontent{
-    transition: all 0.5s ease-in-out;     
+    transition: all 1s ease-in-out;     
     /* height: 200px; */
   }
 

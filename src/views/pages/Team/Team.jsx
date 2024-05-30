@@ -89,60 +89,59 @@ function Team() {
                   key={index}
                 >
                   <div
-                    className="position-relative"
+                    className=""
                     data-aos="zoom-in-up"
                     data-aos-easing="ease"
                     data-aos-duration="1000"
                   >
-                    <button
-                      className="overlay-button"
-                      onClick={() => toggleImageSize(member.id)}
-                    >
-                      <span>{memberSizes[member.id] ? "-" : "+"}</span>
-                    </button>
-                    <img
-                      src={member.memberImg}
-                      className={`rounded memberImg ${
-                        memberSizes[member.id] ? "small-image" : "test"
-                      }`}
-                      alt={`Member ${index}`}
-                    />
+                    <div className={`postrImg ${
+                          memberSizes[member.id] ? "small-image" : "test"
+                        }`}>
+                      <button
+                        className="overlay-button"
+                        onClick={() => toggleImageSize(member.id)}
+                      >
+                        <span>{memberSizes[member.id] ? "-" : "+"}</span>
+                      </button>
+                      <img
+                        src={member.memberImg}
+                        className={`rounded memberImg `}
+                        alt={`Member ${index}`}
+                      />
+                    </div>
                   </div>
 
-                  
-           
+                  <div
+                    className={`d-flex flex-column ${
+                      memberSizes[member.id] ? "postContain" : "test2"
+                    }`}
+                  >
+                    <h2>{member.name}</h2>
+                    <span className="designation">{member.designation}</span>
                     <div
-                      className={`d-flex flex-column ${
-                        memberSizes[member.id] ? "postContain" : "test2"
+                      className={`${
+                        memberSizes[member.id] ? "Collapsecontent" : ""
                       }`}
                     >
-                      <h2>{member.name}</h2>
-                      <span className="designation">{member.designation}</span>
-                      <div
-                        className={`${
-                          memberSizes[member.id] ? "Collapsecontent" : ""
-                        }`}
-                      >
-                        <ul>
-                          <li>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Laudantium, aspernatur.
-                          </li>
-                          <li>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Laudantium, aspernatur.
-                          </li>
-                          <li>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Laudantium, aspernatur.
-                          </li>
-                          <li>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Laudantium, aspernatur.
-                          </li>
-                        </ul>
-                      </div>
-                    
+                      <ul>
+                        <li>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Laudantium, aspernatur.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Laudantium, aspernatur.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Laudantium, aspernatur.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Laudantium, aspernatur.
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               ))}

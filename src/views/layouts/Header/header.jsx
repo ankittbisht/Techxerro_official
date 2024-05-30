@@ -111,7 +111,7 @@ const Header=()=>{
                               <div className="menusubtitle">Get to know about us</div>                        
                             </li>
                             <li>
-                              <div className="menutitle"><a href="#">Our Team</a></div>
+                              <div className="menutitle"><a href="/team">Our Team</a></div>
                               <div className="menusubtitle">Get to know team behind Techxerro</div> 
                             </li>
                             <li>

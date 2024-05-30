@@ -44,7 +44,7 @@ function GridExample() {
             </div>
           </ul>
         </div>
-      </div>{" "}
+      </div>
       <div className={styles.cards}>
         <div className={styles.posterImg}>
           <img

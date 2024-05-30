@@ -1,0 +1,152 @@
+.Teams {
+    background: black;
+    color: white;
+}
+
+.Teamheader {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    /* height: 100vh; */
+}
+
+.Teamheader h1 {
+    font-family: NATS;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: left;
+
+}
+
+.Teamheader p {
+    font-family: NATS;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.Teamheader .teamImg {
+    height: 400px;
+
+}
+
+.teams2 {
+    background: linear-gradient(111.83deg, #151618 56.7%, #FF0000 106.12%);
+    padding-top: 90px;
+}
+
+.teams2 .memberCard {
+    overflow: hidden;
+    height: 560px;
+    padding-left: 40px;
+    margin-bottom: 50px;
+}
+
+.teams2 img {
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+.teams2 h2 {
+    font-family: NATS;
+    font-size: 45px !important;
+    font-weight: 400 !important;
+    text-align: left;
+}
+
+.teams2 .designation {
+    align-self: flex-start;
+    border: 1px solid #666666;
+    border-radius: 100px;
+    font-family: NATS;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    padding: 10px;
+}
+
+.teams2 .postContain {
+    object-position: top;
+    transition: all 1s ease-in-out  ;
+    position: absolute;
+    bottom: 0px;
+    /* top: 230px */
+}
+
+.teams2 .test2 {
+    object-position: top;
+    transition: all 1s ease-in-out ;
+}
+
+.teams2 button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    background: none;
+    border: 2px solid #666666;
+    padding: 5px 15px;
+    border-radius: 100%;
+}
+
+.teams2 button span {
+    color: white;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.teams2 .small-image {
+    object-position: top;
+    width: 288px;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    height: 50%;
+    /* Set the height to 50% when the image is small */
+}
+
+.teams2 .test{
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    width: 288px;
+}
+
+.teams2 .Collapsecontent{
+    transition: all 0.5s ease-in-out;     
+    /* height: 200px; */
+  }
+
+.teams3 {
+    background: #B00809;
+    height: 270px;
+    border-radius: 20px;
+}
+
+.teams3 h1 {
+    margin-bottom: 35px;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-size: 50px !important;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.teams3 button {
+    border: none;
+    margin: 22px auto 0;
+    margin-top: 22px;
+    background: #FFFFFF;
+    color: black;
+    text-align: center;
+    padding: 20px 30px 20px 30px;
+    border-radius: 50px;
+    font-family: Poppins;
+    font-size: 16px !important;
+    font-weight: 400;
+    line-height: 18.54px;
+}
+
+.teamsbanner {
+    background: #161719;
+    height: 500px;
+    color: white;
+}

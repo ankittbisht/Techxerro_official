@@ -4,6 +4,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 .servicemenu {
   padding: 10px 70px 0;
@@ -72,7 +76,7 @@
     transition: 0.2s ease-in;
   }
 
-  img {
+  .posterImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;

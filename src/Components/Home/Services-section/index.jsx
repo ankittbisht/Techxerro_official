@@ -3,6 +3,7 @@ import styles from "./style.module.css";
 import "./styles.css";
 import Cards from "./card";
 import Mobilescroll from "./Mobilescroll";
+import useSmoothScrollWithOffset from "./useSmoothScrollWithOffset";
 
 export const projects = [
   {
@@ -43,6 +44,7 @@ export const projects = [
   },
 ];
 export default function ServicesSection() {
+  // useSmoothScrollWithOffset(1800);
   //testing
   const [isSticky, setIsSticky] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
@@ -74,6 +76,39 @@ export default function ServicesSection() {
     };
   }, []);
 
+  // useEffect(() => {
+  //   const handleSmoothScroll = () => {
+  //     const headerHeight = document.querySelector(".servicemenu").offsetHeight;
+
+  //     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  //       anchor.addEventListener("click", function (e) {
+  //         e.preventDefault();
+
+  //         const targetId = this.getAttribute("href").substring(1);
+  //         const targetElement = document.getElementById(targetId);
+
+  //         if (targetElement) {
+  //           const elementPosition = targetElement.getBoundingClientRect().top;
+  //           const offsetPosition = elementPosition - headerHeight;
+
+  //           window.scrollBy({
+  //             top: offsetPosition,
+  //             behavior: "smooth",
+  //           });
+  //         }
+  //       });
+  //     });
+  //   };
+
+  //   handleSmoothScroll();
+
+  //   return () => {
+  //     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  //       anchor.removeEventListener("click", handleSmoothScroll);
+  //     });
+  //   };
+  // }, []);
+
   return (
     <main className={styles.main}>
       <div className="container headerContainer">
@@ -87,7 +122,7 @@ export default function ServicesSection() {
           <ul className={styles.servicemenu}>
             <li className={styles.menutitle}>Rely on TechXerro for: </li>
             <li>
-              <a href="#websitelaunch">Website Launch</a>
+              <a href="#websitelaunch" >Website Launch</a>
             </li>
             <li>
               <a href="#digitalmarketing">Marketing Mastery</a>

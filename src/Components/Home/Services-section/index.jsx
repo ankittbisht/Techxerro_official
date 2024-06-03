@@ -3,6 +3,7 @@ import styles from "./style.module.css";
 import "./styles.css";
 import Cards from "./card";
 import Mobilescroll from "./Mobilescroll";
+import useSmoothScrollWithOffset from "./useSmoothScrollWithOffset";
 
 export const projects = [
   {
@@ -42,11 +43,64 @@ export const projects = [
     id: "visual-iconicity",
   },
 ];
+
 export default function ServicesSection() {
   //testing
   const [isSticky, setIsSticky] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const sectionRef = useRef(null);
+  const [activeId, setActiveId] = useState(null);
+
+  const handlScroll = () => {
+    const cards = sectionRef.current.querySelectorAll(".cards");
+    if (!cards.length) {
+      console.warn('No cards found');
+    }
+    const scrollTop = window.scrollY;
+    const viewportHeight = window.innerHeight;
+
+    // console.log(`Scroll Top: ${scrollTop}, Viewport Height: ${viewportHeight}`);
+
+    let activeCardId = null;
+
+    cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      const cardTop = rect.top + scrollTop;
+      const cardHeight = rect.height;
+
+      // console.log(
+      //   `Card ID: ${card.id}, Card Top: ${cardTop}, Card Height: ${cardHeight}`
+      // );
+
+      if (
+        cardTop < scrollTop + viewportHeight &&
+        cardTop + cardHeight > scrollTop
+      ) {
+        const visibleHeight = Math.min(
+          cardHeight,
+          viewportHeight - (cardTop - scrollTop)
+        );
+
+        console.log(`Card ID: ${card.id}, Visible Height: ${visibleHeight}`);
+
+        if (visibleHeight > 500) {
+          // Adjust the visible height threshold as needed
+          activeCardId = card.id;
+        }
+      }
+    });
+
+    setActiveId(activeCardId);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handlScroll);
+    handlScroll(); // Initial check
+
+    return () => {
+      window.removeEventListener("scroll", handlScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +111,7 @@ export default function ServicesSection() {
 
       if (
         scrollPosition >= sectionTop &&
-        scrollPosition < sectionTop + sectionHeight - 600
+        scrollPosition < sectionTop + sectionHeight - 700
       ) {
         setIsSticky(true);
         setIsHidden(false);
@@ -74,23 +128,71 @@ export default function ServicesSection() {
     };
   }, []);
 
+  // const scrollToSection = (e, sectionId) => {
+  //   e.preventDefault();
+  //   const section = document.querySelector(sectionId);
+  //   console.log(section)
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+  // const refs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+
+  // const scrollToCard = (index) => {
+  //   refs[index].current.scrollIntoView({ behavior: "smooth" });
+  // };
+
+  // useEffect(() => {
+  //   const handleSmoothScroll = () => {
+  //     const headerHeight = document.querySelector(".servicemenu").offsetHeight;
+
+  //     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  //       anchor.addEventListener("click", function (e) {
+  //         e.preventDefault();
+
+  //         const targetId = this.getAttribute("href").substring(1);
+  //         const targetElement = document.getElementById(targetId);
+
+  //         if (targetElement) {
+  //           const elementPosition = targetElement.getBoundingClientRect().top;
+  //           const offsetPosition = elementPosition - headerHeight;
+
+  //           window.scrollBy({
+  //             top: offsetPosition,
+  //             behavior: "smooth",
+  //           });
+  //         }
+  //       });
+  //     });
+  //   };
+
+  //   handleSmoothScroll();
+
+  //   return () => {
+  //     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  //       anchor.removeEventListener("click", handleSmoothScroll);
+  //     });
+  //   };
+  // }, []);
+  // useSmoothScrollWithOffset(1800);
+
   return (
     <main className={styles.main}>
       <div className="container headerContainer">
         <div className={styles.title} data-aos="fade-up">
           <h3>
-            The 360° <span>Online Presence</span> 
+            The 360° <span>Online Presence</span>
           </h3>
-          <h3>
-             Enabler You Need
-          </h3>          
+          <h3>Enabler You Need</h3>
         </div>
         <div className={styles.servicemenuwrapper}>
-          <ul  className={styles.servicemenu} >
+          <ul className={styles.servicemenu}>
             <li className="hideondesktop">Rely on TechXerro for: </li>
           </ul>
           <ul className={styles.servicemenu}>
-            <li className={styles.menutitle}  id="hidesm">Rely on TechXerro for: </li>
+            <li className={styles.menutitle} id="hidesm">
+              Rely on TechXerro for:{" "}
+            </li>
             <li>
               <a href="#websitelaunch">Website Launch</a>
             </li>
@@ -114,25 +216,33 @@ export default function ServicesSection() {
               isHidden ? "hidden" : ""
             }`}
           >
-            <li>
+            <li className={activeId === "websitelaunch" ? "active" : ""}>
               <a href="#websitelaunch">Website Launch</a>
             </li>
-            <li>
+            <li className={activeId === "digitalmarketing" ? "active" : ""}>
               <a href="#digitalmarketing">Marketing Mastery</a>
             </li>
-            <li>
+            <li className={activeId === "creativedesign" ? "active" : ""}>
               <a href="#creativedesign">Brand Crafting</a>
             </li>
-            <li>
+            <li className={activeId === "story-captivation" ? "active" : ""}>
               <a href="#story-captivation">Story Captivation</a>
             </li>
-            <li>
+            <li className={activeId === "visual-iconicity" ? "active" : ""}>
               <a href="#visual-iconicity">Visual Iconicity</a>
             </li>
           </ul>
           {/* Other content of the section */}
           {projects.map((project, i) => {
-            return <Cards key={`p_${i}`} {...project} id={project.id} i={i} />;
+            return (
+              <Cards
+                key={`p_${i}`}
+                {...project}
+                id={project.id}
+                i={i}
+                className="cards"
+              />
+            );
           })}
         </section>
       </div>

@@ -7,6 +7,8 @@ import ContactUs from '../views/pages/Contact/Contact.jsx';
 import Career from '../views/pages/Career/index.jsx';
 import Ourblogs from '../views/pages/Blog/index.jsx';
 import TechnologiesPage from '../views/pages/Technologies/index.jsx';
+import Singleblog from '../views/pages/singleblog/Singleblog.jsx';
+import Team from '../views/pages/Team/Team.jsx';
 
 const Routes = () =>{
     const element = useRoutes([
@@ -37,6 +39,14 @@ const Routes = () =>{
                 {
                     path:'/blogs',
                     element:<Ourblogs/>
+                },
+                {
+                    path:'/blog',
+                    element:<Singleblog/>
+                },
+                {
+                    path:'/team',
+                    element:<Team/>
                 },
                 {
                     path:'/technology',

@@ -29,6 +29,8 @@
 }
 
 .servicemenu li {
+  transition: opacity 0.3s;
+  opacity: 0.5;
   font-size: 22px !important;
   cursor: pointer;
   line-height: 1.2em;
@@ -36,6 +38,14 @@
 
 .servicemenu li:hover {
   color: #fff;
+}
+
+.servicemenu li.inactive {
+  opacity: 0.5;
+}
+
+.servicemenu li.active {
+  opacity: 1;
 }
 
 .servicemenu li a {
@@ -50,29 +60,39 @@
   border-right: 1px solid #fff;
 }
 
-.hideondesktop{
+.hideondesktop {
   display: none;
 }
 
 /* small screen */
 @media (max-width:1090px) {
-  #hidesm{
-    display: none!important;
+  #hidesm {
+    display: none !important;
   }
-  .hideondesktop{
+
+  .hideondesktop {
     display: block;
   }
 }
+
+@media (max-width:1290px) {
+  .sticky {
+    top: 15px;
+    /* Ensure it appears above other elements */
+  }
+}
+
 /* tables */
 @media (max-width:780px) {
   .servicemenu {
-    padding:10px 20px;
-    width:100dvw;
-    overflow-x:scroll;
+    padding: 10px 20px;
+    width: 100dvw;
+    overflow-x: scroll;
   }
-  .sticky{
-    width:100dvw;
-    overflow-x:scroll;
+
+  .sticky {
+    width: 100dvw;
+    overflow-x: scroll;
     display: none;
   }
 }

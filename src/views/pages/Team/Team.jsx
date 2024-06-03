@@ -6,7 +6,6 @@ import member3 from "../../../assets/team/member-3.png";
 import member4 from "../../../assets/team/member-4.png";
 import member5 from "../../../assets/team/member-5.png";
 import "./team.css";
-import App from "../test/Testing";
 function Team() {
   const [memberSizes, setMemberSizes] = useState({});
 
@@ -62,7 +61,6 @@ function Team() {
   return (
     <>
       <section className="Teams">
-        <App/>
         <div className="container Teamheader">
           <div className="row">
             <div className="col-12 col-sm-6 d-flex flex-column justify-content-center">

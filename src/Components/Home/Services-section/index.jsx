@@ -43,8 +43,8 @@ export const projects = [
     id: "visual-iconicity",
   },
 ];
+
 export default function ServicesSection() {
-  // useSmoothScrollWithOffset(1800);
   //testing
   const [isSticky, setIsSticky] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
@@ -75,6 +75,20 @@ export default function ServicesSection() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const section = document.querySelector(sectionId);
+    console.log(section)
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  // const refs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+
+  // const scrollToCard = (index) => {
+  //   refs[index].current.scrollIntoView({ behavior: "smooth" });
+  // };
 
   // useEffect(() => {
   //   const handleSmoothScroll = () => {
@@ -108,6 +122,7 @@ export default function ServicesSection() {
   //     });
   //   };
   // }, []);
+  // useSmoothScrollWithOffset(1800);
 
   return (
     <main className={styles.main}>
@@ -122,7 +137,7 @@ export default function ServicesSection() {
           <ul className={styles.servicemenu}>
             <li className={styles.menutitle}>Rely on TechXerro for: </li>
             <li>
-              <a href="#websitelaunch" >Website Launch</a>
+              <a href="#websitelaunch">Website Launch</a>
             </li>
             <li>
               <a href="#digitalmarketing">Marketing Mastery</a>
@@ -148,19 +163,44 @@ export default function ServicesSection() {
         >
           <li className="menutitle1">Rely on TechXerro for:</li>
           <li>
-            <a href="#websitelaunch">Website Launch</a>
+            <a
+              href="#websitelaunch"
+              onClick={(e) => scrollToSection(e, "#websitelaunch")}
+            >
+              Website Launch
+            </a>
           </li>
           <li>
-            <a href="#digitalmarketing">Marketing Mastery</a>
+            <a
+              href="#digitalmarketing"
+              onClick={(e) => scrollToSection(e, "#digitalmarketing")}
+            >
+              Marketing Mastery
+            </a>
           </li>
           <li>
-            <a href="#creativedesign">Brand Crafting</a>
+            <a
+              href="#creativedesign"
+              onClick={(e) => scrollToSection(e, "#creativedesign")}
+            >
+              Brand Crafting
+            </a>
           </li>
           <li>
-            <a href="#story-captivation">Story Captivation</a>
+            <a
+              href="#visual-iconicity"
+              onClick={(e) => scrollToSection(e, "#visual-iconicity")}
+            >
+              Story Captivation
+            </a>
           </li>
           <li>
-            <a href="#visual-iconicity">Visual Iconicity</a>
+            <a
+              href="#visual-iconicity"
+              onClick={(e) => scrollToSection(e, "#visual-iconicity")}
+            >
+              Visual Iconicity
+            </a>
           </li>
         </ul>
         {/* Other content of the section */}
@@ -168,7 +208,6 @@ export default function ServicesSection() {
           return <Cards key={`p_${i}`} {...project} id={project.id} i={i} />;
         })}
       </section>
-
       <Mobilescroll />
     </main>
   );

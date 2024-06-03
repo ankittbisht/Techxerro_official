@@ -234,7 +234,8 @@ const Cards = ({ title, description, src, url, color, i, id }) => {
   return (
     <div
       // ref={cardRef}
-      className={`${styles.cardContainer} ${styles.hideOnLarge}`}
+      id={id}
+      className={`${styles.cardContainer} ${styles.hideOnLarge} cards`  }
     >
       <div
        id={id}

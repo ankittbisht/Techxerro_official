@@ -37,7 +37,7 @@ function GridExample() {
                 {truncateContent(item.content, 140)}
                 {item.content.length > 140 && (
                   <a
-                    href="/next-page"
+                    href="/blog"
                     style={{
                       textDecoration: "none",
                       color: "white",

@@ -232,9 +232,13 @@ const Cards = ({ title, description, src, url, color, i, id }) => {
   };
 
   return (
-    <div className={`${styles.cardContainer} ${styles.hideOnLarge}`}>
+    <div
+      // ref={cardRef}
+      id={id}
+      className={`${styles.cardContainer} ${styles.hideOnLarge} cards`  }
+    >
       <div
-        id={id}
+       id={id}
         className={styles.card}
         style={{
           background: "linear-gradient(180deg, #C20607 0%, #151618 100%)",
@@ -242,7 +246,7 @@ const Cards = ({ title, description, src, url, color, i, id }) => {
           top: `calc(8vh + ${i * 20}px)`,
         }}
       >
-        <div className={styles.servicessectionwappper}>
+        <div className={styles.servicessectionwappper}  >
           <h4>{title}</h4>
           <Tabs>
             <TabList className={styles.servicestab} style={{width:'100%',padding:'0'}}>
@@ -252,7 +256,7 @@ const Cards = ({ title, description, src, url, color, i, id }) => {
               <Tab>Story Captivation</Tab>
               <Tab>Visual Iconicity</Tab>
             </TabList>
-            <TabPanel className="cards-container">
+            <TabPanel className="cards-container"  >
               <GridExample />
             </TabPanel>
             <TabPanel className="cards-container">

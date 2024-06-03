@@ -10,7 +10,7 @@ const TeamData = [
         id:1,
         img:img1,
         name: "Nicholas Donarski",
-        tesimony:"I am amazed to see the quality of work that Techqilla did for me. Awesome Designers and awesome team.",
+        tesimony:"I am amazed to see the quality of work that techxerro did for me. Awesome Designers and awesome team.",
         title: "Founder"
     },{
         id:2,
@@ -28,7 +28,7 @@ const TeamData = [
         id:4,
         img:img3,
         name: "Shawn Piatz",
-        tesimony:"Techqilla was fantastic to work  with! Diksha, Vishesh, Sakshi and the whole staff are creative, Intelligent people who helped us meet  our need and expand our audience on social media.",
+        tesimony:"techxerro was fantastic to work  with! Diksha, Vishesh, Sakshi and the whole staff are creative, Intelligent people who helped us meet  our need and expand our audience on social media.",
         title: "VPO"
     },{
         id:5,

@@ -1,101 +1,221 @@
 import React from "react";
 import "./Technologies.scss";
-import { images } from "../../../assets/images";
-import VerticalSlider from "./Iconslides";
-// import PrimaryButton from "../../utils/PrimaryButton/PrimaryButton";
+import VerticalSlider from "./Iconslides";  
+import backgroundimg1 from '../../../assets/Home/technologies/ecom-min.png';
+import backgroundimg2 from '../../../assets/Home/technologies/const-bg-min.jpg';
+import backgroundimg3 from '../../../assets/Home/technologies/hospitality-min.jpg';
+import backgroundimg4 from '../../../assets/Home/technologies/automotive-min.jpg';
+import backgroundimg5 from '../../../assets/Home/technologies/sports-min.jpg';
 
 export default function Technologies(props) {
+
+  const inditems=[
+    {
+      id:1,
+      tabid:'home',
+      tablabel:'home-tab',
+      backgroundimg:backgroundimg1,
+      heading:[<h3>Crafting Your<br/>
+      <span>Digital Marketplace</span></h3>],
+      para:'we have enhanced online shopping experiences through robust website services, effective branding, and comprehensive IT solutions.',
+      logos:[
+        {
+          logoid:1,
+          img:<img src={require('../../../assets/Home/technologies/logo/logo1.png')} alt="Logo 1"/>
+        },
+        {
+          logoid:2,
+          img:<img src={require('../../../assets/Home/technologies/logo/logo3.png')} alt="Logo 1"/>
+        },
+        {
+          logoid:3,
+          img:<img src={require('../../../assets/Home/technologies/logo/logo4.png')} alt="Logo 1"/>
+        },
+      ],
+      buttonlink:'#',    
+    },
+    {
+      id:2,
+      tabid:'construction',
+      tablabel:'construction-tab',
+      backgroundimg:backgroundimg2,
+      heading:[<h3>Building Tomorrow,<br/>
+      <span>Your Blueprint to Success</span></h3>],
+      para:'For the construction sector, we have delivered tailored website services, strong brand identities, and innovative IT support to streamline project management and operations.',
+      logos:[
+        {
+          logoid:1,
+          img:<img src={require('../../../assets/Home/technologies/logo/logo2.png')} alt="Logo 1"/>
+        },
+      ],
+      buttonlink:'#',    
+    },
+    {
+      id:3,
+      tabid:'hospitality',
+      tablabel:'hospitality-tab',
+      backgroundimg:backgroundimg3,
+      heading:[<h3><span>Creating Experiences</span>, <br/>One Stay at a Time
+      </h3>],
+      para:'Creating inviting and functional websites, developed compelling branding strategies, and offered comprehensive IT solutions to elevate guest experiences and streamline administrative processes.',
+      logos:[
+        {
+          logoid:1,
+          img:<img src={require('../../../assets/Home/technologies/logo/logo5.png')} alt="Logo 1"/>
+        },
+      ],
+      buttonlink:'#',    
+    },
+    {
+      id:4,
+      tabid:'automotive',
+      tablabel:'automotive-tab',
+      backgroundimg:backgroundimg4,
+      heading:[<h3>Driving Innovation <span>Roadmap</span><br/> to Excellence</h3>],
+      para:'The automotive industry with cutting-edge websites, distinctive branding, and IT services that enhance customer engagement, improve dealership management, and drive business growth.',
+      logos:[
+        {
+          logoid:1,
+          img:<img src={require('../../../assets/Home/technologies/logo/logo6.png')} alt="Logo 1"/>
+        },
+      ],
+      buttonlink:'#',    
+    },
+    {
+      id:5,
+      tabid:'Sports',
+      tablabel:'Sports-tab',
+      backgroundimg:backgroundimg5,
+      heading:[<h3><span>Game-Changing</span> <br/>Strategies to  Score</h3>],
+      para:'Within the sports industry, we have provided dynamic website services, impactful branding, and advanced IT solutions to engage fans and optimize organizational efficiency.',
+      logos:[
+        {
+          logoid:1,
+          img:<img src={require('../../../assets/Home/technologies/logo/logo3.png')} alt="Logo 1"/>
+        },
+      ],
+      buttonlink:'#',    
+    }
+  ]
   return (
     <>
-    <div className="technologies" data-aos={props.aos} data-aos-delay="100" data-aos-duration="1200">
+    <div className="technologies">
       <div className="container">
-      <div className="row my-5 w-100">
-        <div className="col-sm-6 col-12">
-          <h2 className="title" data-aos="fade-down">
-            Powering every industry<br/>Powering all disruptors.
-          </h2>
+        <div className="row my-4 w-100">
+          <div className="col-md-6 col-12">
+            <h2 className="title" data-aos="fade-down">
+              Powering every industry<br/>Powering all disruptors.
+            </h2>
+          </div>
+          <div className="col-md-6 col-12">
+              <VerticalSlider/>
+          </div>    
         </div>
-        <div className="col-sm-6 col-12">
-            <VerticalSlider/>
-        </div>    
-      </div>
-      <ul className="nav nav-tabs" id="myTab" role="tablist">
-        <li className="nav-item" role="presentation">
-          <button
-            className="nav-link active"
-            id="home-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#home"
-            type="button"
-            role="tab"
-            aria-controls="home"
-            aria-selected="true"
-          >
-            E-commerce
-          </button>
-        </li>
-        <li className="nav-item" role="presentation">
-          <button
-            className="nav-link"
-            id="profile-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#profile"
-            type="button"
-            role="tab"
-            aria-controls="profile"
-            aria-selected="false"
-          >
-            Construction
-          </button>
-        </li>
-        <li className="nav-item" role="presentation">
-          <button
-            className="nav-link"
-            id="contact-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#contact"
-            type="button"
-            role="tab"
-            aria-controls="contact"
-            aria-selected="false"
-          >
-            Hospitality
-          </button>
-        </li>
-        <li className="nav-item" role="presentation">
-          <button
-            className="nav-link"
-            id="automotive-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#automotive"
-            type="button"
-            role="tab"
-            aria-controls="automotive"
-            aria-selected="false"
-          >
-            Automotive
-          </button>
-        </li>
-        <li className="nav-item" role="presentation">
-          <button
-            className="nav-link"
-            id="Sports-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#Sports"
-            type="button"
-            role="tab"
-            aria-controls="Sports"
-            aria-selected="false"
-          >
-            Sports
-          </button>
-        </li>
-      </ul>
+        <ul className="nav nav-tabs" id="myTab" role="tablist">
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              E-commerce
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link"
+              id="construction-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#construction"
+              type="button"
+              role="tab"
+              aria-controls="construction"
+              aria-selected="false"
+            >
+              Construction
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link"
+              id="hospitality-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#hospitality"
+              type="button"
+              role="tab"
+              aria-controls="hospitality"
+              aria-selected="false"
+            >
+              Hospitality
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link"
+              id="automotive-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#automotive"
+              type="button"
+              role="tab"
+              aria-controls="automotive"
+              aria-selected="false"
+            >
+              Automotive
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link"
+              id="Sports-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#Sports"
+              type="button"
+              role="tab"
+              aria-controls="Sports"
+              aria-selected="false"
+            >
+              Sports
+            </button>
+          </li>
+        </ul>
 
       <div className="tab-content" id="myTabContent">
-
-        {/*  {E-Commerce} */}
-        <div
+      {
+        inditems.map((obj)=>{
+          return(
+            <div
+              className={obj.id===1 ? "tab-pane fade show active tech-container":"tab-pane fade tech-container"}
+              id={obj.tabid}
+              role="tabpanel"
+              aria-labelledby={obj.tablabel}
+              key={obj.id}
+            >
+              <div className="industrywrapper" style={{background:`url(${obj.backgroundimg})`,backgroundSize:'cover'}}>
+                <div className="content">
+                  {obj.heading}
+                  <p>{obj.para}</p>
+                  <div class="logos d-flex">
+                    {obj.logos.map((logoobj)=>{
+                      return(
+                        <div key={logoobj.logoid}>
+                          {logoobj.img}
+                        </div>
+                      )
+                    })}
+                  </div>
+                  <button>Get Started</button>
+                </div>
+              </div>
+            </div>
+          )
+        })
+      }
+        {/* <div
           className="tab-pane fade show active tech-container"
           id="home"
           role="tabpanel"
@@ -108,7 +228,6 @@ export default function Technologies(props) {
               <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
               <div class="logos d-flex">
                 <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
-                <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
                 <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
                 <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
               </div>
@@ -117,13 +236,11 @@ export default function Technologies(props) {
           </div>
         </div>
 
-        
-        {/* Construction Tab */}
         <div
           className="tab-pane fade tech-container"
-          id="profile"
+          id="construction"
           role="tabpanel"
-          aria-labelledby="profile-tab"
+          aria-labelledby="construction-tab"
         >
           
           <div className="industrywrapper">
@@ -132,22 +249,18 @@ export default function Technologies(props) {
               <span>Powering all disruptors.</span></h3>
               <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
               <div class="logos d-flex">
-                <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
                 <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
-                <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
-                <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
               </div>
               <button>Get Started</button>
             </div>
           </div>
         </div>
 
-        {/* Hospitality Tab */}
         <div
           className="tab-pane fade tech-container"
-          id="contact"
+          id="hospitality"
           role="tabpanel"
-          aria-labelledby="contact-tab"
+          aria-labelledby="hospitality-tab"
         >
           
           <div className="industrywrapper">
@@ -166,7 +279,6 @@ export default function Technologies(props) {
           </div>
         </div>
         
-        {/* Automotive Tab */}
         <div
           className="tab-pane fade tech-container"
           id="automotive"
@@ -189,28 +301,27 @@ export default function Technologies(props) {
         </div>   
         </div>
 
-        {/* Sports Tab */}
         <div
           className="tab-pane fade tech-container"
           id="Sports"
           role="tabpanel"
           aria-labelledby="Sports-tab"
         >       
-        <div className="industrywrapper">
-          <div className="content">
-            <h3>Powering every industry<br/>
-            <span>Powering all disruptors.</span></h3>
-            <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
-            <div class="logos d-flex">
-              <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
-              <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
-              <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
-              <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
+          <div className="industrywrapper">
+            <div className="content">
+              <h3>Powering every industry<br/>
+              <span>Powering all disruptors.</span></h3>
+              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
+              <div class="logos d-flex">
+                <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
+                <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
+                <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
+                <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
+              </div>
+              <button>Get Started</button>
             </div>
-            <button>Get Started</button>
-          </div>
-        </div>   
-        </div>
+          </div>   
+    </div>*/}
       </div>
       </div>
     </div>

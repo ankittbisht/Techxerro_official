@@ -4,7 +4,9 @@ $--meteor-duration: 2s;
 .workflow {
   background: #151618;
   color:#fff;
-  // overflow-y: hidden;
+  padding-top: 70px;
+  overflow: hidden;
+
 }
 .box.workflow {
   .overlap-group {
@@ -24,7 +26,7 @@ $--meteor-duration: 2s;
     position: absolute;
     width: 100%;
     margin-top: 6%;
-    z-index: 0;
+    z-index: 1;
   }
 
   .rectangle {
@@ -42,12 +44,16 @@ $--meteor-duration: 2s;
     padding-top: 11%;
     margin-bottom: 3%;
     text-align: center;
-    h4 {
+    position: relative;
+    z-index:1;
+    h3 {
+      font-size:50px;
       position: relative;
     }
   }
   .content-container {
     position: relative;
+    z-index:1;
     .number {
       opacity: 0.5;
       font-size: 29px;

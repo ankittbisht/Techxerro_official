@@ -20,9 +20,12 @@ const Testimonial =()=>{
             0:{
                 items:1
             },
-            1000:{
+            1200:{
                 items:2
             }
+
+
+
         }
     }
 
@@ -32,15 +35,15 @@ const Testimonial =()=>{
                 <div className="container">                    
                     {/* <img src={require('../../../assets/pattern-2.png')} className="parlleximg"/> */}
                     <div className="row">                        
-                        <div className="col-lg-4 d-flex align-items-center">
+                        <div className="col-xl-4 col-lg-6 col-12 d-flex ">
                             <div>
-                                <div className="title">
-                                    <h2 data-aos="fade-right" data-aos-delay="100" style={{fontFamily:'poppins'}}>What People Says </h2>
-                                    <p data-aos="fade-left">Start your web business journey with our great team.</p>
+                                <div className="title pt-5">
+                                    <h2 style={{fontFamily:'poppins'}}>What People Says </h2>
+                                    <p>Start your web business journey with our great team.</p>
                                 </div>
                             </div>
                         </div>
-                        <div className='col-lg-8 col-md-8 col-sm-12'>
+                        <div className='col-xl-8 col-lg-6 col-12'>
                             <ul className='Review'>
                                 {/* <li className='opaquetext'>
                                     <h1>What People Says</h1>

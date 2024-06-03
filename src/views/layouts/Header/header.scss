@@ -3,7 +3,7 @@ nav{
     z-index:9;
     width:100%;
     padding:18px 40px;
-    border-bottom: 1px solid #ffffff50;
+    // border-bottom: 1px solid #ffffff50;
     .sidemenu{
       border:none;
       background:transparent;
@@ -16,7 +16,7 @@ nav{
       li{
         padding:10px 0;
         cursor:pointer;
-        font-size: 22px;
+        font-size: 21px;
         height:60px;
         display: flex;
         align-items: center;
@@ -116,22 +116,16 @@ nav{
               display: flex!important;
             }
           }
-        }
-        // &:hover{
-        //   .dropdown{
-        //     display: flex!important;
-        //   }
-        // }
-  
+        }  
       }
     }
     .btnwhite{
       border:1px solid #fff;
       background: transparent;
-      padding:10px 25px;
+      padding:10px 22px;
       border-radius: 10px;
       color:#fff;
-      font-size: 20px;
+      font-size: 20px!important;
       position: relative;
       overflow: hidden;
       z-index: 1;
@@ -139,7 +133,6 @@ nav{
         color:#fff;
         text-decoration: none;
       }
-
       &::after{
         content: '';
         background: #000000;
@@ -189,12 +182,11 @@ nav{
 .sidemenu1 ul {
   list-style: none;
   padding: 70px 10px;
-}
-
-.sidemenu1 li {
-  font-size: 20px;
-  color: white;
-  padding: 10px;
+  li {
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+  }
 }
 
 .close-btn {
@@ -268,7 +260,6 @@ nav{
     .logo{
       width: 150px;
     }
-
   }
   .btnwhite{
     padding:10px 10px !important;

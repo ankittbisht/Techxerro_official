@@ -12,10 +12,10 @@ export default function CurvedCarousel(props) {
   return (
     <div className="curved-wrapper" style={{position:'relative',padding :'100px 0',background:'#0f1011'}}>
       <div className="row mx-auto">
-        <h2 className="title" style={{textAlign:'center'}} data-aos="fade-right">
+        <h2 className="title" style={{textAlign:'center'}}>
           Our Work          
         </h2>
-        <p className="text-center" data-aos="fade-left">
+        <p className="text-center">
           See how we create 360° Value and help clients become the next and best
           versions of themselves.
         </p>

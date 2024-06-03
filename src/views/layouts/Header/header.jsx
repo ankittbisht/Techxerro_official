@@ -54,7 +54,7 @@ const Header=()=>{
       <nav>
         <div className="desktop-menu container">
           <div className="row align-items-center">
-            <div className="col-3 d-flex gap-lg-3 gap-xxl-4 align-items-center">
+            <div className="col-3 d-flex gap-lg-3 gap-xxl-4 align-items-center p-0">
               <button className="sidemenu" onClick={toggleMenu}>
                 <svg width="35" height="11" viewBox="0 0 35 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect y="0.65918" width="34.9854" height="1.88072" fill="white"/>
@@ -94,7 +94,9 @@ const Header=()=>{
               </div>
               <a href="/"><img src={images.Logo} className="logo" alt="" /></a>
             </div>
-            <div className="col-7 d-flex align-items-center">
+
+            {/* Menu */}
+            <div className="col-xl-7 col-md-9 d-flex align-items-center justify-content-md-start justify-content-sm-end">
               <ul className="menu d-flex align-items-center mb-0 gap-4 p-0">
                 <li><a href="/">Home</a></li>
                 <li className="drop-menu">
@@ -259,7 +261,8 @@ const Header=()=>{
                 <li><a href="/technology">Tech</a></li>
               </ul>
             </div>
-            <div className="col-2 d-flex justify-content-end">
+            
+            <div className="col-xl-2 col-md-12  col-2 d-xl-flex justify-content-end d-lg-none">
               <button className="d-flex align-items-center btnwhite">
                 <a href="contact">Get In touch  
                   <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -270,7 +273,7 @@ const Header=()=>{
             </div>
           </div>
         </div>
-        <div className="mobile container-fluid">
+        <div className="mobile container">
             <div className="row">
               <div className="col-3 d-flex justify-contents-start">
                 <img src={images.Logo} alt="" id="mobilelogo" />
@@ -280,9 +283,10 @@ const Header=()=>{
               </div>
               <div className="col-3 d-flex justify-content-end">
                   <button className="sidemenu">
-                    <svg width="35" height="11" viewBox="0 0 35 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="35" height="18" viewBox="0 0 35 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect y="0.65918" width="34.9854" height="1.88072" fill="white"/>
-                      <rect y="8.55859" width="34.9854" height="1.88072" fill="#EC1A1A"/>
+                      <rect y="8.55859" width="34.9854" height="1.88072" fill="white"/>
+                      <rect y="16.65918" width="34.9854" height="1.88072" fill="white"/>
                     </svg>
                   </button>
               </div>

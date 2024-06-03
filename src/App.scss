@@ -13,39 +13,39 @@ h1{
 }
 
 h2{
-  font-size: 60px!important;
+  font-size: 60px;
   font-family: 'Nats';
-  font-weight: 400!important;
+  font-weight: 400;
 }
 
 h3{
-  font-size: 55px!important;
+  font-size: 55px;
   font-family: 'Nats';
-  font-weight: 400!important;
+  font-weight: 400;
 }
 
 h4{
-  font-size: 50px!important;
+  font-size: 50px;
   font-family: 'Nats';
-  font-weight: 400!important;
+  font-weight: 400;
 }
 
 h5{
-  font-size: 35px!important;
+  font-size: 35px;
   font-family: 'Nats';
-  font-weight: 400!important;
+  font-weight: 400;
 }
 
 h6{
-  font-size: 24px!important;
+  font-size: 24px;
   font-family: 'Nats';
-  font-weight: 400!important;
+  font-weight: 400;
 }
 
 button{
-  font-size: 24px!important;
+  font-size: 24px;
   font-family: 'Nats';
-  font-weight: 400!important;
+  font-weight: 400;
 }
 
 body{
@@ -71,8 +71,8 @@ p{
 
 .btn-1{
   font-size: 18px !important;
-  background-color: transparent;
-  border: 1px solid #fff;
+  background-color: #EC1A1A;
+  border: none;
   color: #fff;
   padding: 10px 45px;
   // border: none;
@@ -87,8 +87,8 @@ p{
     left:-100%;
     width:100%;
     height:100%;
-    background: #EC1A1A;    
-    border-radius: inherit;
+    background: #fff;    
+    border-radius: 0;
     border: 1px solid transparent;
     z-index: -1;
     transition: 0.5s ease;
@@ -97,6 +97,10 @@ p{
     &::after{
       transition: 0.7s ease;
       left:-0%;
+      z-index: -1;
+    }
+    a{
+      color:#000!important;
     }
 
   }

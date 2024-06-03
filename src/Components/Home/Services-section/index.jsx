@@ -129,13 +129,18 @@ export default function ServicesSection() {
       <div className="container headerContainer">
         <div className={styles.title} data-aos="fade-up">
           <h3>
-            The 360° <span>Online Presence</span> Enabler <br />
-            You Need
+            The 360° <span>Online Presence</span> 
           </h3>
+          <h3>
+             Enabler You Need
+          </h3>          
         </div>
-        <div>
+        <div className={styles.servicemenuwrapper}>
+          <ul  className={styles.servicemenu} >
+            <li className="hideondesktop">Rely on TechXerro for: </li>
+          </ul>
           <ul className={styles.servicemenu}>
-            <li className={styles.menutitle}>Rely on TechXerro for: </li>
+            <li className={styles.menutitle}  id="hidesm">Rely on TechXerro for: </li>
             <li>
               <a href="#websitelaunch">Website Launch</a>
             </li>
@@ -153,62 +158,35 @@ export default function ServicesSection() {
             </li>
           </ul>
         </div>
+        <section ref={sectionRef} id="service">
+          <ul
+            className={` servicemenu ${isSticky ? "sticky" : ""} ${
+              isHidden ? "hidden" : ""
+            }`}
+          >
+            <li>
+              <a href="#websitelaunch">Website Launch</a>
+            </li>
+            <li>
+              <a href="#digitalmarketing">Marketing Mastery</a>
+            </li>
+            <li>
+              <a href="#creativedesign">Brand Crafting</a>
+            </li>
+            <li>
+              <a href="#story-captivation">Story Captivation</a>
+            </li>
+            <li>
+              <a href="#visual-iconicity">Visual Iconicity</a>
+            </li>
+          </ul>
+          {/* Other content of the section */}
+          {projects.map((project, i) => {
+            return <Cards key={`p_${i}`} {...project} id={project.id} i={i} />;
+          })}
+        </section>
       </div>
-
-      <section ref={sectionRef} id="service">
-        <ul
-          className={` servicemenu ${isSticky ? "sticky" : ""} ${
-            isHidden ? "hidden" : ""
-          }`}
-        >
-          <li className="menutitle1">Rely on TechXerro for:</li>
-          <li>
-            <a
-              href="#websitelaunch"
-              onClick={(e) => scrollToSection(e, "#websitelaunch")}
-            >
-              Website Launch
-            </a>
-          </li>
-          <li>
-            <a
-              href="#digitalmarketing"
-              onClick={(e) => scrollToSection(e, "#digitalmarketing")}
-            >
-              Marketing Mastery
-            </a>
-          </li>
-          <li>
-            <a
-              href="#creativedesign"
-              onClick={(e) => scrollToSection(e, "#creativedesign")}
-            >
-              Brand Crafting
-            </a>
-          </li>
-          <li>
-            <a
-              href="#visual-iconicity"
-              onClick={(e) => scrollToSection(e, "#visual-iconicity")}
-            >
-              Story Captivation
-            </a>
-          </li>
-          <li>
-            <a
-              href="#visual-iconicity"
-              onClick={(e) => scrollToSection(e, "#visual-iconicity")}
-            >
-              Visual Iconicity
-            </a>
-          </li>
-        </ul>
-        {/* Other content of the section */}
-        {projects.map((project, i) => {
-          return <Cards key={`p_${i}`} {...project} id={project.id} i={i} />;
-        })}
-      </section>
-      <Mobilescroll />
+      {/* <Mobilescroll /> */}
     </main>
   );
 }

@@ -1,0 +1,27 @@
+.marquee{
+    background: rgb(0, 0, 0);
+    width:100dvw;
+    overflow: hidden;
+    justify-content: space-around;
+    white-space: nowrap;
+    position: relative;
+    .marqueewrapper{
+        animation: scroll 30s linear infinite;
+        display:flex;
+        align-items: center;
+    }
+    .logitem{
+        min-width: 150px;
+        margin: 0 15px; 
+    }
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

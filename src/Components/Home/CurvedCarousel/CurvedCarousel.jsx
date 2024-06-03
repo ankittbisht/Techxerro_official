@@ -10,7 +10,7 @@ import { images } from "../../../assets/images";
 export default function CurvedCarousel(props) {
   const swiperRef = useRef(); 
   return (
-    <div className="curved-wrapper" style={{position:'relative',padding :'100px 0',background:'#0f1011'}}>
+    <div className="curved-wrapper">
       <div className="row mx-auto">
         <h2 className="title" style={{textAlign:'center'}}>
           Our Work          
@@ -27,7 +27,12 @@ export default function CurvedCarousel(props) {
         modules={[Navigation, Autoplay]}
         className="CurvedSwiper"
         loop={true}
-        centeredSlides={true}
+        centeredSlides={true}   
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}     
+        speed={800}
         // autoplay={{
         //   delay: 2000,
         //   disableOnInteraction: false,
@@ -198,17 +203,14 @@ export default function CurvedCarousel(props) {
         </SwiperSlide>
         <div className="custom-nav">
           <button className="btn-prev" onClick={() => swiperRef.current?.slidePrev()}>
-          <svg width="34" height="7" viewBox="0 0 34 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M33.9121 5.70898H5.80976M5.80976 5.70898H0.742123C2.73846 5.09473 6.91543 3.22124 7.65254 0.641348C7.19184 2.33056 6.17832 5.70898 5.80976 5.70898Z" stroke="white"/>
-          </svg>
-
-
+            <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.4057 13.38L8.5957 21.19L16.4057 29" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </button>
           <button className="btn-next" onClick={() => swiperRef.current?.slideNext()}>
-            <svg width="34" height="7" viewBox="0 0 34 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.664062 5.70898H28.7664M28.7664 5.70898H33.834C31.8377 5.09473 27.6607 3.22124 26.9236 0.641348C27.3843 2.33056 28.3979 5.70898 28.7664 5.70898Z" stroke="white"/>
-            </svg>
-
+              <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5943 13.38L20.4043 21.19L12.5943 29" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
           </button>
       </div>
       </Swiper>

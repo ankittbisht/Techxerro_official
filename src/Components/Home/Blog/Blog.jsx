@@ -48,8 +48,8 @@ export default function Blog(props) {
       <div className="container">
         <div className="row title">        
           <div className="col-12">
-            <span data-aos="fade-left">Our blogs</span>
-            <h2 className="text-start">
+            <span >Our blogs</span>
+            <h2 className="text-start" data-aos="fade-left">
               News & Insight from our experts
             </h2>
             <form action="" >

@@ -70,13 +70,15 @@ const Stats=()=>{
                                                 <div>   
                                                     {obj.img}            
                                                     <h3>
-                                                        <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
-                                                        {({ isVisible }) => (
+                                                        {/* <VisibilitySensor partialVisibility offset={{ bottom: 100 }}> */}
+                                                        {/* {({ isVisible }) => ( */}
                                                         <div style={{ height: '60px' }}>
-                                                            {isVisible ? <CountUp end={obj.number}  enableScrollSpy scrollSpyOnce suffix={`${obj.suffix ? obj.suffix: ''}`} prefix={`${obj.prefix ? obj.prefix: ''}`} /> : null}
+                                                            {/* {isVisible ?  */}
+                                                            <CountUp start={0} enableScrollSpy={true} scrollSpyOnce={true} end={obj.number} suffix={`${obj.suffix ? obj.suffix: ''}`} prefix={`${obj.prefix ? obj.prefix: ''}`} />
+                                                             {/* : null} */}
                                                         </div>
-                                                        )}
-                                                        </VisibilitySensor>
+                                                        {/* )} */}
+                                                        {/* </VisibilitySensor> */}
                                                     </h3>
                                                     <h6>{obj.heading}</h6>
                                                 </div> 

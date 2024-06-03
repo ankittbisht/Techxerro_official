@@ -6,6 +6,9 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 const Testimonial =()=>{ 
  
     const option={ 
+        slideTransition: 'linear',
+        autoplayTimeout: 6000,
+        autoplaySpeed: 6000,
         navText:
         [
         `<svg width="41" height="9" viewBox="0 0 41 9" fill="none" xmlns="http://www.w3.org/2000/svg">

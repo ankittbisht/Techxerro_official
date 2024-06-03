@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Technologies.scss";
 import VerticalSlider from "./Iconslides";  
 import backgroundimg1 from '../../../assets/Home/technologies/ecom-min.png';
@@ -97,6 +97,45 @@ export default function Technologies(props) {
       buttonlink:'#',    
     }
   ]
+
+  const ulRef = useRef(null);  
+  const [activeItem, setActiveItem] = useState(null);
+
+  // useEffect(()=>{
+  //   if (ulRef.current) {
+  //     const activeElement = ulRef.current.querySelector('li button.active');
+  //     ulRef.current.querySelector('li button.active').al
+  //     if (activeElement) {
+  //       setActiveItem(activeElement.innerText); // or any other property you need
+  //     }
+  //   }
+  // })
+  const handleMenuClick =(e)=>{
+    e.preventDefault();
+    const dataPosition=e.target.dataset.position;
+
+    e.target.parentElement.parentElement.classList.add(`pos${dataPosition}`); 
+  
+    document.querySelector('.menbar').style.width= e.target.offsetWidth + 'px';
+    if(dataPosition==='0'){
+      document.querySelector('.menbar').style.left= '0';      
+    }
+    else if(dataPosition==='100'){
+      document.querySelector('.menbar').style.left= '145px';       
+    }
+    else if(dataPosition==='200'){
+      document.querySelector('.menbar').style.left= '280px';       
+    }
+    else if(dataPosition==='300'){
+      document.querySelector('.menbar').style.left= '420px';       
+    }
+    else if(dataPosition==='400'){
+      document.querySelector('.menbar').style.left= '560px';      
+    }
+    else{
+    }
+  }
+
   return (
     <>
     <div className="technologies">
@@ -110,9 +149,10 @@ export default function Technologies(props) {
           <div className="col-md-6 col-12">
               <VerticalSlider/>
           </div>    
-        </div>
-        <ul className="nav nav-tabs" id="myTab" role="tablist">
-          <li className="nav-item" role="presentation">
+        </div> 
+        <ul className="nav nav-tabs" id="myTab" role="tablist" ref={ulRef}>
+          <div className="menbar"></div>
+          <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)} >
             <button
               className="nav-link active"
               id="home-tab"
@@ -121,12 +161,13 @@ export default function Technologies(props) {
               type="button"
               role="tab"
               aria-controls="home"
-              aria-selected="true"
+              aria-selected="true" 
+              data-position="0"
             >
               E-commerce
             </button>
           </li>
-          <li className="nav-item" role="presentation">
+          <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)}>
             <button
               className="nav-link"
               id="construction-tab"
@@ -135,12 +176,13 @@ export default function Technologies(props) {
               type="button"
               role="tab"
               aria-controls="construction"
-              aria-selected="false"
+              aria-selected="false" 
+              data-position="100" 
             >
               Construction
             </button>
           </li>
-          <li className="nav-item" role="presentation">
+          <li className="nav-item active " role="presentation" onClick={(e)=>handleMenuClick(e)}>
             <button
               className="nav-link"
               id="hospitality-tab"
@@ -150,11 +192,12 @@ export default function Technologies(props) {
               role="tab"
               aria-controls="hospitality"
               aria-selected="false"
+              data-position="200"
             >
               Hospitality
             </button>
           </li>
-          <li className="nav-item" role="presentation">
+          <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)}>
             <button
               className="nav-link"
               id="automotive-tab"
@@ -164,11 +207,12 @@ export default function Technologies(props) {
               role="tab"
               aria-controls="automotive"
               aria-selected="false"
+              data-position="300" 
             >
               Automotive
             </button>
           </li>
-          <li className="nav-item" role="presentation">
+          <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)}>
             <button
               className="nav-link"
               id="Sports-tab"
@@ -178,6 +222,7 @@ export default function Technologies(props) {
               role="tab"
               aria-controls="Sports"
               aria-selected="false"
+              data-position="400" 
             >
               Sports
             </button>

@@ -5,6 +5,9 @@
   color:#fff;
   .title {
     padding: 100px 0 60px 0px;
+    h2{
+      font-size: 45px;
+    }
     span{
       color: #EC1A1A;
       font-size: 20px;
@@ -14,7 +17,8 @@
       padding-top:30px;
       label{
         border:1px solid #fff;
-        border-radius: 40px;
+        border-radius: 10px;
+        overflow: hidden;
       }
       input[type="email"]{
         padding:15px 25px;
@@ -22,14 +26,20 @@
         border:none;
         background: transparent;
         font-size: 18px;
+        color:#fff;
       }
       input[type="submit"]{
         padding:15px 50px;
         border:none;
-        border-radius:40px;
+        border-radius:8px;
         background: #EC1A1A;
         color:#fff;
         font-size: 18px;
+        &:hover{
+          background: #000;
+          transition: 0.2s ease-in-out;
+        }
+
       }
 
     }
@@ -127,13 +137,13 @@
   padding: 15px 0px;
   margin-right:40px;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 20px;
   color:#fff;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  border-bottom:1px solid #ccc;
+  color:#EC1A1A;
 }
 
 /* Style the tab content */
@@ -143,8 +153,43 @@
   border-top: none;
 }
 
+.tabcontent .imgcont{
+  min-height:350px;
+  max-height:350px;
+  height:350px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
 .tabcontent img{
-  margin-bottom: 20px;
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  padding:0;
+}
+
+.imgcont .describe{
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+  color:#fff;
+  position: absolute;
+  bottom:0;
+  // height:20%;
+}
+
+.imgcont .describe p{
+  margin:15px 0;
+}
+
+.tabcontent .content .content-title{
+  font-size:34px;
+}
+
+.tabcontent .content p{
+  font-weight: 400;
+  font-size: 19px;
 }
 
 .blog-container  .owl-theme .owl-dots .owl-dot{
@@ -161,6 +206,18 @@
   background-color:#EC1A1A;
 }
 
+.blogbtn{
+  color:#fff;
+  border:none;
+  background: transparent;
+}
+.blogbtn a{
+  color:#fff;
+  text-decoration: none;
+  display: flex;
+  gap:15px;
+  align-items: center;
+}
 
 @media (max-width:480px) {
   .blog-container{

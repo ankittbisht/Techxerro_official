@@ -3,7 +3,7 @@
     // background:url('../../../assets/imagebg.jpg');
     color:#fff;
     .about-company{
-        padding:50px 20px 80px;
+        padding:100px 20px 80px;
         span{
             font-family: 'syne';
             font-size:21px;
@@ -12,8 +12,8 @@
         }
         h3{
             font-size:44px!important;
-            font-weight: 700;
-            margin-bottom:0px;
+            font-weight: 400;
+            margin-bottom:15px;
         } 
         p{
             color:#fff;
@@ -23,11 +23,10 @@
             position: relative; 
             img{
                 width:75%;
+                object-fit: contain;
             }
-        }
-        
+        }        
     }
-
     a{
         color:#fff;
         text-decoration: none;
@@ -37,12 +36,15 @@
 
 
 @media (max-width:480px) {
-    
+    .btn-1{
+        border: 1px solid #fff!important;
+    }
     .about-com-img {
         position: relative; 
         width:100%;
         img{
             width:100%!important;
+            padding-top:20px;
         }
     }
 }

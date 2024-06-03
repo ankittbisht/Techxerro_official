@@ -45,13 +45,14 @@ function Mobilescroll() {
   ];
 
   return (
-    <div className="hide-on-large">
+    <div 
+    className="hide-on-large"
+    >
       <div className="container">
         {projects.map((project) => (
           <>
             <div className="row cardContainer">{project.title}</div>
-            <div className="row">
-                
+            <div className="row">                
               <Tabs>
                 <TabList>
                   <Tab>Social Media</Tab>

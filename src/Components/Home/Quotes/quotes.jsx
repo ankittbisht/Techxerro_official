@@ -4,7 +4,7 @@ import './style.scss';
 const Quotes=(props)=>{
     return(
         <> 
-            <section className="quote-section" style={{ backgroundImage: `linear-gradient(81.71deg, rgba(21, 22, 24, 45%) 11.63%, rgba(255, 0, 0, 45%) 129.18%),url('${props.background}')` }}>
+            <section className="quote-section" style={{ backgroundImage: `url('${props.background}')` }}>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-10">

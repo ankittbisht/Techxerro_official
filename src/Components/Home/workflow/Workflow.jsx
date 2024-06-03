@@ -95,9 +95,9 @@ export default function Workflow(props) {
 
           <img className="ellipse" alt="Ellipse" src={images.WorkflowCircle} />
           <div className="text-wrapper">
-            <h4 data-aos="fade-up">
+            <h3 data-aos="fade-up">
               Our customized workflow              
-            </h4>
+            </h3>
           </div>
           <div className="content-container container-fluid p-0">
             <div className="rectangle" id="rectangle" />
@@ -137,7 +137,7 @@ export default function Workflow(props) {
               <div className="row ">
                 <div className="col-5 mt-5 d-flex justify-content-center">
                   <div className="text budget">
-                    <div className="number">02</div>Budget
+                    <div className="number">02</div>&nbsp;Budget&nbsp;
                   </div>
                 </div>
                 <div className="col-1 vl-dot-container">
@@ -187,7 +187,7 @@ export default function Workflow(props) {
                 </div>
                 <div className="col-5 mt-5 d-flex justify-content-center">
                   <div className="text result">
-                    <div className="number">04</div>Result
+                    <div className="number">04</div>Result&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </div>
                 </div>
               </div>

@@ -42,6 +42,11 @@ import circularArrowLeft from "./circularArrowLeft.svg";
 import circularArrowRight from "./circularArrowRight.svg";
 import blog1 from "./blog1.png";
 import blog2 from "./blog2.png";
+import blog3 from "./blog3.jpg";
+import blog4 from "./blog2.png";
+import blog5 from "./blog2.png";
+import blog6 from "./blog2.png";
+import blog7 from "./blog2.png";
 // import blog3 from "./blog3.png";
 // import blog4 from "./blog4.png";
 import blogBG from "./blogBG.png";
@@ -109,6 +114,11 @@ export const home = {
   circularArrowRight,
   blog1,
   blog2,
+  blog3,
+  blog4,
+  blog5,
+  blog6,
+  blog7,
   // blog3,
   // blog4,
   blogBG,

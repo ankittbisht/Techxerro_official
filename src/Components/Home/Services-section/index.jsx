@@ -34,6 +34,15 @@ export const projects = [
     id: "creativedesign",
   },
   {
+    title: "Story Captivation",
+    description:
+      "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+    src: "water.jpg",
+    link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
+    color: "#C2491D",
+    id: "story-captivation",
+  },
+  {
     title: "Brand Positioning & Architecture",
     description:
       "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
@@ -51,15 +60,35 @@ export default function ServicesSection() {
   const sectionRef = useRef(null);
   const [activeId, setActiveId] = useState(null);
 
+  function handleanchor(event, targetId) {
+    event.preventDefault();
+
+    let scrollPosition = 0;
+    let id = targetId;
+    // Calculate scroll position based on targetId
+    if (id === "websitelaunch") {
+      scrollPosition = 2427;
+    } else if (id === "digitalmarketing") {
+      scrollPosition = 3172;
+    } else if (id === "creativedesign") {
+      scrollPosition = 3917;
+    } else if(id === "story-captivation"){
+      // Default scroll position if the id doesn't match any specific case
+      scrollPosition = 4663;
+    }else{
+      scrollPosition = 5408;
+    }
+
+    window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+  }
+
   const handlScroll = () => {
     const cards = sectionRef.current.querySelectorAll(".cards");
-    if (!cards.length) {
-      console.warn('No cards found');
-    }
+    // if (!cards.length) {
+    //   console.warn("No cards found");
+    // }
     const scrollTop = window.scrollY;
     const viewportHeight = window.innerHeight;
-
-    // console.log(`Scroll Top: ${scrollTop}, Viewport Height: ${viewportHeight}`);
 
     let activeCardId = null;
 
@@ -67,11 +96,6 @@ export default function ServicesSection() {
       const rect = card.getBoundingClientRect();
       const cardTop = rect.top + scrollTop;
       const cardHeight = rect.height;
-
-      // console.log(
-      //   `Card ID: ${card.id}, Card Top: ${cardTop}, Card Height: ${cardHeight}`
-      // );
-
       if (
         cardTop < scrollTop + viewportHeight &&
         cardTop + cardHeight > scrollTop
@@ -81,10 +105,8 @@ export default function ServicesSection() {
           viewportHeight - (cardTop - scrollTop)
         );
 
-        console.log(`Card ID: ${card.id}, Visible Height: ${visibleHeight}`);
-
         if (visibleHeight > 500) {
-          // Adjust the visible height threshold as needed
+         
           activeCardId = card.id;
         }
       }
@@ -128,54 +150,6 @@ export default function ServicesSection() {
     };
   }, []);
 
-  // const scrollToSection = (e, sectionId) => {
-  //   e.preventDefault();
-  //   const section = document.querySelector(sectionId);
-  //   console.log(section)
-  //   if (section) {
-  //     section.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
-  // const refs = [useRef(null), useRef(null), useRef(null), useRef(null)];
-
-  // const scrollToCard = (index) => {
-  //   refs[index].current.scrollIntoView({ behavior: "smooth" });
-  // };
-
-  // useEffect(() => {
-  //   const handleSmoothScroll = () => {
-  //     const headerHeight = document.querySelector(".servicemenu").offsetHeight;
-
-  //     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  //       anchor.addEventListener("click", function (e) {
-  //         e.preventDefault();
-
-  //         const targetId = this.getAttribute("href").substring(1);
-  //         const targetElement = document.getElementById(targetId);
-
-  //         if (targetElement) {
-  //           const elementPosition = targetElement.getBoundingClientRect().top;
-  //           const offsetPosition = elementPosition - headerHeight;
-
-  //           window.scrollBy({
-  //             top: offsetPosition,
-  //             behavior: "smooth",
-  //           });
-  //         }
-  //       });
-  //     });
-  //   };
-
-  //   handleSmoothScroll();
-
-  //   return () => {
-  //     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  //       anchor.removeEventListener("click", handleSmoothScroll);
-  //     });
-  //   };
-  // }, []);
-  // useSmoothScrollWithOffset(1800);
-
   return (
     <main className={styles.main}>
       <div className="container headerContainer">
@@ -217,19 +191,44 @@ export default function ServicesSection() {
             }`}
           >
             <li className={activeId === "websitelaunch" ? "active" : ""}>
-              <a href="#websitelaunch">Website Launch</a>
+              <a
+                href="#websitelaunch"
+                onClick={(e) => handleanchor(e, "websitelaunch")}
+              >
+                Website Launch
+              </a>
             </li>
             <li className={activeId === "digitalmarketing" ? "active" : ""}>
-              <a href="#digitalmarketing">Marketing Mastery</a>
+              <a
+                href="#digitalmarketing"
+                onClick={(e) => handleanchor(e, "digitalmarketing")}
+              >
+                Marketing Mastery
+              </a>
             </li>
             <li className={activeId === "creativedesign" ? "active" : ""}>
-              <a href="#creativedesign">Brand Crafting</a>
+              <a
+                href="#creativedesign"
+                onClick={(e) => handleanchor(e, "creativedesign")}
+              >
+                Brand Crafting
+              </a>
             </li>
             <li className={activeId === "story-captivation" ? "active" : ""}>
-              <a href="#story-captivation">Story Captivation</a>
+              <a
+                href="#story-captivation"
+                onClick={(e) => handleanchor(e, "story-captivation")}
+              >
+                Story Captivation
+              </a>
             </li>
             <li className={activeId === "visual-iconicity" ? "active" : ""}>
-              <a href="#visual-iconicity">Visual Iconicity</a>
+              <a
+                href="#visual-iconicity"
+                onClick={(e) => handleanchor(e, "visual-iconicity")}
+              >
+                Visual Iconicity
+              </a>
             </li>
           </ul>
           {/* Other content of the section */}

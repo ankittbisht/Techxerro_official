@@ -77,12 +77,10 @@
 
 @media (max-width:1290px) {
   .sticky {
-    top: 15px;
-    /* Ensure it appears above other elements */
+    top: 15px; 
   }
 }
-
-/* tables */
+ 
 @media (max-width:780px) {
   .servicemenu {
     padding: 10px 20px;
@@ -96,17 +94,13 @@
     display: none;
   }
 }
-
-/* for mobile */
+ 
 @media (max-width:501px) {
 
-  .cards {
-    background: rgba(236, 26, 26, 1);
-    box-shadow: 0px 0px 5px 5px #00000020;
+  .cards {  
     position: relative;
     width: 100%;
-    height: 100%;
-    /* overflow: hidden; */
+    height: 100%; 
   }
 
   .cardComponent {
@@ -132,20 +126,28 @@
     padding: 5px 20px;
     color: #fff;
     background: rgba(236, 26, 26, 1);
-    /* // position: absolute;
-    // width: 100%; */
+ 
   }
 
   .cards p {
     font-size: 18px !important;
   }
 
-  .cards ul {
+  /* .cards cardmodule {
     padding: 0;
     list-style-type: none;
     opacity: 0.8;
     font-size: 16px;
-  }
+    display: none;
+    grid-template-columns: auto auto auto ; 
+    
+    gap:20px;
+    li{
+      padding:0;
+      text-align: left;
+      font-size: 16px;
+    }
+  } */
 
   button {
     border: none !important;
@@ -170,15 +172,9 @@
 
   .cardContainer {
     background: #151618;
-    color: white;
-    /* background-color: black; */
+    color: white; 
     font-size: 30px;
     padding: 20px;
-  }
-
-  .react-tabs {
-    /* background: #151618; */
-    /* background-color: black; */
   }
 }
 

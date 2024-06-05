@@ -142,7 +142,7 @@ export default function Technologies(props) {
       <div className="container">
         <div className="row my-4 w-100">
           <div className="col-md-6 col-12">
-            <h2 className="title" data-aos="fade-down">
+            <h2 className="title">
               Powering every industry<br/>Powering all disruptors.
             </h2>
           </div>

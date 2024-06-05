@@ -49,11 +49,11 @@ export default function Blog(props) {
         <div className="row title">        
           <div className="col-12">
             <span >Our blogs</span>
-            <h2 className="text-start" data-aos="fade-left">
+            <h2 className="text-start" >
               News & Insight from our experts
             </h2>
             <form action="" >
-              <label>
+              <label >
                 <input type="email" placeholder="Enter Your Email" />
                 <input type="submit" value="Get Started" />
               </label>

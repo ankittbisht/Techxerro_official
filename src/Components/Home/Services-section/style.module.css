@@ -53,8 +53,8 @@
 
 @media (max-width: 480px) {
   .main {
-    padding-bottom: 0;
-    padding-top: 10vh;
+    padding-bottom:30vh;
+    padding-top: 6vh;
   }
 
   .servicemenu{

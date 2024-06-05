@@ -50,15 +50,21 @@
 @media (max-width:780px) {
     .quote-section{
         padding:50px 0;
-        height:350px;
+        height:360px;
         .quote-wrapper{
-            padding:25px 30px!important;
+            padding:30px 22px!important;
+            &::after{
+                height:30px;
+            }
+            &::before{
+                height:90px;
+            }
             svg{
-                scale:0.7;
+                scale:0.6;
                 left:-8%;
             }
             h3{
-                font-size:27px!important;
+                font-size:22px!important;
             }
         }
     }

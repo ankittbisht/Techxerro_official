@@ -167,10 +167,13 @@
 @media (max-width:880px) {
   .technologies{
     .title{
-        font-size: 35px!important;
+        font-size: 32px!important;
+        padding:0px 10px;
     }
     .nav-tabs{
       gap:0px;
+      display: grid;
+      grid-template-columns: auto auto auto;
       .nav-link{
         padding:5px 5px;
         &.active{

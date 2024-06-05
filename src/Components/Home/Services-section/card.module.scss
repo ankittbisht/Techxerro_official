@@ -78,7 +78,7 @@
   width: 100%;
   margin: 0 auto;
   h4{
-    font-size:38px!important;
+    font-size:38px;
   }
   .servicestab {
     padding-top: 0; 
@@ -190,20 +190,26 @@
 
 @media (max-width: 480px) {
   .cardContainer {
+    height:65vh;
+    padding:0 20px;
     .card {
       padding: 40px 20px !important;
-      height: 620px !important;
+      height: 520px !important;
+      .servicestab{
+        display: none;
+      }
     }
   }
   
   .servicessectionwappper {
     width: 100% !important;
-    h3 {
-      font-size: 35px !important;
+    h4 {
+      font-size: 30px !important;
     }
     .cardsWrapper {
       display: inline !important;
       width: 100%;
     }
   }
+
 }

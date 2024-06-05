@@ -14,6 +14,7 @@ import quotebgimg from "../../../assets/Home/quote1.png";
 import quotebgimg2 from "../../../assets/Home/quote2.png";
 import Mobilescroll from "../../../Components/Home/Services-section/Mobilescroll";
 import Marqueelogo from "../../../Components/Home/MarqueeLogo";
+import ROIsection from "../../../Components/Home/ROIsection";
 
 const Home = () => {
   return (
@@ -31,6 +32,7 @@ const Home = () => {
       {/* <div className="blackbg"></div> */}
       <CurvedCarousel />
       <Stats />
+      <ROIsection/>
       <Quotes
         quote="Empowering businesses of any size to become formidable brands through comprehensive branding, marketing, and consulting solutions."
         background={quotebgimg2}

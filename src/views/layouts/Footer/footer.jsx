@@ -91,13 +91,15 @@ const Footer =()=> {
               <div>
                 <a
                   className="hvr-underline-from-left "
-                  href="www.ovatetextile.com"
+                  href="https://www.ovatetextiles.com/"
+                  target="_blank"
                 >
                   www.ovatetextile.com
                 </a>
               </div>
               <div>
-                <a className="hvr-underline-from-left " href="www.gemgatz.com">
+                <a className="hvr-underline-from-left " href="https://www.gemgatz.com/"
+                  target="_blank">
                   www.gemgatz.com
                 </a>
               </div>

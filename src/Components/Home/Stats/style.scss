@@ -28,8 +28,7 @@
         border-radius: 8px;
         height:200px;
         position: relative;
-        z-index: 1;
-        /* align-items:end; */
+        z-index: 1; 
         display: flex;
         margin-bottom: 50px;
         &::before{
@@ -126,25 +125,36 @@
 }
 
 @media (max-width:550px) {
-    .stats-section{
-        padding:50px 20px;
+    .stats-section{        
+        padding:50px 10px;
+        .statscontent{
+            .title{
+                padding:0;
+                padding-bottom: 10px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
     }
+
+    
     .stats-section .d-flex{
         flex-flow: wrap;
         gap:0!important;
     }
     .stats-section .wrapper{
-        width:160px;
+        width:140px;
         height:180px;
         padding:15px 10px;
     }
 
     .stats-section .wrapper::before{
-        width:160px;
+        width:inherit;
         height:180px;
     }
     .stats-section .wrapper::after{
-        width:160px;
+        width:inherit;
         height:180px;
     }
     
@@ -159,3 +169,4 @@
         font-size: 20px!important;
     }
 }
+

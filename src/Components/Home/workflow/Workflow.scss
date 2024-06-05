@@ -29,17 +29,6 @@ $--meteor-duration: 2s;
     z-index: 1;
   }
 
-  .rectangle {
-    // background-color: #444427;
-    // border: 1px solid;
-    // border-color: #e8e71b;
-    // height: 128px;
-    // position: absolute;
-    // width: 100%;
-    // // margin-top: 11%;
-    // z-index: -1;
-  }
-
   .text-wrapper {
     padding-top: 11%;
     margin-bottom: 3%;
@@ -295,25 +284,16 @@ $--meteor-duration: 2s;
       display: block;
       transition: width 1s linear, height 1s linear, background-color 1s linear,
         margin-right 1s linear;
-      // &.active {
-      //   width: 55px;
-      //   height: 55px;
-      //   margin-right: -27px;
-      //   background-image: url(../../../assets/ArrowRight.svg);
-      //   background-repeat: no-repeat;
-      //   background-size: 70% 70%;
-      //   background-position: center;
-      //   background-color: yellow;
-      //   transition: width 1s linear, height 1s linear,
-      //     background-color 1s linear, margin-right 1s linear,
-      //     background-image 1s linear;
-      // }
+       
     }
   }
 }
 
 
 @media (max-width:480px) {
+  .workflow{
+    display: none;
+  }
   .box.workflow .meteor-section.pointer-events-none{
     display: none;
   }

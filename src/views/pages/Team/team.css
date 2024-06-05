@@ -43,10 +43,10 @@
 
 .teams2 .postrImg {
     overflow: hidden;
-    transition: all 1s ease-in-out;
+    transition: all 0.4s ease-in-out;
     width: 327px;
     height: 400px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .teams2 .postrImg img{
@@ -57,9 +57,9 @@
 }
 
 .teams2 .small-image {
-    /* width: 288px; */
+    width: 327px;
     /* object-fit: cover; */
-    transition: all 1s ease-in-out;
+    transition: all 0.4s ease-in-out;
     height: 250px;
  }
 
@@ -71,6 +71,7 @@
 }
 
 .teams2 .designation {
+    
     margin-bottom: 20px;
     align-self: flex-start;
     border: 1px solid #666666;
@@ -79,48 +80,52 @@
     font-size: 20px !important;
     font-weight: 400;
     text-align: left;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .teams2 .postContain {
   
-    transition: all 1s ease-in-out  ;
+    transition: all 0.4s ease-in-out  ;
    
 }
 
 .teams2 .test2 {
  
-    transition: all 1s ease-in-out ;
+    transition: all 0.4s ease-in-out ;
 }
 
 .teams2 button {
+    height: 50px;
+    width: 50px;
     position: absolute;
     top: 15px;
     right: 15px;
     z-index: 1;
     background: none;
     border: 2px solid #666666;
-    padding: 5px 15px;
+    /* padding: 5px 15px; */
     border-radius: 100%;
+    color: white;
+    font-size: 30px;
 }
 
-.teams2 button span {
-    color: white;
+/* .teams2 button span {
+    
     font-family: Poppins;
-    font-size: 30px;
+    
     font-weight: 500;
-}
+} */
 
 
 
 /* .teams2 .test{
     object-fit: cover;
-    transition: all 1s ease-in-out;
+    transition: all 0.4s ease-in-out;
     width: 288px;
 } */ 
 
 .teams2 .Collapsecontent{
-    transition: all 1s ease-in-out;     
+    transition: all 0.4s ease-in-out;     
     /* height: 200px; */
   }
 
@@ -158,4 +163,13 @@
     background: #161719;
     height: 500px;
     color: white;
+}
+
+@media (min-width: 991px)and (max-width:1199px){
+    .teams2 button {
+       
+        top: 15px;
+        right: 55px;
+        
+    }
 }

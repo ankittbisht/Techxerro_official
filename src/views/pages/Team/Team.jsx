@@ -5,6 +5,7 @@ import member2 from "../../../assets/team/member-2.png";
 import member3 from "../../../assets/team/member-3.png";
 import member4 from "../../../assets/team/member-4.png";
 import member5 from "../../../assets/team/member-5.png";
+import member6 from "../../../assets/team/member-6.png";
 import "./team.css";
 function Team() {
   const [memberSizes, setMemberSizes] = useState({});
@@ -30,31 +31,31 @@ function Team() {
       id: 2,
       memberImg: member5,
       name: "Pankaj Bisht",
-      designation: "CTO",
+      designation: "FullStack Developer",
     },
     {
       id: 3,
       memberImg: member2,
-      name: "Vishesh Nagar",
-      designation: "Founder | CEO",
+      name: "Kanika Singh",
+      designation: "Content Strategist",
     },
     {
       id: 4,
       memberImg: member4,
-      name: "Another Member",
-      designation: "CTO",
+      name: "Sourav Kumar",
+      designation: "Brand Strategist",
     },
     {
       id: 5,
       memberImg: member3,
-      name: "Vishesh Nagar",
-      designation: "Founder | CEO",
+      name: "Kunal kuriyal",
+      designation: "Graphic Designer",
     },
     {
       id: 6,
-      memberImg: member5,
-      name: "Ankit Bisht",
-      designation: "CTO",
+      memberImg: member6,
+      name: "Riya Rawat",
+      designation: "Project Manager",
     },
   ];
 
@@ -85,7 +86,7 @@ function Team() {
             <div className="row">
               {membersData.map((member, index) => (
                 <div
-                  className="memberCard col-12 col-sm-4 d-flex flex-column  align-items-start position-relative"
+                  className="memberCard col-12  col-sm-6 col-lg-4 d-flex flex-column  align-items-start position-relative"
                   key={index}
                 >
                   <div
@@ -94,14 +95,16 @@ function Team() {
                     data-aos-easing="ease"
                     data-aos-duration="1000"
                   >
-                    <div className={`postrImg ${
-                          memberSizes[member.id] ? "small-image" : "test"
-                        }`}>
+                    <div
+                      className={`postrImg ${
+                        memberSizes[member.id] ? "small-image" : "test"
+                      }`}
+                    >
                       <button
                         className="overlay-button"
                         onClick={() => toggleImageSize(member.id)}
                       >
-                        <span>{memberSizes[member.id] ? "-" : "+"}</span>
+                        {memberSizes[member.id] ? "-" : "+"}
                       </button>
                       <img
                         src={member.memberImg}

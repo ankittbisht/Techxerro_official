@@ -3,7 +3,31 @@ import styles from "./style.module.css";
 import "./styles.css";
 import Cards from "./card";
 import Mobilescroll from "./Mobilescroll";
-import useSmoothScrollWithOffset from "./useSmoothScrollWithOffset";
+
+import Dev1 from "../../../assets/services/devImg1.png";
+import Dev2 from "../../../assets/services/devImg2.png";
+import Dev3 from "../../../assets/services/devimg3.png";
+import Dev4 from "../../../assets/services/devimg4.png";
+
+import Va1 from "../../../assets/services/VaImg1.png";
+import Va2 from "../../../assets/services/VaImg2.png";
+import Va3 from "../../../assets/services/VaImg3.png";
+import Va4 from "../../../assets/services/VaImg4.png";
+
+import Cd1 from "../../../assets/services/CdImg1.png";
+import Cd2 from "../../../assets/services/CdImg2.png";
+import Cd3 from "../../../assets/services/CdImg3.png";
+import Cd4 from "../../../assets/services/CdImg4.png";
+
+import Dm1 from "../../../assets/services/DmImg1.png";
+import Dm2 from "../../../assets/services/DmImg2.png";
+import Dm3 from "../../../assets/services/DmImg3.png";
+import Dm4 from "../../../assets/services/DmImg4.png";
+
+import Marketing1 from "../../../assets/services/fb-marketing.png";
+import Marketing2 from "../../../assets/services/influencer-marketing.png";
+import Marketing3 from "../../../assets/services/insta-marketing.png";
+import Marketing4 from "../../../assets/services/youtubemarketing.png";
 
 export const projects = [
   {
@@ -14,6 +38,14 @@ export const projects = [
     link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
     color: "#BBACAF",
     id: "websitelaunch",
+    subheading: [
+      "Cloud Solutions",
+      "Cybersecurity",
+      "ERP Systems",
+      "Network Management",
+      "Data Analytics",
+    ],
+    cardBanner: [{ first: Dev1, second: Dev2, third: Dev3, fourth: Dev4 }],
   },
   {
     title: "Digital Marketing Strategies",
@@ -23,6 +55,14 @@ export const projects = [
     link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
     color: "#C2491D",
     id: "digitalmarketing",
+    subheading: [
+      "Content Marketing",
+      "Social Media Marketing",
+      "SEO",
+      "Email Marketing",
+      "PPC Advertising",
+    ],
+    cardBanner: [{ first: Dm1, second: Dm2, third: Dm3, fourth: Dm4 }],
   },
   {
     title: "Creative Design Solutions",
@@ -32,6 +72,14 @@ export const projects = [
     link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
     color: "#C2491D",
     id: "creativedesign",
+    subheading: [
+      "Graphic Design",
+      "Web Design",
+      "Brand Identity",
+      "User Experience Design",
+      "Packaging Design",
+    ],
+    cardBanner: [{ first: Cd1, second: Cd2, third: Cd3, fourth: Cd4 }],
   },
   {
     title: "Story Captivation",
@@ -41,6 +89,21 @@ export const projects = [
     link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
     color: "#C2491D",
     id: "story-captivation",
+    subheading: [
+      "Engaging Introductions",
+      "Character Development",
+      "Plot Twists and Suspense",
+      "Emotional Resonance",
+      "Vivid Descriptions",
+    ],
+    cardBanner: [
+      {
+        first: Marketing1,
+        second: Marketing2,
+        third: Marketing3,
+        fourth: Marketing4,
+      },
+    ],
   },
   {
     title: "Brand Positioning & Architecture",
@@ -50,6 +113,14 @@ export const projects = [
     link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
     color: "#C2491D",
     id: "visual-iconicity",
+    subheading: [
+      "Identity Building",
+      "Market Analysis",
+      "Competitive Edge",
+      "Message Crafting",
+      "Visual Branding",
+    ],
+    cardBanner: [{ first: Va1, second: Va2, third: Va3, fourth: Va4 }],
   },
 ];
 
@@ -72,10 +143,10 @@ export default function ServicesSection() {
       scrollPosition = 3172;
     } else if (id === "creativedesign") {
       scrollPosition = 3917;
-    } else if(id === "story-captivation"){
+    } else if (id === "story-captivation") {
       // Default scroll position if the id doesn't match any specific case
       scrollPosition = 4663;
-    }else{
+    } else {
       scrollPosition = 5408;
     }
 
@@ -106,7 +177,6 @@ export default function ServicesSection() {
         );
 
         if (visibleHeight > 500) {
-         
           activeCardId = card.id;
         }
       }

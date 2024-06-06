@@ -14,7 +14,7 @@ import "./styles.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 // import { projects } from '.';
 
-function GridExample() {
+function GridExample({ cardBanner }) {
   // const maxAlphabets = 150; // Change this to the desired number of alphabets per page
   // Function to truncate content to the specified number of alphabets
   const truncateContent = (content, maxAlphabets) => {
@@ -65,10 +65,11 @@ function GridExample() {
       >
         <div className={styles.cards}>
           <div className={styles.posterImg}>
-            <img
+            {/* <img
               src={require("../../../assets/services/insta-marketing.png")}
               alt=""
-            />
+            /> */}
+            <img src={cardBanner.first} alt="" />
           </div>
           <div className={styles.cardContent}>
             <p>Instagram Marketing</p>
@@ -80,13 +81,10 @@ function GridExample() {
               </div>
             </ul>
           </div>
-        </div>{" "}
+        </div>
         <div className={styles.cards}>
           <div className={styles.posterImg}>
-            <img
-              src={require("../../../assets/services/youtubemarketing.png")}
-              alt=""
-            />
+            <img src={cardBanner.second} alt="" />
           </div>
           <div className={styles.cardContent}>
             <p>Youtube Marketing</p>
@@ -101,10 +99,7 @@ function GridExample() {
         </div>
         <div className={styles.cards}>
           <div className={styles.posterImg}>
-            <img
-              src={require("../../../assets/services/fb-marketing.png")}
-              alt=""
-            />
+            <img src={cardBanner.third} alt="" />
           </div>
           <div className={styles.cardContent}>
             <p>Facebook Marketing</p>
@@ -119,10 +114,7 @@ function GridExample() {
         </div>
         <div className={styles.cards}>
           <div className={styles.posterImg}>
-            <img
-              src={require("../../../assets/services/influencer-marketing.png")}
-              alt=""
-            />
+            <img src={cardBanner.fourth} alt="" />
           </div>
           <div className={styles.cardContent}>
             <p>Influencer Marketing</p>
@@ -212,7 +204,17 @@ function GridExample2() {
   );
 }
 
-const Cards = ({ title, description, src, url, color, i, id }) => {
+const Cards = ({
+  title,
+  subheading,
+  cardBanner,
+  description,
+  src,
+  url,
+  color,
+  i,
+  id,
+}) => {
   //testing
 
   const option = {
@@ -266,26 +268,26 @@ const Cards = ({ title, description, src, url, color, i, id }) => {
               className={styles.servicestab}
               style={{ width: "100%", padding: "0" }}
             >
-              <Tab>Social Media</Tab>
-              <Tab>Marketing Mastery</Tab>
-              <Tab>Brand Crafting</Tab>
-              <Tab>Story Captivation</Tab>
-              <Tab>Visual Iconicity</Tab>
+              <Tab>{subheading[0]}</Tab>
+              <Tab>{subheading[1]}</Tab>
+              <Tab>{subheading[2]}</Tab>
+              <Tab>{subheading[3]}</Tab>
+              <Tab>{subheading[4]}</Tab>
             </TabList>
             <TabPanel className="cards-container">
-              <GridExample />
+              <GridExample cardBanner={cardBanner[0]} />
             </TabPanel>
             <TabPanel className="cards-container">
               <GridExample2 />
             </TabPanel>
             <TabPanel className="cards-container">
-              <GridExample />
+              <GridExample cardBanner={cardBanner[0]} />
             </TabPanel>
             <TabPanel className="cards-container">
-              <GridExample />
+              <GridExample2 />
             </TabPanel>
             <TabPanel className="cards-container">
-              <GridExample />
+              <GridExample cardBanner={cardBanner[0]} />
             </TabPanel>
           </Tabs>
           {/* <div className={styles.cardsWrapper}>              

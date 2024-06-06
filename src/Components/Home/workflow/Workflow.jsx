@@ -95,9 +95,7 @@ export default function Workflow(props) {
 
           <img className="ellipse" alt="Ellipse" src={images.WorkflowCircle} />
           <div className="text-wrapper">
-            <h3 data-aos="fade-up">
-              Our customized workflow              
-            </h3>
+            <h3>Our customized workflow</h3>
           </div>
           <div className="content-container container-fluid p-0">
             <div className="rectangle" id="rectangle" />
@@ -128,9 +126,11 @@ export default function Workflow(props) {
                 </div>
                 <div className="col-5">
                   <p className="ms-5">
-                    Blandit feugiat volutpat scelerisque lacinia varius justo
-                    felis turpis. Vitae accumsan tempor orci pellentesque lorem.
-                    Tempus at odio libero cras eget est vestibulum vel nisi.
+                    At TechXerro, we begin by understanding your brand's vision,
+                    unraveling its identity and aspirations through
+                    collaborative brainstorming and analysis. This phase sets
+                    the stage for crafting innovative strategies tailored to
+                    resonate with your target audience.
                   </p>
                 </div>
               </div>
@@ -142,28 +142,34 @@ export default function Workflow(props) {
                 </div>
                 <div className="col-1 vl-dot-container">
                   <div className="vl">
-                    <div className={"dot " + (activeEl === 2 ? "active" : "")}></div>
+                    <div
+                      className={"dot " + (activeEl === 2 ? "active" : "")}
+                    ></div>
                   </div>
                 </div>
                 <div className="col-5 mt-5">
                   <p className="ms-5">
-                    Blandit feugiat volutpat scelerisque lacinia varius justo
-                    felis turpis. Vitae accumsan tempor orci pellentesque lorem.
-                    Tempus at odio libero cras eget est vestibulum vel nisi.
+                    Transparency and efficiency guide our budget planning
+                    process. We conduct thorough cost analyses to ensure optimal
+                    resource allocation, maximizing the value of your investment
+                    without compromising quality.
                   </p>
                 </div>
               </div>
               <div className="row">
                 <div className="col-5 mt-5">
                   <p className="ms-5">
-                    Blandit feugiat volutpat scelerisque lacinia varius justo
-                    felis turpis. Vitae accumsan tempor orci pellentesque lorem.
-                    Tempus at odio libero cras eget est vestibulum vel nisi.
+                    With a clear roadmap, our expert team executes projects with
+                    precision and creativity. From website development to
+                    digital campaigns, we prioritize attention to detail and
+                    adaptability to deliver exceptional results.
                   </p>
                 </div>
                 <div className="col-1 vl-dot-container">
                   <div className="vl">
-                    <div className={"dot " + (activeEl === 3 ? "active" : "")}></div>
+                    <div
+                      className={"dot " + (activeEl === 3 ? "active" : "")}
+                    ></div>
                   </div>
                 </div>
                 <div className="col-5  mt-5 d-flex justify-content-center">
@@ -175,19 +181,23 @@ export default function Workflow(props) {
               <div className="row ">
                 <div className="col-5 mt-5">
                   <p className="ms-5">
-                    Blandit feugiat volutpat scelerisque lacinia varius justo
-                    felis turpis. Vitae accumsan tempor orci pellentesque lorem.
-                    Tempus at odio libero cras eget est vestibulum vel nisi.
+                    Success hinges on continuous improvement. We evaluate
+                    performance metrics to gain insights, driving ongoing
+                    optimization to refine your brand's digital presence for
+                    sustained growth.
                   </p>
                 </div>
                 <div className="col-1 vl-dot-container">
                   <div className="vl vl-bottom">
-                    <div className={"dot " + (activeEl === 4 ? "active" : "")}></div>
+                    <div
+                      className={"dot " + (activeEl === 4 ? "active" : "")}
+                    ></div>
                   </div>
                 </div>
                 <div className="col-5 mt-5 d-flex justify-content-center">
                   <div className="text result">
-                    <div className="number">04</div>Result&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div className="number">04</div>
+                    Result&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </div>
                 </div>
               </div>

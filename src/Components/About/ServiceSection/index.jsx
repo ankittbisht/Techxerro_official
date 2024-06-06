@@ -1,5 +1,5 @@
 import React from "react";
-import './style.scss';
+import "./style.scss";
 
 const ServAvail = () =>{
     return(
@@ -17,7 +17,7 @@ const ServAvail = () =>{
                             <img src={require('../../../assets/cultureimg2.png')} alt="" />
                             <div>
                                 <p><b>Startups</b></p>  
-                                <p>TechXerro helps startups with brand identity, market analysis, digital marketing, and product launch support to ensure competitive market success. </p>     
+                                <p>TechXerro helps startups with brand identity, market analysis, digital marketing, and product launch support to ensure competitive market success. </p>     
                             
                             </div>
                         </div>                   
@@ -27,7 +27,7 @@ const ServAvail = () =>{
                             <img src={require('../../../assets/cultureimg3.png')} alt="" />
                             <div>
                                 <p><b>Small Business</b></p>
-                                <p>We assist small businesses in brand revitalization, customer engagement, website development, and local SEO to boost growth and online visibility.</p>     
+                                <p>We assist small businesses in brand revitalization, customer engagement, website development, and local SEO to boost growth and online visibility.</p>     
                              
                             </div>
                         </div>                   
@@ -37,7 +37,7 @@ const ServAvail = () =>{
                             <img src={require('../../../assets/cultureimg1.png')} alt="" />
                             <div>
                                 <p><b>Mid-Enterprises</b></p>
-                               <p>TechXerro drives growth for mid-sized enterprises through brand expansion, integrated marketing, and advanced analytics to extend market reach and efficiency.</p>
+                               <p>TechXerro drives growth for mid-sized enterprises through brand expansion, integrated marketing, and advanced analytics to extend market reach and efficiency.</p>
                             </div>
                         </div>                   
                     </div>
@@ -46,7 +46,7 @@ const ServAvail = () =>{
                             <img src={require('../../../assets/bigent.jpg')} alt="" />
                             <div>
                                 <p><b>Enterprises</b></p>
-                                <p>We enable enterprises to dominate markets with strategic brand management, digital transformation, and comprehensive insights for sustained industry leadership.</p>     
+                                <p>We enable enterprises to dominate markets with strategic brand management, digital transformation, and comprehensive insights for sustained industry leadership.</p>     
                             </div>
                         </div>                   
                     </div>

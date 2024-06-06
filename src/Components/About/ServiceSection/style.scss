@@ -1,19 +1,82 @@
 .serviceavail{
-    padding: 100px 0;
-    background: #161719;
+    padding: 70px 0;
+    background: linear-gradient(315deg, #151618 28.5% , #a1030e );
     color:#fff;
+    h2{
+        font-size: 52px;
+    }
     .serv-card-wrapper{
-        padding:100px 0 0;
+        padding:30px 0  20px;
         .business-card{
-            text-align: center;
-            background: #fff;
-            border-radius: 10px;
-            color:#000;
+            background: #ffffff10;
+            color:#fff;
             padding:20px;
+            border-radius: 6px;
+            display: GRID;
+            gap:20px;
+            grid-template-columns: 30% 65%;
+            max-height: 180px;
+            margin-right:20px;
+            margin-bottom:20px;
+            b{
+                font-size:26px;
+            }
             img{
-                margin-top: -50px;
-                padding-bottom: 20px;
+                width:100%;
+                height:100%;
+                // max-width: 150px;
+                max-height: 140px;
+                object-fit: cover;
+                border-radius: 3px;
             }
         }
     }
+}
+
+@media (max-width:1200px){
+    .serviceavail{
+        padding: 70px 15px;
+        .serv-card-wrapper{
+            .business-card{
+                max-height: fit-content;
+                margin-right:10px;
+                b{
+                    padding-bottom: 15px!important;
+                }
+                p{
+                    margin:0;
+                }
+                img{
+                    max-height: 150px;
+                    min-height:150px;
+                }
+            }
+        }
+    } 
+}
+
+@media (max-width:580px){
+    .serviceavail{
+        padding: 45px 15px;
+        h2{
+            font-size:40px!important;
+        }
+        .serv-card-wrapper{
+            .business-card{
+                grid-template-columns: auto;
+                max-height: fit-content;
+                margin-right:10px;
+                b{
+                    padding-bottom: 15px!important;
+                }
+                p{
+                    margin:0;
+                }
+                img{
+                    max-height: 150px;
+                    min-height:150px;
+                }
+            }
+        }
+    } 
 }

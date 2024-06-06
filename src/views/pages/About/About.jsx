@@ -33,13 +33,14 @@ const About = () => {
       <Banner
         title={[`Unleashing Potential,`, <br />, `Delivering Excellence`]}
         subtitle="Who we are"
+        subtitlepara="Something to Know About Us"
         para="TechXerro: Your catalyst for digital dominance. Elevate your brand's online identity with our seamless blend of creativity and data-driven strategies."
       />
       <Ourstorysection />
       <Ourvaluesection />
       <AboutLogo />
-      <Ourculture  />
       <ServAvail />
+      <Ourculture  />
     </>
   );
 };

@@ -6,13 +6,14 @@ const Banner=(props)=>{
             <section className="banner-section">
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-4 col-12" style={{height:'100%', display:'flex', alignItems:'center'}} >
-                            <h3 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >{props.subtitle}</h3>                          
+                        <div className="col-md-5 col-12" style={{height:'100%', display:'grid', alignItems:'center'}} >
+                            <h4 >{props.subtitle}</h4>            
+                            <p>{props.subtitlepara}</p>
                         </div>
-                        <div className="col-sm-8 col-12" style={{height:'100%', display:'flex', alignItems:'end'}}>      
+                        <div className="col-md-7 col-12" style={{height:'100%', display:'flex', alignItems:'end'}}>      
                             <div>               
-                            <h2  data-aos="fade-left" data-aos-delay="100">{props.title}</h2>
-                            <p  data-aos="fade-right" data-aos-delay="200">{props.para}</p> 
+                                <h2 >{props.title}</h2>
+                                <p  >{props.para}</p> 
                             </div>                          
                         </div>
                     </div>

@@ -1,7 +1,4 @@
-import React,{useState} from "react";  
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import React,{useEffect, useState} from "react";  
 import './style.scss'
 
 const ROIsection = () =>{
@@ -17,6 +14,15 @@ const ROIsection = () =>{
         let slides  = document.querySelectorAll('.Roislides'); 
         slider.appendChild(slides[0]);  
     }
+
+    useEffect(()=>{
+        const slider= document.querySelector('.ROIslider');
+        let slides  = document.querySelectorAll('.Roislides');
+        // setInterval(() => {slider.appendChild(slides[0]);  }, 2000)
+
+    })
+
+    
  
     return(
         <>          

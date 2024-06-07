@@ -133,7 +133,7 @@ function Singleblog() {
                         </g>
                         <defs>
                         <clipPath id="clip0_8367_195">
-                        <rect width="23" height="23" fill="white" transform="translate(8 9)"/>
+                          <rect width="23" height="23" fill="white" transform="translate(8 9)"/>
                         </clipPath>
                         </defs>
                       </svg>                      

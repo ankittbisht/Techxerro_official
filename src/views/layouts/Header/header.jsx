@@ -109,26 +109,36 @@ const Header=()=>{
                       <div className="col-7 d-flex " style={{justifyContent:'space-around'}}>
                         <ul>
                             <li>
-                              <div className="menutitle"><a href="/about">Who We Are</a></div>
-                              <div className="menusubtitle">Get to know about us</div>                        
+                              <a href="/about">
+                                <div className="menutitle">Who We Are</div>
+                                <div className="menusubtitle">Get to know about us</div>    
+                              </a>                    
                             </li>
                             <li>
-                              <div className="menutitle"><a href="/team">Our Team</a></div>
-                              <div className="menusubtitle">Get to know team behind Techxerro</div> 
+                              <a href="/team">
+                                <div className="menutitle">Our Team</div>
+                                <div className="menusubtitle">Get to know team behind Techxerro</div> 
+                              </a>
                             </li>
                             <li>
-                              <div className="menutitle"><a href="/about#corporate-values">Corporate Values</a></div>
-                              <div className="menusubtitle">Check out Techxerro's Values</div> 
+                              <a href="/about#corporate-values">
+                                <div className="menutitle">Corporate Values</div>
+                                <div className="menusubtitle">Check out Techxerro's Values</div>
+                              </a> 
                             </li>
                         </ul>
                         <ul>
                           <li>
-                            <div className="menutitle"><a href="/career">Career</a></div>
-                            <div className="menusubtitle">Find Opportunities</div>                        
+                            <a href="/career">
+                              <div className="menutitle">Career</div>
+                              <div className="menusubtitle">Find Opportunities</div>    
+                            </a>                    
                           </li>
                           <li> 
-                            <div className="menutitle"><a href="/about#service-avail">Why TechXerro</a></div>
-                            <div className="menusubtitle">Understanding the "why"</div>  
+                            <a href="/about#service-avail">
+                              <div className="menutitle">Why TechXerro</div>
+                              <div className="menusubtitle">Understanding the "why"</div> 
+                            </a> 
                           </li>
                         </ul>
                       </div>
@@ -140,10 +150,12 @@ const Header=()=>{
                           </svg>
                           <h6>Your one-stop brand empowerment hub, leveling the playing field with tailored strategies and a commitment to your success.</h6>              
                           <button className="d-flex align-items-center btnwhite">
-                            Get In touch  
-                            <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.0943 9.88L17.9043 17.69L10.0943 25.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <a href="/contact">
+                              Get In touch  
+                              <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M10.0943 9.88L17.9043 17.69L10.0943 25.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </a>
                           </button>
                         </div>
                       </div>

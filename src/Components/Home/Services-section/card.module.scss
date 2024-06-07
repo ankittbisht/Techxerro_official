@@ -1,6 +1,6 @@
 .cardContainer {
   scroll-behavior: smooth;
-  height: 110dvh;
+  height: 720px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -162,7 +162,9 @@
 
 @media (min-width:1580px){
   .cardContainer{
-    height:75vh;
+    // height:75vh;
+    
+    height:720px;
   }
 }
 
@@ -170,6 +172,9 @@
 @media (min-width: 990px) and (max-width: 1290px) {
   .react-tabs__tab-panel {
     padding-top: 0px !important;
+  }
+  .cardContainer{
+    height:690px;
   }
   .servicessectionwappper {
     .cardsWrapper {

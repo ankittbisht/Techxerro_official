@@ -2,9 +2,6 @@
     background: #161719;
 }
 
-.blogs-section .content {
-    width: 75%;
-}
 
 .blogs-section .blogReference {
     padding-top: 30px;
@@ -103,5 +100,44 @@
 }
 
 .blogs-section .teamsheaderRow {
-    padding-top: 40px;
+    padding-top:20px;
+    a{
+        color:#ffffff60;
+        text-decoration: none;
+    }
+    h2{
+        font-size: 55px!important;
+    }
+    .img-fluid{
+        padding:20px 0 0; 
+        width:100%;
+        border-radius: 6px;
+    }
+    .content{
+        padding:25px 10px;
+        padding-right: 55px;
+        h3{
+            font-size: 35px;
+        }
+        .datetag{
+            color:#ffffff80
+        }
+        p{
+            color:#fff;
+        }
+    }
+    .sidebar{
+        padding-top:30px;
+        .M-blog{
+            padding:0px 0 15px;
+            h5{
+                font-size: 26px;
+                padding-top: 10px;
+            }
+            .d-flex{
+                justify-content: space-between;
+                color:#ffffff70;
+            }
+        }
+    }
 }

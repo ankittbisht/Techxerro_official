@@ -7,21 +7,25 @@
   h3 {
     // font-weight: bold!important;
     font-size: 55px !important;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
   .contact-info {
     padding-left: 50px;
     font-size: 34px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     p {
       // font-weight: bold;
       font-size: 26px !important;
     }
   }
+  p{
+    font-size: 22px;
+  }
 }
 .contact-form {
   padding: 100px 0;
   color: #fff;
+  
   .consult-card {
     background-size: cover;
     background-color: #ffffff10;
@@ -38,9 +42,6 @@
     div {
       position: relative;
       z-index: 3;
-      p {
-        font-size: 18px;
-      }
     }
     &::after {
       background-size: cover;

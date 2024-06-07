@@ -52,10 +52,10 @@ const ContactUs = () => {
                       alt=""
                       
                     />
-                    <h3 >
+                    <h3>
                       Free 30min consultation
                     </h3>
-                    <p >
+                    <p>
                       Have a new project in mind? Schedule a 30-minute discovery
                       call or fill out the quick form, and together we'll
                       explore the possibilities.

@@ -29,6 +29,9 @@ const Ourvaluesection = () => {
                         </div>
                     </div>
                     <div className="col-lg-6 col-12">
+                        {/* <div className="boxshade">
+                            <img src={require('../../../assets/about/visionim.png')} alt="" style={{width:'100%'}}/>
+                        </div> */}
                         <div className="boxshade">
                             <h4>Democratizing Brand Excellence</h4>
                             <p>For too long, small businesses have been overshadowed by big players with massive budgets. Our vision is to level that playing field, making top-notch branding, marketing, and consulting affordable for companies of any size. We envision success determined by passion and execution, not finances.</p>

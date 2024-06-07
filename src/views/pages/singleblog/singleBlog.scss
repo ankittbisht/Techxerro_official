@@ -106,7 +106,7 @@
         text-decoration: none;
     }
     h2{
-        font-size: 55px!important;
+        font-size: 55px;
     }
     .img-fluid{
         padding:20px 0 0; 
@@ -137,6 +137,39 @@
             .d-flex{
                 justify-content: space-between;
                 color:#ffffff70;
+            }
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .sidebar{
+        padding-bottom: 50px;
+        .sidebar-posts{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap:15px;
+        }
+    }
+}
+
+@media (max-width:580px) {
+    .blogs-section{
+        padding: 80px 15px 40px;
+        h2{
+            font-size: 28px;
+        }
+        h3{
+            font-size: 26px!important;
+        }
+        .content{
+            padding-right: 10px!important;            
+        }
+        .sidebar-posts{
+            .M-blog{
+                .d-flex{
+                    display: inline!important;
+                }
             }
         }
     }

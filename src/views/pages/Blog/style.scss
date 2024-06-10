@@ -10,7 +10,6 @@
 }
 
 .first-row h1 {
-  font-family: Poppins;
   font-size: 54px !important;
   font-weight: 700 !important;
   text-align: left;
@@ -39,7 +38,6 @@
 }
 
 .blogs-card h3 {
-  font-family: Poppins;
   font-size: 26px !important;
   font-weight: 400 !important;
   line-height: 31.36px !important;
@@ -47,7 +45,6 @@
 }
 
 .blogs-card p {
-  font-family: Poppins;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
@@ -92,8 +89,7 @@
 }
 
 .react-tabs__tab {
-  font-family: Poppins;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 25.74px;
   text-align: center;
@@ -134,22 +130,24 @@
   padding: 10px 20px 10px;
   .react-tabs__tab {
     padding: 10px 20px !important;
-    font-family: Poppins;
+
     font-size: 18px;
     text-align: center;
     border: none !important;
     &:hover {
       border: 1px solid;
       border-radius: 50px;
-      background: #c10000;
+      //   background: #c10000;
     }
   }
   .react-tabs__tab--selected {
-    background: transparent !important;
+    // background: #c10000 !important;
+    border-radius: 20px !important;
+    border: none !important;
     border-color: unset !important;
     color: white !important;
     border-radius: 0 !important;
-    font-weight: bold !important;
+    font-weight: 400 !important;
   }
 }
 

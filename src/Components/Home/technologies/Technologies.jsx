@@ -150,224 +150,117 @@ export default function Technologies(props) {
               <VerticalSlider/>
           </div>    
         </div> 
-        <ul className="nav nav-tabs" id="myTab" role="tablist" ref={ulRef}>
-          <div className="menbar"></div>
-          <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)} >
-            <button
-              className="nav-link active"
-              id="home-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#home"
-              type="button"
-              role="tab"
-              aria-controls="home"
-              aria-selected="true" 
-              data-position="0"
-            >
-              E-commerce
-            </button>
-          </li>
-          <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)}>
-            <button
-              className="nav-link"
-              id="construction-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#construction"
-              type="button"
-              role="tab"
-              aria-controls="construction"
-              aria-selected="false" 
-              data-position="100" 
-            >
-              Construction
-            </button>
-          </li>
-          <li className="nav-item active " role="presentation" onClick={(e)=>handleMenuClick(e)}>
-            <button
-              className="nav-link"
-              id="hospitality-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#hospitality"
-              type="button"
-              role="tab"
-              aria-controls="hospitality"
-              aria-selected="false"
-              data-position="200"
-            >
-              Hospitality
-            </button>
-          </li>
-          <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)}>
-            <button
-              className="nav-link"
-              id="automotive-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#automotive"
-              type="button"
-              role="tab"
-              aria-controls="automotive"
-              aria-selected="false"
-              data-position="300" 
-            >
-              Automotive
-            </button>
-          </li>
-          <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)}>
-            <button
-              className="nav-link"
-              id="Sports-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#Sports"
-              type="button"
-              role="tab"
-              aria-controls="Sports"
-              aria-selected="false"
-              data-position="400" 
-            >
-              Sports
-            </button>
-          </li>
-        </ul>
+          <ul className="nav nav-tabs" id="myTab" role="tablist" ref={ulRef}>
+            <div className="menbar"></div>
+            <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)} >
+              <button
+                className="nav-link active"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home"
+                type="button"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true" 
+                data-position="0"
+              >
+                E-commerce
+              </button>
+            </li>
+            <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)}>
+              <button
+                className="nav-link"
+                id="construction-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#construction"
+                type="button"
+                role="tab"
+                aria-controls="construction"
+                aria-selected="false" 
+                data-position="100" 
+              >
+                Construction
+              </button>
+            </li>
+            <li className="nav-item active " role="presentation" onClick={(e)=>handleMenuClick(e)}>
+              <button
+                className="nav-link"
+                id="hospitality-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#hospitality"
+                type="button"
+                role="tab"
+                aria-controls="hospitality"
+                aria-selected="false"
+                data-position="200"
+              >
+                Hospitality
+              </button>
+            </li>
+            <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)}>
+              <button
+                className="nav-link"
+                id="automotive-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#automotive"
+                type="button"
+                role="tab"
+                aria-controls="automotive"
+                aria-selected="false"
+                data-position="300" 
+              >
+                Automotive
+              </button>
+            </li>
+            <li className="nav-item" role="presentation" onClick={(e)=>handleMenuClick(e)}>
+              <button
+                className="nav-link"
+                id="Sports-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#Sports"
+                type="button"
+                role="tab"
+                aria-controls="Sports"
+                aria-selected="false"
+                data-position="400" 
+              >
+                Sports
+              </button>
+            </li>
+          </ul>
 
-      <div className="tab-content" id="myTabContent">
-      {
-        inditems.map((obj)=>{
-          return(
-            <div
-              className={obj.id===1 ? "tab-pane fade show active tech-container":"tab-pane fade tech-container"}
-              id={obj.tabid}
-              role="tabpanel"
-              aria-labelledby={obj.tablabel}
-              key={obj.id}
-            >
-              <div className="industrywrapper" style={{background:`url(${obj.backgroundimg})`,backgroundSize:'cover'}}>
-                <div className="content">
-                  {obj.heading}
-                  <p>{obj.para}</p>
-                  <div class="logos d-flex">
-                    {obj.logos.map((logoobj)=>{
-                      return(
-                        <div key={logoobj.logoid}>
-                          {logoobj.img}
-                        </div>
-                      )
-                    })}
+        <div className="tab-content" id="myTabContent">
+        {
+          inditems.map((obj)=>{
+            return(
+              <div
+                className={obj.id===1 ? "tab-pane fade show active tech-container":"tab-pane fade tech-container"}
+                id={obj.tabid}
+                role="tabpanel"
+                aria-labelledby={obj.tablabel}
+                key={obj.id}
+              >
+                <div className="industrywrapper" style={{background:`url(${obj.backgroundimg})`,backgroundSize:'cover'}}>
+                  <div className="content">
+                    {obj.heading}
+                    <p>{obj.para}</p>
+                    <div class="logos d-flex">
+                      {obj.logos.map((logoobj)=>{
+                        return(
+                          <div key={logoobj.logoid}>
+                            {logoobj.img}
+                          </div>
+                        )
+                      })}
+                    </div>
+                    <button>Get Started</button>
                   </div>
-                  <button>Get Started</button>
                 </div>
               </div>
-            </div>
-          )
-        })
-      }
-        {/* <div
-          className="tab-pane fade show active tech-container"
-          id="home"
-          role="tabpanel"
-          aria-labelledby="home-tab"
-        >
-          <div className="industrywrapper">
-            <div className="content">
-              <h3>Powering every industry<br/>
-              <span>Powering all disruptors.</span></h3>
-              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
-              <div class="logos d-flex">
-                <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
-                <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
-                <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
-              </div>
-              <button>Get Started</button>
-            </div>
-          </div>
+            )
+          })
+        }
         </div>
-
-        <div
-          className="tab-pane fade tech-container"
-          id="construction"
-          role="tabpanel"
-          aria-labelledby="construction-tab"
-        >
-          
-          <div className="industrywrapper">
-            <div className="content">
-              <h3>Powering every industry<br/>
-              <span>Powering all disruptors.</span></h3>
-              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
-              <div class="logos d-flex">
-                <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
-              </div>
-              <button>Get Started</button>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="tab-pane fade tech-container"
-          id="hospitality"
-          role="tabpanel"
-          aria-labelledby="hospitality-tab"
-        >
-          
-          <div className="industrywrapper">
-            <div className="content">
-              <h3>Powering every industry<br/>
-              <span>Powering all disruptors.</span></h3>
-              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
-              <div class="logos d-flex">
-                <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
-                <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
-                <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
-                <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
-              </div>
-              <button>Get Started</button>
-            </div>
-          </div>
-        </div>
-        
-        <div
-          className="tab-pane fade tech-container"
-          id="automotive"
-          role="tabpanel"
-          aria-labelledby="automotive-tab"
-        >       
-        <div className="industrywrapper">
-          <div className="content">
-            <h3>Powering every industry<br/>
-            <span>Powering all disruptors.</span></h3>
-            <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
-            <div class="logos d-flex">
-              <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
-              <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
-              <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
-              <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
-            </div>
-            <button>Get Started</button>
-          </div>
-        </div>   
-        </div>
-
-        <div
-          className="tab-pane fade tech-container"
-          id="Sports"
-          role="tabpanel"
-          aria-labelledby="Sports-tab"
-        >       
-          <div className="industrywrapper">
-            <div className="content">
-              <h3>Powering every industry<br/>
-              <span>Powering all disruptors.</span></h3>
-              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
-              <div class="logos d-flex">
-                <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
-                <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
-                <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
-                <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
-              </div>
-              <button>Get Started</button>
-            </div>
-          </div>   
-    </div>*/}
-      </div>
       </div>
     </div>
     </>

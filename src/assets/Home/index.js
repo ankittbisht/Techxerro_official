@@ -38,6 +38,10 @@ import work2 from "./work2.png";
 import work3 from "./work3.png";
 import work4 from "./work4.png";
 import work5 from "./work5.png";
+import workweb1 from './workweb1.png';
+import workweb2 from './workweb2.png';
+import workweb3 from './workweb3.png';
+// import workweb1 from './workweb1.png';
 import circularArrowLeft from "./circularArrowLeft.svg";
 import circularArrowRight from "./circularArrowRight.svg";
 import blog1 from "./blog1.png";
@@ -110,6 +114,10 @@ export const home = {
   work3,
   work4,
   work5,
+  workweb1,
+  workweb2,
+  workweb3,
+  // workweb1,
   circularArrowLeft,
   circularArrowRight,
   blog1,

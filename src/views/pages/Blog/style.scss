@@ -92,8 +92,7 @@
 }
 
 .react-tabs__tab {
-  font-family: Poppins;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 25.74px;
   text-align: center;
@@ -101,11 +100,11 @@
 }
 
 .react-tabs__tab--selected {
-  background: transparent !important;
+  background: transparent!important;
   border-color: unset !important;
   color: white !important;
   border-radius: 0 !important;
-  font-weight: bold !important;
+  font-weight: bold ;
 }
 
 .react-tabs__tab-panel {
@@ -134,8 +133,7 @@
   padding: 10px 20px 10px;
   .react-tabs__tab {
     padding: 10px 20px !important;
-    font-family: Poppins;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     border: none !important;
     &:hover {
@@ -145,11 +143,12 @@
     }
   }
   .react-tabs__tab--selected {
-    background: transparent !important;
+    background: #c10000 !important;
+    border:none!important;
     border-color: unset !important;
     color: white !important;
-    border-radius: 0 !important;
-    font-weight: bold !important;
+    border-radius: 50px !important;
+    font-weight: 400 !important;
   }
 }
 

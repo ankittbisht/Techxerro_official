@@ -97,6 +97,60 @@ export default function Workflow(props) {
           <div className="text-wrapper">
             <h3>Our customized workflow</h3>
           </div>
+          <div className="content-container">
+            <section class="ps-timeline-sec">
+              <div class="container">
+                  <ol class="ps-timeline">
+                    <li>
+                        <div class="img-handler-top">
+                          <div className="text concept">
+                            <div className="number">01</div>Concept
+                          </div>
+                        </div>
+                        <div class="ps-bot">
+                            <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem.</p>
+                        </div>
+                        <span class="ps-sp-top"></span>
+                    </li>
+                    <li>
+                        <div class="img-handler-top">
+                          <div className="text budget">
+                            <div className="number">02</div>Budget
+                          </div>
+                        </div>
+                        <div class="ps-bot">
+                            <p>Have you tried Physiotherapy, Chiropractor or your GP without the pain free results?</p>
+                        </div>
+                        <span class="ps-sp-top"></span>
+                    </li>
+                    <li>
+                        <div class="img-handler-top">  
+                          <div className="text development">                    
+                            <div className="number">03</div>Development
+                          </div>
+                        </div>
+                        <div class="ps-bot">
+                            <p>Let Physology assess and treat your pain with our trusted revolusionary approach.</p>
+                        </div>
+                        <span class="ps-sp-top"></span>
+                    </li>
+                    <li>
+                        <div class="img-handler-top">                      
+                          <div className="text result">  
+                            <div className="number">04</div>Results
+                          </div>
+                        </div>
+                        <div class="ps-bot">
+                            <p>Join our happy family of pain free clients.</p>
+                        </div>
+                        <span class="ps-sp-top"></span>
+                    </li>
+                  </ol>
+                </div>
+            </section>
+          </div>
+         
+{/* 
           <div className="content-container container-fluid p-0">
             <div className="rectangle" id="rectangle" />
             <div className="container pt-4">
@@ -104,13 +158,13 @@ export default function Workflow(props) {
                 className="workflowLine"
                 alt="Vector"
                 src={images.workflowLine}
-              /> */}
-              {/* <img
+              /> 
+             <img
                 className="workflowArrow"
                 alt="Vector"
                 src={images.workflowArrow}
                 id="circle"
-              /> */}
+              /> 
               <div className="row">
                 <div className="col-5 d-flex justify-content-center">
                   <div className="text concept">
@@ -202,9 +256,9 @@ export default function Workflow(props) {
                 </div>
               </div>
             </div>
-            {/* <div className="ellipse-8" />
-          <div className="ellipse-9" /> */}
-          </div>
+            <div className="ellipse-8" />
+          <div className="ellipse-9" /> 
+          </div> */}
         </div>
       </div>
     </div>

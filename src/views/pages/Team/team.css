@@ -136,15 +136,17 @@
 }
 
 .teams3 h1 {
+    font-family: NATS;
     margin-bottom: 35px;
     color: #FFFFFF;
-    font-family: Poppins;
+    /* font-family: Poppins; */
     font-size: 50px !important;
     font-weight: 700;
     line-height: 48px;
 }
 
 .teams3 button {
+    font-family: NATS;
     border: none;
     margin: 22px auto 0;
     margin-top: 22px;
@@ -153,7 +155,7 @@
     text-align: center;
     padding: 20px 30px 20px 30px;
     border-radius: 50px;
-    font-family: Poppins;
+    /* font-family: Poppins; */
     font-size: 16px !important;
     font-weight: 400;
     line-height: 18.54px;

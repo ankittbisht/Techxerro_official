@@ -108,7 +108,13 @@ export default function Workflow(props) {
                           </div>
                         </div>
                         <div class="ps-bot">
-                            <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem.</p>
+                            <p>
+                            At TechXerro, we begin by understanding your brand's vision,
+                            unraveling its identity and aspirations through
+                            collaborative brainstorming and analysis. This phase sets
+                            the stage for crafting innovative strategies tailored to
+                            resonate with your target audience.
+                            </p>
                         </div>
                         <span class="ps-sp-top"></span>
                     </li>
@@ -119,7 +125,12 @@ export default function Workflow(props) {
                           </div>
                         </div>
                         <div class="ps-bot">
-                            <p>Have you tried Physiotherapy, Chiropractor or your GP without the pain free results?</p>
+                            <p>
+                            Transparency and efficiency guide our budget planning
+                            process. We conduct thorough cost analyses to ensure optimal
+                            resource allocation, maximizing the value of your investment
+                            without compromising quality.
+                            </p>
                         </div>
                         <span class="ps-sp-top"></span>
                     </li>
@@ -130,7 +141,12 @@ export default function Workflow(props) {
                           </div>
                         </div>
                         <div class="ps-bot">
-                            <p>Let Physology assess and treat your pain with our trusted revolusionary approach.</p>
+                            <p>
+                            With a clear roadmap, our expert team executes projects with
+                            precision and creativity. From website development to
+                            digital campaigns, we prioritize attention to detail and
+                            adaptability to deliver exceptional results.
+                            </p>
                         </div>
                         <span class="ps-sp-top"></span>
                     </li>
@@ -141,7 +157,10 @@ export default function Workflow(props) {
                           </div>
                         </div>
                         <div class="ps-bot">
-                            <p>Join our happy family of pain free clients.</p>
+                            <p>Success hinges on continuous improvement. We evaluate
+                    performance metrics to gain insights, driving ongoing
+                    optimization to refine your brand's digital presence for
+                    sustained growth.</p>
                         </div>
                         <span class="ps-sp-top"></span>
                     </li>

@@ -52,7 +52,7 @@ export const blogData = [
     category: "Marketing",
   },
   {
-    id: 5,
+    id: 6,
     img: Blog4,
     title: "Design Content Presentaion.",
     para: "A design review presentation is a concise yet comprehensive overview of design progress, decisions, and next steps. It's a pivotal moment where stakeholders gather to assess the design's alignment with project goals, usability, and technical feasibility. Through succinct communication and impactful visuals.",

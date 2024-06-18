@@ -35,12 +35,9 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 export default function CurvedCarousel(props) {
   const imgStyle = {
     transform: "translate(-50%, -50%)",
-    // maxWidth: 'fit-content', // This property is commented out
     position: "absolute",
-    // margin: '0 auto', // This property is commented out
     top: "70%",
     left: "50%",
-    // margin: '50px 0 0 50px', // This property is commented out
   };
 
   const items = [
@@ -55,8 +52,8 @@ export default function CurvedCarousel(props) {
       id: 2,
       tabid: "Branding",
       tablabel: "Branding-tab",
-      imgs: [web1, web2, web3, web4, web5],
-      bg: ["#ECE7D7", "#ECE7D7", "#ECE7D7", "#ECE7D7", "#ECE7D7"],
+      imgs: [web1, web3, web2, web4, web5],
+      bg: ["#01A95B", "#ECE7D7", "#40403F", "#FEF8D9", "#ECE7D7"],
     },
     {
       id: 3,
@@ -73,7 +70,8 @@ export default function CurvedCarousel(props) {
       bg: ["#09247B", "#B31E22", "#01A95B", "#EAF5EB", "#158942"],
     },
   ];
-  const swiperRef = useRef();
+  const swiperRefs = useRef(items.map(() => React.createRef()));
+
   const ulRef = useRef(null);
   const handleMenuClick = (e) => {
     e.preventDefault();
@@ -92,7 +90,6 @@ export default function CurvedCarousel(props) {
       document.querySelector(".menbar").style.left = "420px";
     } else if (dataPosition === "400") {
       document.querySelector(".menbar").style.left = "560px";
-    } else {
     }
   };
 
@@ -107,7 +104,6 @@ export default function CurvedCarousel(props) {
         </p>
 
         <ul className="nav nav-tabs" id="myTab" role="tablist" ref={ulRef}>
-          {/* <div className="menbar"></div> */}
           <li
             className="nav-item"
             role="presentation"
@@ -188,7 +184,7 @@ export default function CurvedCarousel(props) {
       </div>
 
       <div className="tab-content" id="myTabContent">
-        {items.map((obj) => {
+        {items.map((obj, index) => {
           return (
             <div
               className={
@@ -202,24 +198,22 @@ export default function CurvedCarousel(props) {
               key={obj.id}
             >
               <Swiper
+                initialSlide={4}
+                loop={true}
                 slidesPerView={"auto"}
                 spaceBetween={30}
                 navigation={true}
                 modules={[Navigation, Autoplay]}
                 className="CurvedSwiper"
-                loop={true}
+                // rewind={true}
                 centeredSlides={true}
-                // autoplay={{
-                //   delay: 2500,
-                //   disableOnInteraction: false,
-                // }}
+                autoplay={{
+                  delay: 1500,
+                  disableOnInteraction: false,
+                }}
                 speed={800}
-                // autoplay={{
-                //   delay: 2000,
-                //   disableOnInteraction: false,
-                // }}
                 onBeforeInit={(swiper) => {
-                  swiperRef.current = swiper;
+                  swiperRefs.current[index].current = swiper;
                 }}
               >
                 <SwiperSlide className="container3">
@@ -263,6 +257,29 @@ export default function CurvedCarousel(props) {
                         <p>
                           Creating memorable brand identities, capturing
                           essence.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="container2">
+                  <div className="container">
+                    <div
+                      className="row"
+                      style={{
+                        height: "410px",
+                        position: "relative",
+                        backgroundColor: obj.bg[3],
+                      }}
+                    >
+                      <img style={imgStyle} src={obj.imgs[3]} alt="" />
+                    </div>
+                    <div className="row">
+                      <div className="content animate__animated animate__fadeInUp">
+                        <h5>Social media design</h5>
+                        <p>
+                          Crafting engaging visuals, driving brand recognition
+                          and engagement strategically.
                         </p>
                       </div>
                     </div>
@@ -337,14 +354,14 @@ export default function CurvedCarousel(props) {
                     </div>
                   </div>
                 </SwiperSlide>
-                <SwiperSlide className="container3">
+                <SwiperSlide className="container2">
                   <div className="container">
                     <div
                       className="row"
                       style={{
-                        backgroundColor: obj.bg[0],
                         height: "410px",
                         position: "relative",
+                        backgroundColor: obj.bg[3],
                       }}
                     >
                       <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[0]} alt="" />
@@ -383,11 +400,12 @@ export default function CurvedCarousel(props) {
                     </div>
                   </div>
                 </SwiperSlide>
-
                 <div className="custom-nav">
                   <button
                     className="btn-prev"
-                    onClick={() => swiperRef.current?.slidePrev()}
+                    onClick={() =>
+                      swiperRefs.current[index].current.slidePrev()
+                    }
                   >
                     <svg
                       width="29"
@@ -399,15 +417,17 @@ export default function CurvedCarousel(props) {
                       <path
                         d="M16.4057 13.38L8.5957 21.19L16.4057 29"
                         stroke="white"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </button>
                   <button
                     className="btn-next"
-                    onClick={() => swiperRef.current?.slideNext()}
+                    onClick={() =>
+                      swiperRefs.current[index].current.slideNext()
+                    }
                   >
                     <svg
                       width="29"
@@ -419,9 +439,9 @@ export default function CurvedCarousel(props) {
                       <path
                         d="M12.5943 13.38L20.4043 21.19L12.5943 29"
                         stroke="white"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </button>

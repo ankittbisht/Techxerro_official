@@ -109,7 +109,7 @@ export default function Blog(props) {
               >
                 {blogData.map((data) => {
                   return (
-                    <div className="container">
+                    <div key={data.id} className="container">
                       <div className="row imgcont">
                         <LazyLoadImage effect="blur" src={data.img} alt="" />
                         <div className="describe">
@@ -175,7 +175,7 @@ export default function Blog(props) {
                   .filter((data) => data.category.toLowerCase() === "design")
                   .map((data) => {
                     return (
-                      <div className="container">
+                      <div key={data.id} className="container">
                         <div className="row imgcont">
                           <LazyLoadImage effect="blur" src={data.img} alt="" />
                           <div className="describe">
@@ -237,14 +237,13 @@ export default function Blog(props) {
                 autoplaySpeed={5000}
                 autoplayTimeout={3000}
               >
-                {" "}
                 {blogData
                   .filter(
                     (data) => data.category.toLowerCase() === "development"
                   )
                   .map((data) => {
                     return (
-                      <div className="container">
+                      <div key={data.id} className="container">
                         <div className="row imgcont">
                           <LazyLoadImage effect="blur" src={data.img} alt="" />
                           <div className="describe">
@@ -310,7 +309,7 @@ export default function Blog(props) {
                   .filter((data) => data.category.toLowerCase() === "marketing")
                   .map((data) => {
                     return (
-                      <div className="container">
+                      <div key ={data.id} className="container">
                         <div className="row imgcont">
                           <LazyLoadImage effect="blur" src={data.img} alt="" />
                           <div className="describe">

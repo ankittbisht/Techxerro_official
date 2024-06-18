@@ -6,8 +6,6 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { blogPosts } from "./blogData";
-import insta from "../../../assets/insta.png";
-import linkedin from "../../../assets/linked.png";
 
 function GridExample({ category }) {
   // const maxAlphabets = 150; // Change this to the desired number of alphabets per page

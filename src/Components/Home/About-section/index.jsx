@@ -1,6 +1,7 @@
 import React from "react";
 import aboutimg from '../../../assets/Home/aboutimg2.png';
 import './style.scss';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const AboutSection = () =>{
     
@@ -32,8 +33,8 @@ const AboutSection = () =>{
                         </div>
                     </div>
                     
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-12 about-com-img d-flex justify-content-end">
-                        <img src={aboutimg} alt="whatwedo" data-aos="fade-left" data-aos-delay="200"/>
+                    <div className="col-xl-6 col-lg-6 col-md-12 col-12 about-com-LazyLoadImage d-flex justify-content-end">
+                        <LazyLoadImage src={aboutimg} effect="blue" alt="whatwedo" data-aos="fade-left" data-aos-delay="200"/>
                     </div>
                 </div>
             </div>

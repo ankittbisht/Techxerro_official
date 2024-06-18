@@ -20,6 +20,7 @@ import colorlogo9 from '../../../assets/Home/Logo/colorlogo/viti.png';
 import logo10 from '../../../assets/Home/Logo/Group 335.png';
 import colorlogo10 from '../../../assets/Home/Logo/colorlogo/flashmuscle.png';
 import './style.scss'; 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Marqueelogo = () =>{
     const logos=[
@@ -82,8 +83,8 @@ const Marqueelogo = () =>{
                     {logos.map((obj)=>{
                         return(
                             <div key={obj.id} className="logitem">
-                                <img src={obj.logo} alt="" className="logo"/>
-                                <img src={obj.hoverlogo} alt="" className="hoverlogo"/>
+                                <LazyLoadImage src={obj.logo} alt="" className="logo" effect="blue"/>
+                                <LazyLoadImage src={obj.hoverlogo} alt="" className="hoverlogo"  effect="blue"/>
                             </div>
                         )
                     })}
@@ -92,8 +93,8 @@ const Marqueelogo = () =>{
                     {logos.map((obj)=>{
                         return(
                             <div key={obj.id} className="logitem">
-                                <img src={obj.logo} alt="" className="logo" />
-                                <img src={obj.hoverlogo} alt="" className="hoverlogo"/>
+                                <LazyLoadImage src={obj.logo} alt="" className="logo" effect="blue"/>
+                                <LazyLoadImage src={obj.hoverlogo} alt="" className="hoverlogo" effect="blue"/>
                             </div>
                         )
                     })}

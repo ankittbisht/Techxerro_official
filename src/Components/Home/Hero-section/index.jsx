@@ -1,44 +1,8 @@
 import React, { useEffect } from "react";
-import "./style.scss";
-// import OwlCarousel from 'react-owl-carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
+import "./style.scss"; 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const HeroSection = () => {
-  const items = {
-    nav: true,
-    navText: [
-      `<svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9.4057 17.3036L1.5957 9.49359L9.4057 1.68359" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>        
-        `,
-      `<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.02789 1.06359L8.83789 8.87359L1.02789 16.6836" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        `,
-    ],
-    smartSpeed: 100,
-    animateOut: "fadeOut",
-    animateIn: "fadeIn",
-    responsive: {
-      // breakpoint from 0 up
-      0: {
-        items: 1,
-      },
-      // breakpoint from 480 up
-      480: {
-        items: 1,
-      },
-      // breakpoint from 768 up
-      768: {
-        items: 1,
-      },
-      1028: {
-        items: 1,
-      },
-    },
-  };
-
   useEffect(() => {
     let dots = document.querySelectorAll(
       ".Hero-section .hide-on-mobile .owl-items"
@@ -57,8 +21,7 @@ const HeroSection = () => {
     <>
       <section className="hero-sec-wrapper">
         <div className="container">
-          {/* <OwlCarousel className='owl-theme hide-on-mobile' {...items} items={1} loop margin={40} nav={false} dots={false} autoplaySpeed={5000} autoplayTimeout={3000}> */}
-
+         
           <div className="row Hero-section align-items-center">
             <div
               className="col-lg-6 col-md-12 pd50 slider-content order-lg-1 order-md-2 order-2"              
@@ -87,12 +50,13 @@ const HeroSection = () => {
 
             <div className="col-lg-6 col-md-12 d-flex justify-content-lg-center justify-content-md-start order-lg-2 order-md-1 order-1">
               <div className="banner-1">
-                <img
+                <LazyLoadImage
                   src={require("../../../assets/logobanner.png")}
                   alt="techxerroslogo"
                   data-aos="fade-left"
                   data-aos-duration="1200"
                   data-aos-delay="200"
+                  effect="blur"
                 />
               </div>
             </div>

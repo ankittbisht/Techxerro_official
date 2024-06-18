@@ -30,6 +30,8 @@ import mob3 from "../../../assets/Service/Mob3.png";
 import mob4 from "../../../assets/Service/Mob4.png";
 import mob5 from "../../../assets/Service/Mob5.png";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 export default function CurvedCarousel(props) {
   const imgStyle = {
     transform: "translate(-50%, -50%)",
@@ -230,7 +232,7 @@ export default function CurvedCarousel(props) {
                         position: "relative",
                       }}
                     >
-                      <img style={imgStyle} src={obj.imgs[0]} alt="" />
+                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[0]} alt="" />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -253,7 +255,7 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[1],
                       }}
                     >
-                      <img style={imgStyle} src={obj.imgs[1]} alt="" />
+                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[1]} alt="" />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -276,7 +278,7 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[2],
                       }}
                     >
-                      <img style={imgStyle} src={obj.imgs[2]} alt="" />
+                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[2]} alt="" />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -299,7 +301,7 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[3],
                       }}
                     >
-                      <img style={imgStyle} src={obj.imgs[3]} alt="" />
+                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[3]} alt="" />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -322,7 +324,7 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[4],
                       }}
                     >
-                      <img style={imgStyle} src={obj.imgs[4]} alt="" />
+                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[4]} alt="" />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -345,7 +347,7 @@ export default function CurvedCarousel(props) {
                         position: "relative",
                       }}
                     >
-                      <img style={imgStyle} src={obj.imgs[0]} alt="" />
+                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[0]} alt="" />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -368,7 +370,7 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[1],
                       }}
                     >
-                      <img style={imgStyle} src={obj.imgs[1]} alt="" />
+                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[1]} alt="" />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">

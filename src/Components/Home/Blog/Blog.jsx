@@ -9,6 +9,7 @@ import { blogData } from "./data";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Blog(props) {
   const openCity = (evt, cityName) => {
@@ -57,7 +58,7 @@ export default function Blog(props) {
           </div>
           {/* <div className="col-7">
             <p className="all-blog">
-              All Blogs <img src={images.BlogArrow} alt="" />
+              All Blogs <LazyLoadImage src={images.BlogArrow} alt="" />
             </p>
           </div> */}
         </div>
@@ -110,7 +111,7 @@ export default function Blog(props) {
                   return (
                     <div className="container">
                       <div className="row imgcont">
-                        <img src={data.img} alt="" />
+                        <LazyLoadImage effect="blur" src={data.img} alt="" />
                         <div className="describe">
                           <div className="d-flex align-items-center justify-content-space-between">
                             <p className="col-6 author">
@@ -176,7 +177,7 @@ export default function Blog(props) {
                     return (
                       <div className="container">
                         <div className="row imgcont">
-                          <img src={data.img} alt="" />
+                          <LazyLoadImage effect="blur" src={data.img} alt="" />
                           <div className="describe">
                             <div className="d-flex align-items-center justify-content-space-between">
                               <p className="col-6 author">
@@ -245,7 +246,7 @@ export default function Blog(props) {
                     return (
                       <div className="container">
                         <div className="row imgcont">
-                          <img src={data.img} alt="" />
+                          <LazyLoadImage effect="blur" src={data.img} alt="" />
                           <div className="describe">
                             <div className="d-flex align-items-center justify-content-space-between">
                               <p className="col-6 author">
@@ -311,7 +312,7 @@ export default function Blog(props) {
                     return (
                       <div className="container">
                         <div className="row imgcont">
-                          <img src={data.img} alt="" />
+                          <LazyLoadImage effect="blur" src={data.img} alt="" />
                           <div className="describe">
                             <div className="d-flex align-items-center justify-content-space-between">
                               <p className="col-6 author">

@@ -8,12 +8,16 @@ const TechnologiesPage = () => {
       <section className="bannersection">
         <div className="container">
           <div className="row">
-            <div className="col-6 d-flex align-items-center">
+            <div className="col-12 col-sm-6 d-flex align-items-center">
               <div>
-                <h2 data-aos="fade-right" data-aos-delay="100">
+                <h2
+                // data-aos="fade-right" data-aos-delay="100"
+                >
                   Technology we use
                 </h2>
-                <p data-aos="fade-left" data-aos-delay="100">
+                <p
+                // data-aos="fade-left" data-aos-delay="100"
+                >
                   we leverage cutting-edge technology to drive innovation and
                   deliver top-notch solutions. By utilizing advanced tools such
                   as artificial intelligence, machine learning, and cloud
@@ -25,20 +29,23 @@ const TechnologiesPage = () => {
 
                 <button
                   className="btn-red"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
+                  //   data-aos="fade-up"
+                  //   data-aos-delay="200"
                 >
                   Let's Talk
                 </button>
               </div>
             </div>
-            <div className="col-6 d-flex justify-content-end">
+            <div
+              className="col-6 d-flex  justify-content-start align-items-center imgContainer"
+              style={{ overflow: "hidden" }}
+            >
               <img
                 src={images.techimgbanner}
                 alt=""
-                width="750px"
-                data-aos="fade-left"
-                data-aos-delay="300"
+                // width="750px"
+                // data-aos="fade-left"
+                // data-aos-delay="300"
               />
             </div>
           </div>
@@ -55,10 +62,8 @@ const TechnologiesPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
-              <h3 data-aos="fade-left" data-aos-delay="100">
-                Your Digital ally
-              </h3>
-              <p data-aos="fade-right" data-aos-delay="100">
+              <h3>Your Digital ally</h3>
+              <p>
                 As your digital ally, we harness cutting-edge technology to
                 drive innovation and deliver tailored solutions.we enhance
                 productivity and ensure excellence in every project, staying
@@ -69,7 +74,9 @@ const TechnologiesPage = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-4 text-center" data-aos="fade-up">
+            <div className="col-4 text-center" 
+            // data-aos="fade-up"
+            >
               <svg
                 width="62"
                 height="62"
@@ -92,7 +99,7 @@ const TechnologiesPage = () => {
                 and expertise in AI, machine learning, and cloud computing.
               </p>
             </div>
-            <div className="col-4 text-center" data-aos="fade-up">
+            <div className="col-4 text-center">
               <svg
                 width="62"
                 height="62"
@@ -128,7 +135,7 @@ const TechnologiesPage = () => {
                 cutting-edge technology and a commitment to excellence.
               </p>
             </div>
-            <div className="col-4 text-center" data-aos="fade-up">
+            <div className="col-4 text-center">
               <svg
                 width="62"
                 height="62"
@@ -159,10 +166,10 @@ const TechnologiesPage = () => {
       <section className="techs">
         <div className="container">
           <div className="row">
-            <div className="col-12" data-aos="fade-up" data-aos-delay="100">
+            <div className="col-12">
               <h4>Front End Web</h4>
               <br />
-              <div className="d-flex gap-5 align-items-center">
+              <div className="d-flex gap-5 align-items-center techList">
                 <div className="text-center">
                   <div className="icon-ellipse">
                     <img
@@ -234,10 +241,14 @@ const TechnologiesPage = () => {
           <br />
           <br />
           <div className="row">
-            <div className="col-12" data-aos="fade-up" data-aos-delay="100">
+            <div
+              className="col-12 backend"
+              //   data-aos="fade-up"
+              //   data-aos-delay="100"
+            >
               <h4>Back-End Web</h4>
               <br />
-              <div className="d-flex gap-5 align-items-center">
+              <div className="d-flex gap-5 align-items-center techList">
                 <div className="text-center">
                   <div className="icon-ellipse">
                     <img
@@ -333,10 +344,13 @@ const TechnologiesPage = () => {
           <br />
           <br />
           <div className="row">
-            <div className="col-12" data-aos="fade-up" data-aos-delay="100">
+            <div
+              className="col-12"
+              //  data-aos="fade-up" data-aos-delay="100"
+            >
               <h4>Mobile</h4>
               <br />
-              <div className="d-flex gap-5 align-items-center">
+              <div className="d-flex gap-5 align-items-center techList">
                 <div className="text-center">
                   <div className="icon-ellipse">
                     <img
@@ -417,10 +431,13 @@ const TechnologiesPage = () => {
           <br />
           <br />
           <div className="row">
-            <div className="col-12" data-aos="fade-up" data-aos-delay="100">
+            <div
+              className="col-12"
+              // data-aos="fade-up" data-aos-delay="100"
+            >
               <h4>Software development</h4>
               <br />
-              <div className="d-flex gap-5 align-items-center">
+              <div className="d-flex gap-5 align-items-center techList">
                 <div className="text-center">
                   <div className="icon-ellipse">
                     <img
@@ -510,10 +527,15 @@ const TechnologiesPage = () => {
           <br />
           <br />
           <div className="row">
-            <div className="col-6" data-aos="fade-up" data-aos-delay="100">
+            <div
+              className="col-12 col-lg-6"
+              //   data-aos="fade-up"
+              //   data-aos-delay="100"
+              style={{ marginBottom: "100px" }}
+            >
               <h4>Graphic & UI/UX design</h4>
               <br />
-              <div className="d-flex gap-5 align-items-center">
+              <div className="d-flex gap-5 align-items-center techList">
                 <div className="text-center">
                   <div className="icon-ellipse">
                     <img
@@ -557,10 +579,14 @@ const TechnologiesPage = () => {
             <br />
             <br />
 
-            <div className="col-6" data-aos="fade-up" data-aos-delay="200">
+            <div
+              className="col-12 col-lg-6"
+              //   data-aos="fade-up"
+              //   data-aos-delay="200"
+            >
               <h4>Video Animation & Editing</h4>
               <br />
-              <div className="d-flex gap-5 align-items-center">
+              <div className="d-flex gap-5 align-items-center techList">
                 <div className="text-center">
                   <div className="icon-ellipse">
                     <img

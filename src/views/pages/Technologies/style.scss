@@ -1,29 +1,67 @@
-.bannersection{
-    background-color: #161719;
-    padding:100px 0 0px;
-    color:#fff;
-    display: flex;
-    align-items: end;
-    height:750px;
+.bannersection {
+  background-color: #161719;
+  padding: 100px 0 0px;
+  color: #fff;
+  display: flex;
+  align-items: end;
+  height: 750px;
+
+  img {
+    height: 600px;
+  }
 }
 
-.techs{
-    background-color: #161719;
-    padding:100px 0;
-    color:#fff;
-    .icon-ellipse{
-        height:100px;
-        width:100px;
-        border-radius: 100px;
-        padding:20px;
-        box-shadow: 10px 10px 15px #00000020;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-        background-color: #fff;
+.techs {
+  background-color: #161719;
+  padding: 100px 0;
+  color: #fff;
+  .icon-ellipse {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    padding: 20px;
+    box-shadow: 10px 10px 15px #00000020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+  }
+  span {
+    opacity: 0.5;
+  }
+  .techList {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  .techList::-webkit-scrollbar{
+    display: none;
+  }
+
+}
+
+// .backend {
+// }
+@media (max-width: 1000px) {
+  .bannersection img {
+    height: 70%;
+  }
+}
+@media (max-width:700px) {
+    .bannersection img{
+        height: 50%;
     }
-    span{
-        opacity: 0.5;
-    }
+}
+
+@media (max-width: 576px) {
+  .bannersection .imgContainer {
+    display: none !important;
+  }
+  .bannersection{
+    align-items: center;
+    padding: 0 10px 0;
+  }
 }

@@ -42,15 +42,15 @@ export const blogPosts = [
     content:
       "Investing wisely is key to financial success. Diversify your portfolio to spread risk and maximize returns. Consider long-term goals and risk tolerance when choosing investments. Regularly review and adjust your portfolio to adapt to market changes. By staying informed and disciplined, you can achieve your financial objectives.",
   },
-  {
-    id: 1,
-    blogimg: blog6,
-    date: "May 21, 2024",
-    category: "Healthcare",
-    title: "The Importance of Regular Exercise for Overall Health",
-    content:
-      "Regular exercise is essential for maintaining good health. It strengthens the heart, improves circulation, and boosts the immune system. Exercise also helps control weight, reduce stress, and improve mood. Aim for at least 30 minutes of moderate-intensity exercise most days of the week to reap the benefits.",
-  },
+  // {
+  //   id: 1,
+  //   blogimg: blog6,
+  //   date: "May 21, 2024",
+  //   category: "Healthcare",
+  //   title: "The Importance of Regular Exercise for Overall Health",
+  //   content:
+  //     "Regular exercise is essential for maintaining good health. It strengthens the heart, improves circulation, and boosts the immune system. Exercise also helps control weight, reduce stress, and improve mood. Aim for at least 30 minutes of moderate-intensity exercise most days of the week to reap the benefits.",
+  // },
 
   {
     id: 2,

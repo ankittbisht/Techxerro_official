@@ -241,11 +241,11 @@ const Cards = ({
     },
   };
 
-  useEffect(() => {
-    const element = document.getElementById(id);
-    const distanceFromTop = element.getBoundingClientRect().top;
-    console.log("Distance from top:", distanceFromTop);
-  }, [id]); //
+  // useEffect(() => {
+  //   const element = document.getElementById(id);
+  //   const distanceFromTop = element.getBoundingClientRect().top;
+  //   console.log("Distance from top:", distanceFromTop);
+  // }, [id]); //
 
   return (
     <div

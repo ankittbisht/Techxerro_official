@@ -1,7 +1,79 @@
-import React from "react"; 
+import React from "react";
 import "./style.scss";
 
+import Bg1 from "../../../assets/ROI/Bg1.png";
+import Bg2 from "../../../assets/ROI/Bg2.png";
+import Bg3 from "../../../assets/ROI/bg3.png";
+import Bg4 from "../../../assets/ROI/Bg4.png";
+
+import Logo1 from "../../../assets/ROI/Logo1.png";
+import Logo2 from "../../../assets/ROI/Logo2.png";
+import Logo3 from "../../../assets/ROI/Logo3.png";
+import Logo4 from "../../../assets/ROI/Logo4.png";
+
+import Thumbnail1 from "../../../assets/ROI/Bg1.png";
+import Thumbnail2 from "../../../assets/ROI/Thumbnail2.png";
+import Thumbnail3 from "../../../assets/ROI/Thumbnail3.png";
+import Thumbnail4 from "../../../assets/ROI/Thumbnail4.png";
+
 const ROIsection = () => {
+  const ROIData = [
+    {
+      id: 1,
+      bgimg: Bg1,
+      logo: Logo1,
+      thumbnail: Thumbnail1,
+      title: "Busy Beans",
+      para: "Busy Beans is a chain of coffee shops that also offers hot beverages, cold beverages, sundaes, and food.",
+      work: "Social Media Marketing",
+    },
+    {
+      id: 2,
+      bgimg: Bg2,
+      logo: Logo2,
+      thumbnail: Thumbnail2,
+      title: "Flash Muscles",
+      para: "Flash Muscles is a casual wear lifestyle brand, fit for the fashion conscious woman of today.",
+      work: "Social Media Marketing",
+    },
+    {
+      id: 3,
+      bgimg: Bg3,
+      logo: Logo3,
+      thumbnail: Thumbnail3,
+      title: "Golds Gym",
+      para: "Gold's Gym is one of the most iconic and renowned fitness centers in the world,legacy over five decades.",
+      work: "Social Media Marketing",
+    },
+    {
+      id: 4,
+      bgimg: Bg4,
+      logo: Logo4,
+      thumbnail: Thumbnail4,
+      title: "VFF Clothing Brand",
+      para: "Gold's Gym is one of the most iconic and renowned fitness centers in the world, legacy over five decades.",
+      work: "Social Media Marketing",
+    },
+    {
+      id: 1,
+      bgimg: Bg1,
+      logo: Logo1,
+      thumbnail: Thumbnail1,
+      title: "Busy Beans",
+      para: "Busy Beans is a chain of coffee shops that also offers hot beverages, cold beverages, sundaes, and food.",
+      work: "Social Media Marketing",
+    },
+    {
+      id: 2,
+      bgimg: Bg2,
+      logo: Logo2,
+      thumbnail: Thumbnail2,
+      title: "Flash Muscles",
+      para: "Flash Muscles is a casual wear lifestyle brand, fit for the fashion conscious woman of today.",
+      work: "Social Media Marketing",
+    },
+  ];
+
   const handlePrevclick = () => {
     const slider = document.querySelector(".ROIslider");
     let slides = document.querySelectorAll(".Roislides");
@@ -27,162 +99,31 @@ const ROIsection = () => {
             </div>
           </div>
           <div className="ROIslider">
-            <div
-              className="Roislides"
-              style={{
-                backgroundImage:
-                  "url('https://www.techopedia.com/wp-content/uploads/2023/02/tech-career-outlook-1.jpg')",
-              }}
-            >
-              <div className="content">
-                <img
-                  src="https://www.techopedia.com/wp-content/uploads/2023/02/tech-career-outlook-1.jpg"
-                  alt=""
-                  className="thumbnail"
-                />
-                <div className="thumbnailct">
-                  <div className="company">Pegasus Drone</div>
-                  <div className="companylogo">
-                    <img
-                      src={require("../../../assets/Home/Logo/colorlogo/pegasusbiglogo.png")}
-                      alt=""
-                    />
+            {ROIData.map((data) => {
+              return (
+                <div
+                key={data.id}
+                  className="Roislides"
+                  style={{
+                    backgroundImage: `url(${data.bgimg})`,
+                  }}
+                >
+                  <div className="content" style={{ overflow: "hidden" }}>
+                    <img src={data.thumbnail} alt="" className="thumbnail" />
+                    <div className="thumbnailct">
+                      <div className="company">{data.title}</div>
+                      <div className="companylogo">
+                        <img src={data.logo} alt="" />
+                      </div>
+                      <h4>{data.para}</h4>
+                      <h5 className="work">{data.work}</h5>
+                    </div>
                   </div>
-                  <h4>Top 5 most ROI generated App Marketing Project</h4>
                 </div>
-              </div>
-            </div>
-            <div
-              className="Roislides"
-              style={{
-                backgroundImage:
-                  "url('https://cdn.get.tech/images/showcase/1x-tech.png')",
-              }}
-            >
-              <div className="content">
-                <img
-                  src="https://cdn.get.tech/images/showcase/1x-tech.png"
-                  alt=""
-                  className="thumbnail"
-                />
-                <div className="thumbnailct">
-                  <div className="company">Viti Collection</div>
-                  <div className="companylogo">
-                    <img
-                      src={require("../../../assets/Home/Logo/colorlogo/pegasusbiglogo.png")}
-                      alt=""
-                    />
-                  </div>
-                  <h4>
-                    Insights from the Most Successful App Marketing Ventures
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div
-              className="Roislides"
-              style={{
-                backgroundImage:
-                  "url('https://burst.shopifycdn.com/photos/tech-meeting-flatlay.jpg?width=1000&format=pjpg&exif=0&iptc=0')",
-              }}
-            >
-              <div className="content">
-                <img
-                  src="https://burst.shopifycdn.com/photos/tech-meeting-flatlay.jpg?width=1000&format=pjpg&exif=0&iptc=0"
-                  alt=""
-                  className="thumbnail"
-                />
-                <div className="thumbnailct">
-                  <div className="company">Varnin Design</div>
-                  <div className="companylogo">
-                    <img
-                      src={require("../../../assets/Home/Logo/colorlogo/pegasusbiglogo.png")}
-                      alt=""
-                    />
-                  </div>
-                  <h4>Examining the Most Lucrative App Marketing Projects</h4>
-                </div>
-              </div>
-            </div>
-            <div
-              className="Roislides"
-              style={{
-                backgroundImage:
-                  "url('https://www.crowe.com/-/media/crowe/llp/sc10-media/insights/articles/2023/content-2000x1125/contentmktmt2300002bfy23-markets-technology-awareness--whats-next-for-tech--thought-leadershipas3639.jpg?rev=025a044aa9394515a261e9c6242045cb')",
-              }}
-            >
-              <div className="content">
-                <img
-                  src="https://www.crowe.com/-/media/crowe/llp/sc10-media/insights/articles/2023/content-2000x1125/contentmktmt2300002bfy23-markets-technology-awareness--whats-next-for-tech--thought-leadershipas3639.jpg?rev=025a044aa9394515a261e9c6242045cb"
-                  alt=""
-                  className="thumbnail"
-                />
-                <div className="thumbnailct">
-                  <div className="company">Techqilla</div>
-                  <div className="companylogo">
-                    <img
-                      src={require("../../../assets/Home/Logo/colorlogo/pegasusbiglogo.png")}
-                      alt=""
-                    />
-                  </div>
-                  <h4> App Marketing Campaigns That Set the Bar High</h4>
-                </div>
-              </div>
-            </div>
-            <div
-              className="Roislides"
-              style={{
-                backgroundImage:
-                  "url('https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg')",
-              }}
-            >
-              <div className="content">
-                <img
-                  src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg"
-                  alt=""
-                  className="thumbnail"
-                />
-                <div className="thumbnailct">
-                  <div className="company">TechXerro</div>
-                  <div className="companylogo">
-                    <img
-                      src={require("../../../assets/Home/Logo/colorlogo/pegasusbiglogo.png")}
-                      alt=""
-                    />
-                  </div>
-                  <h4>
-                    Beyond Expectations: The 5 Most Rewarding App Marketing
-                    Ventures
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div
-              className="Roislides"
-              style={{
-                backgroundImage:
-                  "url('https://www.theforage.com/blog/wp-content/uploads/2022/09/tech-companies.jpg')",
-              }}
-            >
-              <div className="content">
-                <img
-                  src="https://www.theforage.com/blog/wp-content/uploads/2022/09/tech-companies.jpg"
-                  alt=""
-                  className="thumbnail"
-                />
-                <div className="thumbnailct">
-                  <div className="company">Pegasus Drone</div>
-                  <div className="companylogo">
-                    <img
-                      src={require("../../../assets/Home/Logo/colorlogo/pegasusbiglogo.png")}
-                      alt=""
-                    />
-                  </div>
-                  <h4>Top 5 most ROI generated App Marketing Project</h4>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
+
           <div className="arrowbtn d-flex gap-4">
             <button className="btn-prev" onClick={() => handlePrevclick()}>
               <svg

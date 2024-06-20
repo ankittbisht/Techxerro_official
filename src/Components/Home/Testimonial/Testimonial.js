@@ -2,6 +2,8 @@ import "./Testimonial.css";
 import TesimonialData from "./Testimonial-Data.js";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Testimonial = () => {
   const option = {
@@ -37,7 +39,7 @@ const Testimonial = () => {
             <div className="col-xl-4 col-lg-6 col-12 d-flex ">
               <div>
                 <div className="title pt-5">
-                  <h2 style={{ fontFamily: "poppins" }}>What People Says </h2>
+                  <h2>What People Says </h2>
                   <p>Start your web business journey with our great team.</p>
                 </div>
               </div>
@@ -60,14 +62,15 @@ const Testimonial = () => {
                 >
                   {TesimonialData.map((obj, index) => {
                     return (
-                
-                        <li key={obj.id}>
-                          <img src={obj.img} />
-                          <h3 className="ClientName">{obj.name}</h3>
-                          <div className="ClientTitle">{obj.title}</div>
-                          <p className="ClientReview">{obj.tesimony}</p>
-                        </li>
-               
+                      <li key={obj.id}>
+                        {/* <img src={obj.img} /> */}
+                        <LazyLoadImage src= {obj.img} effect="blur" width={100} height={100} />
+                        <h3 className="ClientName" style={{ color: "#EC1A1A" }}>
+                          {obj.name}
+                        </h3>
+                        <p className="ClientTitle">{obj.title}</p>
+                        <p className="ClientReview">{obj.tesimony}</p>
+                      </li>
                     );
                   })}
                 </OwlCarousel>

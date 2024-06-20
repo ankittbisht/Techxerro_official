@@ -1,29 +1,18 @@
 "use client";
 // import Image from 'next/image';
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./card.module.scss";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import { blogPosts } from "./blogData";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import "./styles.css";
 
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 // import { projects } from '.';
 
-function GridExample({ cardBanner }) {
-  // const maxAlphabets = 150; // Change this to the desired number of alphabets per page
-  // Function to truncate content to the specified number of alphabets
-  const truncateContent = (content, maxAlphabets) => {
-    if (content.length > maxAlphabets) {
-      return content.slice(0, maxAlphabets) + "..."; // Add ellipsis
-    }
-    return content;
-  };
-
+function GridExample({ cardBanner, placeholdercardBanner }) {
   const option = {
     navText: [
       `<svg width="41" height="9" viewBox="0 0 41 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,11 +54,12 @@ function GridExample({ cardBanner }) {
       >
         <div className={styles.cards}>
           <div className={styles.posterImg}>
-            {/* <img
-              src={require("../../../assets/services/insta-marketing.png")}
-              alt=""
-            /> */}
-            <img src={cardBanner.first} alt="" />
+            <LazyLoadImage
+              src={cardBanner.first}
+              placeholderSrc={placeholdercardBanner.first1}
+              effect="blur"
+            />
+            {/* <img src={cardBanner.first} alt="" /> */}
           </div>
           <div className={styles.cardContent}>
             <p>Instagram Marketing</p>
@@ -84,7 +74,12 @@ function GridExample({ cardBanner }) {
         </div>
         <div className={styles.cards}>
           <div className={styles.posterImg}>
-            <img src={cardBanner.second} alt="" />
+            <LazyLoadImage
+              src={cardBanner.second}
+              effect="blur"
+              placeholderSrc={placeholdercardBanner.second1}
+            />
+            {/* <img src={cardBanner.second} alt="" /> */}
           </div>
           <div className={styles.cardContent}>
             <p>Youtube Marketing</p>
@@ -99,7 +94,12 @@ function GridExample({ cardBanner }) {
         </div>
         <div className={styles.cards}>
           <div className={styles.posterImg}>
-            <img src={cardBanner.third} alt="" />
+            <LazyLoadImage
+              src={cardBanner.third}
+              effect="blur"
+              placeholderSrc={placeholdercardBanner.third1}
+            />
+            {/* <img src={cardBanner.third} alt="" /> */}
           </div>
           <div className={styles.cardContent}>
             <p>Facebook Marketing</p>
@@ -114,7 +114,12 @@ function GridExample({ cardBanner }) {
         </div>
         <div className={styles.cards}>
           <div className={styles.posterImg}>
-            <img src={cardBanner.fourth} alt="" />
+            <LazyLoadImage
+              src={cardBanner.fourth}
+              effect="blur"
+              placeholderSrc={placeholdercardBanner.fourth1}
+            />
+            {/* <img src={cardBanner.fourth} alt="" /> */}
           </div>
           <div className={styles.cardContent}>
             <p>Influencer Marketing</p>
@@ -208,6 +213,7 @@ const Cards = ({
   title,
   subheading,
   cardBanner,
+  placeholdercardBanner,
   description,
   src,
   url,
@@ -271,23 +277,32 @@ const Cards = ({
               <Tab>{subheading[0]}</Tab>
               <Tab>{subheading[1]}</Tab>
               <Tab>{subheading[2]}</Tab>
-              <Tab>{subheading[3]}</Tab>
-              <Tab>{subheading[4]}</Tab>
+              {subheading[3] && <Tab>{subheading[3]}</Tab>}
+              {/* <Tab>{subheading[4]}</Tab> */}
             </TabList>
             <TabPanel className="cards-container">
-              <GridExample cardBanner={cardBanner[0]} />
+              <GridExample
+                cardBanner={cardBanner[0]}
+                placeholdercardBanner={placeholdercardBanner[0]}
+              />
             </TabPanel>
             <TabPanel className="cards-container">
-              <GridExample2 />
+              <GridExample
+                cardBanner={cardBanner[1]}
+                placeholdercardBanner={placeholdercardBanner[1]}
+              />
             </TabPanel>
             <TabPanel className="cards-container">
-              <GridExample cardBanner={cardBanner[0]} />
+              <GridExample
+                cardBanner={cardBanner[2]}
+                placeholdercardBanner={placeholdercardBanner[2]}
+              />
             </TabPanel>
             <TabPanel className="cards-container">
-              <GridExample2 />
-            </TabPanel>
-            <TabPanel className="cards-container">
-              <GridExample cardBanner={cardBanner[0]} />
+              <GridExample
+                cardBanner={cardBanner[3]}
+                placeholdercardBanner={placeholdercardBanner[3]}
+              />
             </TabPanel>
           </Tabs>
           {/* <div className={styles.cardsWrapper}>              

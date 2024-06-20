@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { images } from "../../../assets/images";
 import "./header.scss";
 import { Link } from "react-router-dom";
+import logoplace from "../../../assets/logoplace.jpg";
+import logoplaceholder from "../../../assets/logoplaceholder.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Header = () => {
   const [isServiceOpen, setIsServiceOpen] = useState(false);
@@ -151,7 +155,14 @@ const Header = () => {
                 </div>
               </div>
               <a href="/">
-                <img src={images.Logo} className="logo" alt="" />
+                <LazyLoadImage
+                  src={images.Logo}
+                  PlaceholderSrc={logoplaceholder}
+                  effect="blur"
+                  className="logo"
+                  alt="Image Alt"
+                />
+                {/* <img src={images.Logo} className="logo" alt="" /> */}
               </a>
             </div>
 
@@ -159,7 +170,7 @@ const Header = () => {
             <div className="col-xl-7 col-md-9 d-flex align-items-center justify-content-md-start justify-content-sm-end">
               <ul className="menu d-flex align-items-center mb-0 gap-4 p-0">
                 <li>
-                  <Link to ="/">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li className="drop-menu">
                   <a

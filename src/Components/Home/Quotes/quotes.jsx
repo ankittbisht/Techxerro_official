@@ -1,5 +1,7 @@
 import React from "react";
 import "./style.scss";
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Quotes = (props) => {
   return (

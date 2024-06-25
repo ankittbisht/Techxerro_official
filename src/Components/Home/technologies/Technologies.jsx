@@ -6,6 +6,9 @@ import backgroundimg2 from "../../../assets/Home/technologies/const-bg-min.jpg";
 import backgroundimg3 from "../../../assets/Home/technologies/hospitality-min.jpg";
 import backgroundimg4 from "../../../assets/Home/technologies/automotive-min.jpg";
 import backgroundimg5 from "../../../assets/Home/technologies/sports-min.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 export default function Technologies(props) {
   const inditems = [
@@ -197,7 +200,7 @@ export default function Technologies(props) {
             <div className="col-md-6 col-12">
               <h2 className="title">
                 Powering every industry
-                <br />
+                <br/>
                 Powering all disruptors.
               </h2>
             </div>
@@ -318,13 +321,11 @@ export default function Technologies(props) {
                   aria-labelledby={obj.tablabel}
                   key={obj.id}
                 >
-                  <div
-                    className="industrywrapper"
-                    style={{
-                      background: `url(${obj.backgroundimg})`,
-                      backgroundSize: "cover",
-                    }}
-                  >
+                  <div className="industrywrapper">
+                    <picture>
+                      <source />
+                      <LazyLoadImage src={obj.backgroundimg} effect="blur" alt="Technology"/>
+                    </picture>
                     <div className="content">
                       {obj.heading}
                       <p>{obj.para}</p>
@@ -338,114 +339,7 @@ export default function Technologies(props) {
                   </div>
                 </div>
               );
-            })}
-            {/* <div
-          className="tab-pane fade show active tech-container"
-          id="home"
-          role="tabpanel"
-          aria-labelledby="home-tab"
-        >
-          <div className="industrywrapper">
-            <div className="content">
-              <h3>Powering every industry<br/>
-              <span>Powering all disruptors.</span></h3>
-              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
-              <div class="logos d-flex">
-                <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
-                <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
-                <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
-              </div>
-              <button>Get Started</button>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="tab-pane fade tech-container"
-          id="construction"
-          role="tabpanel"
-          aria-labelledby="construction-tab"
-        >
-          
-          <div className="industrywrapper">
-            <div className="content">
-              <h3>Powering every industry<br/>
-              <span>Powering all disruptors.</span></h3>
-              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
-              <div class="logos d-flex">
-                <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
-              </div>
-              <button>Get Started</button>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="tab-pane fade tech-container"
-          id="hospitality"
-          role="tabpanel"
-          aria-labelledby="hospitality-tab"
-        >
-          
-          <div className="industrywrapper">
-            <div className="content">
-              <h3>Powering every industry<br/>
-              <span>Powering all disruptors.</span></h3>
-              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
-              <div class="logos d-flex">
-                <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
-                <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
-                <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
-                <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
-              </div>
-              <button>Get Started</button>
-            </div>
-          </div>
-        </div>
-        
-        <div
-          className="tab-pane fade tech-container"
-          id="automotive"
-          role="tabpanel"
-          aria-labelledby="automotive-tab"
-        >       
-        <div className="industrywrapper">
-          <div className="content">
-            <h3>Powering every industry<br/>
-            <span>Powering all disruptors.</span></h3>
-            <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
-            <div class="logos d-flex">
-              <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
-              <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
-              <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
-              <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
-            </div>
-            <button>Get Started</button>
-          </div>
-        </div>   
-        </div>
-
-        <div
-          className="tab-pane fade tech-container"
-          id="Sports"
-          role="tabpanel"
-          aria-labelledby="Sports-tab"
-        >       
-          <div className="industrywrapper">
-            <div className="content">
-              <h3>Powering every industry<br/>
-              <span>Powering all disruptors.</span></h3>
-              <p>Blandit feugiat volutpat scelerisque lacinia varius justo felis turpis. Vitae accumsan tempor orci pellentesque lorem. </p>
-              <div class="logos d-flex">
-                <img src={require('../../../assets/techs/logo/logo (1).png')} alt="Logo 1"/>
-                <img src={require('../../../assets/techs/logo/logo (2).png')} alt="Logo 2"/>
-                <img src={require('../../../assets/techs/logo/logo (3).png')} alt="Logo 3"/>
-                <img src={require('../../../assets/techs/logo/logo (4).png')} alt="Logo 4"/>
-              </div>
-              <button>Get Started</button>
-            </div>
-          </div>   
-    </div>*/}
+            })}            
           </div>
         </div>
       </div>

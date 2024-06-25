@@ -31,6 +31,7 @@ import mob4 from "../../../assets/Service/Mob4.png";
 import mob5 from "../../../assets/Service/Mob5.png";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function CurvedCarousel(props) {
   const imgStyle = {

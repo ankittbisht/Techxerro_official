@@ -21,6 +21,7 @@ import logo10 from '../../../assets/Home/Logo/Group 335.png';
 import colorlogo10 from '../../../assets/Home/Logo/colorlogo/flashmuscle.png';
 import './style.scss'; 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Marqueelogo = () =>{
     const logos=[

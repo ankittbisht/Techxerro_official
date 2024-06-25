@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Quotes = (props) => {
@@ -8,8 +8,12 @@ const Quotes = (props) => {
     <>
       <section
         className="quote-section"
-        style={{ backgroundImage: `url('${props.background}')` }}
+        // style={{ backgroundImage: `url('${props.background}')` }}
       >
+        <picture>
+          <source type="image/webp" />
+          <LazyLoadImage effect="blur" src={props.background} alt="Office meeting" width="100%" />
+        </picture>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-10">

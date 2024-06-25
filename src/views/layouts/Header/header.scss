@@ -95,6 +95,13 @@ nav{
             height:100%;
             padding-left:150px;
             padding-right: 60px;
+            .tab{
+              .tablinks{
+                padding:0 0 10px 0;
+                width:100%;
+                text-align: left;
+              } 
+            }  
             h2{
               border-bottom: 1px solid #ffffff50;
               padding-bottom: 20px;
@@ -108,6 +115,9 @@ nav{
                 padding-bottom:2px;
               }
             }
+          }          
+          .tabcontent{
+            padding: 0;
           }
           .servicelist{
             padding-top: 5px;
@@ -155,6 +165,35 @@ nav{
     }
 }
 
+.menulist{
+  background:#151618;
+  font-size:29px; 
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:none;
+  padding:20px 0 0px 20px;
+  img{
+    padding-bottom: 20px;
+  }
+  ul {
+    li{
+      padding-bottom: 15px;
+      a{
+        color:#fff;
+        text-decoration: none;
+      }
+    }
+  }
+  .close{
+    width:100%;
+    display: flex;
+    justify-content: center;
+
+  }
+}
 .sidemenu1 {
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
   /* Add shadow to the left */
@@ -207,7 +246,6 @@ nav{
   /* Use flexbox */
   justify-content: center;
   /* Center the icons horizontally */
-
   transform: translateX(-50%);
 
   a {
@@ -228,7 +266,7 @@ nav{
 .mobile{
   display: none;
   #mobilelogo{
-    width:140px
+    width:140px;
   }
 }
 
@@ -272,5 +310,8 @@ nav{
 @media (max-width:580px) {
   nav{
     padding:18px 15px;
+  }
+  .menulist{
+    display:block;
   }
 }

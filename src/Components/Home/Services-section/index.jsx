@@ -73,6 +73,25 @@ import Dm2 from "../../../assets/services/DmImg2.png";
 import Dm3 from "../../../assets/services/DmImg3.png";
 import Dm4 from "../../../assets/services/DmImg4.png";
 
+import CSP1 from "../../../assets/services/CSP1.png";
+import CSP2 from "../../../assets/services/CSP2.png";
+import CSP3 from "../../../assets/services/CSP3.png";
+
+import CE1 from "../../../assets/services/CE1.png";
+import CE2 from "../../../assets/services/CE2.png";
+import CE3 from "../../../assets/services/CE3.png";
+import CE4 from "../../../assets/services/CE4.png";
+
+import VP1 from "../../../assets/services/VP1.png";
+import VP2 from "../../../assets/services/VP2.png";
+import VP3 from "../../../assets/services/VP3.png";
+import VP4 from "../../../assets/services/VP4.png";
+
+import UX1 from "../../../assets/services/UX1.png";
+import UX2 from "../../../assets/services/UX2.png";
+import UX3 from "../../../assets/services/UX3.png";
+import UX4 from "../../../assets/services/UX4.png";
+
 import Marketing1 from "../../../assets/services/fb-marketing.png";
 import Marketing2 from "../../../assets/services/influencer-marketing.png";
 import Marketing3 from "../../../assets/services/insta-marketing.png";
@@ -152,6 +171,25 @@ import pMarketing1 from "../../../assets/Services-compressed-images/fb-marketing
 import pMarketing2 from "../../../assets/Services-compressed-images/influencer-marketing.png";
 import pMarketing3 from "../../../assets/Services-compressed-images/insta-marketing.png";
 import pMarketing4 from "../../../assets/Services-compressed-images/youtubemarketing.png";
+
+import pCSP1 from "../../../assets/Services-compressed-images/CSP1.png";
+import pCSP2 from "../../../assets/Services-compressed-images/CSP2.png";
+import pCSP3 from "../../../assets/Services-compressed-images/CSP3.png";
+
+import pCE1 from "../../../assets/Services-compressed-images/CE1.png";
+import pCE2 from "../../../assets/Services-compressed-images/CE2.png";
+import pCE3 from "../../../assets/Services-compressed-images/CE3.png";
+import pCE4 from "../../../assets/Services-compressed-images/CE4.png";
+
+import pVP1 from "../../../assets/Services-compressed-images/VP1.png";
+import pVP2 from "../../../assets/Services-compressed-images/VP2.png";
+import pVP3 from "../../../assets/Services-compressed-images/VP3.png";
+import pVP4 from "../../../assets/Services-compressed-images/VP4.png";
+
+import pUX1 from "../../../assets/Services-compressed-images/UX1.png";
+import pUX2 from "../../../assets/Services-compressed-images/UX2.png";
+import pUX3 from "../../../assets/Services-compressed-images/UX3.png";
+import pUX4 from "../../../assets/Services-compressed-images/UX4.png";
 
 export const projects = [
   {
@@ -254,42 +292,42 @@ export const projects = [
     ],
     cardBanner: [
       {
-        first: Marketing1,
-        second: Marketing2,
-        third: Marketing3,
-        fourth: Marketing4,
+        first: CSP1,
+        second: CSP2,
+        third: CSP3,
+        fourth: CSP3,
       },
       {
-        first: Marketing1,
-        second: Marketing2,
-        third: Marketing3,
-        fourth: Marketing4,
+        first: CE1,
+        second: CE2,
+        third: CE3,
+        fourth: CE4,
       },
       {
-        first: Marketing1,
-        second: Marketing2,
-        third: Marketing3,
-        fourth: Marketing4,
+        first: VP1,
+        second: VP2,
+        third: VP3,
+        fourth: VP4,
       },
     ],
     placeholdercardBanner: [
       {
-        first1: pMarketing1,
-        second1: pMarketing2,
-        third1: pMarketing3,
-        fourth1: pMarketing4,
+        first1: pCSP1,
+        second1: pCSP2,
+        third1: pCSP3,
+        fourth1: pCSP3,
       },
       {
-        first1: pMarketing1,
-        second1: pMarketing2,
-        third1: pMarketing3,
-        fourth1: pMarketing4,
+        first1: pCE1,
+        second1: pCE2,
+        third1: pCE3,
+        fourth1: pCE4,
       },
       {
-        first1: pMarketing1,
-        second1: pMarketing2,
-        third1: pMarketing3,
-        fourth1: pMarketing4,
+        first1: pVP1,
+        second1: pVP2,
+        third1: pVP3,
+        fourth1: pVP4,
       },
     ],
   },
@@ -310,13 +348,13 @@ export const projects = [
       // "Visual Branding",
     ],
     cardBanner: [
-      { first: Va1, second: Va2, third: Va3, fourth: Va4 },
+      { first: UX1, second: UX2, third: UX3, fourth: UX4 },
       { first: Dm1, second: Dm2, third: Dm3, fourth: Dm4 },
       { first: Cd1, second: Cd2, third: Cd3, fourth: Cd4 },
       { first: Dev1, second: Dev2, third: Dev3, fourth: Dev4 },
     ],
     placeholdercardBanner: [
-      { first1: pVa1, second1: pVa2, third1: pVa3, fourth1: pVa4 },
+      { first1: pUX1, second1: pUX2, third1: pUX3, fourth1: pUX4 },
       { first1: pDm1, second1: pDm2, third1: pDm3, fourth1: pDm4 },
       { first1: pCd1, second1: pCd2, third1: pCd3, fourth1: pCd4 },
       { first1: pDev1, second1: pDev2, third1: pDev3, fourth1: pDev4 },

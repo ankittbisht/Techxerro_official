@@ -16,20 +16,20 @@ import { Suspense, lazy } from "react";
 //   return <h2>🌀 Loading...</h2>;
 // }
 
-const LazyAbout = lazy(() => import("../views/pages/About/About"));
-const LazyPrivacy = lazy(() =>
-  import("../views/pages/PrivacyPolicy/index.jsx")
-);
-const Lazycontactus = lazy(() => import("../views/pages/Contact/Contact.jsx"));
-const Lazyourblog = lazy(() => import("../views/pages/Blog/index.jsx"));
-const Lazycareer = lazy(() => import("../views/pages/Career/index.jsx"));
-const Lazytechnologypage = lazy(() =>
-  import("../views/pages/Technologies/index.jsx")
-);
-const Lazysingleblog = lazy(() =>
-  import("../views/pages/singleblog/Singleblog.jsx")
-);
-const Lazyteam = lazy(() => import("../views/pages/Team/Team.jsx"));
+// const LazyAbout = lazy(() => import("../views/pages/About/About"));
+// const LazyPrivacy = lazy(() =>
+//   import("../views/pages/PrivacyPolicy/index.jsx")
+// );
+// const Lazycontactus = lazy(() => import("../views/pages/Contact/Contact.jsx"));
+// const Lazyourblog = lazy(() => import("../views/pages/Blog/index.jsx"));
+// const Lazycareer = lazy(() => import("../views/pages/Career/index.jsx"));
+// const Lazytechnologypage = lazy(() =>
+//   import("../views/pages/Technologies/index.jsx")
+// );
+// const Lazysingleblog = lazy(() =>
+//   import("../views/pages/singleblog/Singleblog.jsx")
+// );
+// const Lazyteam = lazy(() => import("../views/pages/Team/Team.jsx"));
 
 const Routes = () => {
   const element = useRoutes([

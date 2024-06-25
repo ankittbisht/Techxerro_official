@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import "./style.scss"; 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import "./style.scss";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -21,11 +21,8 @@ const HeroSection = () => {
     <>
       <section className="hero-sec-wrapper">
         <div className="container">
-         
           <div className="row Hero-section align-items-center">
-            <div
-              className="col-lg-6 col-md-12 pd50 slider-content order-lg-1 order-md-2 order-2"              
-            >
+            <div className="col-lg-6 col-md-12 pd50 slider-content order-lg-1 order-md-2 order-2">
               <div>
                 <div className="bannerText">
                   <div>
@@ -63,26 +60,51 @@ const HeroSection = () => {
 
             <div className="col-12 order-3 d-lg-block d-sm-none d-none">
               <div className="basebox">
-                <div  className="d-flex gap-4">
+                <div className="d-flex gap-4">
                   <div className="d-flex align-items-center gap-2">
-                    <img src={require('../../../assets/searchicon.png')} alt="" />
+                    <img
+                      src={require("../../../assets/searchicon.png")}
+                      alt=""
+                    />
                     <span>I am here to:</span>
                   </div>
                   <ul className="baseboxoptions d-flex gap-4 align-items-center">
-                    <li><a href="/contact" target="_blank">Brand my Business</a></li>
-                    <li><a href="/contact" target="_blank">Consultation</a></li>
+                    <li>
+                      <a href="/contact" target="_blank">
+                        Brand my Business
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/contact" target="_blank">
+                        Consultation
+                      </a>
+                    </li>
                   </ul>
                 </div>
-                <div className="d-flex align-items-center descriptionbox gap-3"> 
-                  <span classname="descriptiontext"><a href="#" target="_blank">Find the best solutions for your business</a></span>
-                  <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.5943 1.38L9.4043 9.19L1.5943 17" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <div className="d-flex align-items-center descriptionbox gap-3">
+                  <span classname="descriptiontext">
+                    <a href="#" target="_blank">
+                      Find the best solutions for your business
+                    </a>
+                  </span>
+                  <svg
+                    width="11"
+                    height="18"
+                    viewBox="0 0 11 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5943 1.38L9.4043 9.19L1.5943 17"
+                      stroke="#666666"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </div>
-
               </div>
             </div>
-
           </div>
         </div>
       </section>

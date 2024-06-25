@@ -3,13 +3,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
-import { images } from "../../../assets/images";
 import "./Blog.scss";
 import { blogData } from "./data";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Blog(props) {
   const openCity = (evt, cityName) => {
@@ -309,7 +309,7 @@ export default function Blog(props) {
                   .filter((data) => data.category.toLowerCase() === "marketing")
                   .map((data) => {
                     return (
-                      <div key ={data.id} className="container">
+                      <div key={data.id} className="container">
                         <div className="row imgcont">
                           <LazyLoadImage effect="blur" src={data.img} alt="" />
                           <div className="describe">

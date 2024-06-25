@@ -6,6 +6,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { images } from "../../../assets/images";
+
 import web1 from "../../../assets/Service/Web1.png";
 import web2 from "../../../assets/Service/Web2.png";
 import web3 from "../../../assets/Service/Web3.png";
@@ -30,8 +31,33 @@ import mob3 from "../../../assets/Service/Mob3.png";
 import mob4 from "../../../assets/Service/Mob4.png";
 import mob5 from "../../../assets/Service/Mob5.png";
 
+import pweb1 from "../../../assets/Curvedcarousel-compressed-images/Web1.png";
+import pweb2 from "../../../assets/Curvedcarousel-compressed-images/Web2.png";
+import pweb3 from "../../../assets/Curvedcarousel-compressed-images/Web3.png";
+import pweb4 from "../../../assets/Curvedcarousel-compressed-images/Web4.png";
+import pweb5 from "../../../assets/Curvedcarousel-compressed-images/work2.png";
+
+import pSM1 from "../../../assets/Curvedcarousel-compressed-images/SM1.png";
+import pSM2 from "../../../assets/Curvedcarousel-compressed-images/SM2.png";
+import pSM3 from "../../../assets/Curvedcarousel-compressed-images/SM3.png";
+import pSM4 from "../../../assets/Curvedcarousel-compressed-images/SM4.png";
+import pSM5 from "../../../assets/Curvedcarousel-compressed-images/SM5.png";
+
+import pmrk1 from "../../../assets/Curvedcarousel-compressed-images/Marketing1.png";
+import pmrk2 from "../../../assets/Curvedcarousel-compressed-images/Marketing2.png";
+import pmrk3 from "../../../assets/Curvedcarousel-compressed-images/Marketing3.png";
+import pmrk4 from "../../../assets/Curvedcarousel-compressed-images/Marketing4.png";
+import pmrk5 from "../../../assets/Curvedcarousel-compressed-images/Marketing5.png";
+
+import pmob1 from "../../../assets/Curvedcarousel-compressed-images/Mob1.png";
+import pmob2 from "../../../assets/Curvedcarousel-compressed-images/Mob2.png";
+import pmob3 from "../../../assets/Curvedcarousel-compressed-images/Mob3.png";
+import pmob4 from "../../../assets/Curvedcarousel-compressed-images/Mob4.png";
+import pmob5 from "../../../assets/Curvedcarousel-compressed-images/Mob5.png";
+
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 
 export default function CurvedCarousel(props) {
   const imgStyle = {
@@ -47,6 +73,7 @@ export default function CurvedCarousel(props) {
       tabid: "home1",
       tablabel: "home1-tab",
       imgs: [mob1, mob2, mob3, mob4, mob5],
+      placeholderimgs: [pmob1, pmob2, pmob3, pmob4, pmob5],
       bg: ["#624ED1", " #CAE9FE", "#C7C7C7", "#D8CFEE", "#7200E3"],
     },
     {
@@ -54,6 +81,7 @@ export default function CurvedCarousel(props) {
       tabid: "Branding",
       tablabel: "Branding-tab",
       imgs: [web1, web3, web2, web4, web5],
+      placeholderimgs: [pweb1, pweb3, pweb2, pweb4, pweb5],
       bg: ["#01A95B", "#ECE7D7", "#40403F", "#FEF8D9", "#ECE7D7"],
     },
     {
@@ -61,6 +89,7 @@ export default function CurvedCarousel(props) {
       tabid: "SocialMedia",
       tablabel: "SocialMedia-tab",
       imgs: [SM1, SM2, SM3, SM4, SM5],
+      placeholderimgs: [pSM1, pSM2, pSM3, pSM4, pSM5],
       bg: ["#BBA9B9", "#2C2C2C", "#01A95B", "#4E5050", "#C9C9C9"],
     },
     {
@@ -68,6 +97,7 @@ export default function CurvedCarousel(props) {
       tabid: "Marketing",
       tablabel: "Marketing-tab",
       imgs: [mrk1, mrk2, mrk3, mrk4, mrk5],
+      placeholderimgs: [pmrk1, pmrk2, pmrk3, pmrk4, pmrk5],
       bg: ["#09247B", "#B31E22", "#01A95B", "#EAF5EB", "#158942"],
     },
   ];
@@ -206,7 +236,6 @@ export default function CurvedCarousel(props) {
                 navigation={true}
                 modules={[Navigation, Autoplay]}
                 className="CurvedSwiper"
-                // rewind={true}
                 centeredSlides={true}
                 autoplay={{
                   delay: 1500,
@@ -227,7 +256,13 @@ export default function CurvedCarousel(props) {
                         position: "relative",
                       }}
                     >
-                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[0]} alt="" />
+                      <LazyLoadImage
+                        effect="blur"
+                        placeholderSrc= {obj.placeholderimgs[0]}
+                        ////// style={imgStyle}
+                        src={obj.imgs[0]}
+                        alt=""
+                      />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -250,7 +285,13 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[1],
                       }}
                     >
-                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[1]} alt="" />
+                      <LazyLoadImage
+                        effect="blur"
+                       //// style={imgStyle}
+                        src={obj.imgs[1]}
+                        placeholderSrc= {obj.placeholderimgs[1]}
+                        alt=""
+                      />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -273,7 +314,14 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[3],
                       }}
                     >
-                      <img style={imgStyle} src={obj.imgs[3]} alt="" />
+                       <LazyLoadImage
+                        effect="blur"
+                       //// style={imgStyle}
+                        src={obj.imgs[3]}
+                        placeholderSrc= {obj.placeholderimgs[3]}
+                        alt=""
+                      />
+                     
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -296,7 +344,13 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[2],
                       }}
                     >
-                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[2]} alt="" />
+                      <LazyLoadImage
+                        effect="blur"
+                       // style={imgStyle}
+                        src={obj.imgs[2]}
+                        placeholderSrc= {obj.placeholderimgs[2]}
+                        alt=""
+                      />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -319,7 +373,13 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[3],
                       }}
                     >
-                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[3]} alt="" />
+                      <LazyLoadImage
+                        effect="blur"
+                       // style={imgStyle}
+                        src={obj.imgs[3]}
+                        placeholderSrc= {obj.placeholderimgs[3]}
+                        alt=""
+                      />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -342,7 +402,13 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[4],
                       }}
                     >
-                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[4]} alt="" />
+                      <LazyLoadImage
+                        effect="blur"
+                       // style={imgStyle}
+                        src={obj.imgs[4]}
+                        placeholderSrc= {obj.placeholderimgs[4]}
+                        alt=""
+                      />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -365,7 +431,13 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[3],
                       }}
                     >
-                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[0]} alt="" />
+                      <LazyLoadImage
+                        effect="blur"
+                       // style={imgStyle}
+                        src={obj.imgs[0]}
+                        placeholderSrc= {obj.placeholderimgs[0]}
+                        alt=""
+                      />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">
@@ -388,7 +460,13 @@ export default function CurvedCarousel(props) {
                         backgroundColor: obj.bg[1],
                       }}
                     >
-                      <LazyLoadImage effect="blur" style={imgStyle} src={obj.imgs[1]} alt="" />
+                      <LazyLoadImage
+                        effect="blur"
+                       // style={imgStyle}
+                        src={obj.imgs[1]}
+                        placeholderSrc= {obj.placeholderimgs[1]}
+                        alt=""
+                      />
                     </div>
                     <div className="row">
                       <div className="content animate__animated animate__fadeInUp">

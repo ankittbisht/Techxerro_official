@@ -1,9 +1,9 @@
 import { images } from "../../../assets/images";
-import Blog1 from "../../../assets/Blogs/blog1.png";
+
 import Blog2 from "../../../assets/Blogs/blog2.png";
 import Blog3 from "../../../assets/Blogs/blog3.png";
 import Blog4 from "../../../assets/Blogs/blog4.png";
-import Blog5 from "../../../assets/Blogs/blog5.png";
+
 
 export const blogData = [
   {
